@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Klimas Recipes Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles/style.css" th:href="@{/styles/style.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+          rel="stylesheet">
+
+    <meta name="description" content="Portfolio Sebastian Klimas">
+</head>
+
+<body class="official-purple">
+<div class="container-fluid black-to-purple">
+    <div class="row page-header">
+        <div class="col-1"></div>
+
+        <div class="col-10 col-md-5 page-name-logo">
+            <a href="#" th:href="@{/}"><p>Portfolio</p></a>
+        </div>
+        <div class="col-12 col-md-5">
+            <div class="row page-menu">
+                <div class="col">
+                    <a href="#" th:href="@{/cv}" target="_blank">
+                        <p>CV</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://github.com/s-klimas" target="_blank">
+                        <p>Github</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/sebastian-klimas-433354210/" target="_blank">
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" th:href="@{/}">
+                        <p>Home</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1"></div>
+    </div>
+    <div class="row project-site">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div>
+                <h1 class="s3-project-title project-title">Recipes Manager</h1>
+            </div>
+            <div class="white-line-s3-project"></div>
+            <div class="project-tech-desc">
+                <h3>Technologie wykorzystane w projekcie:</h3>
+                <ul class="lists">
+                    <li>Java</li>
+                    <li>Spring</li>
+                    <li>Hibernate</li>
+                    <li>Liquibase</li>
+                    <li>Mailtrap</li>
+                    <li>Thymeleaf</li>
+                    <li>HTML, CSS, Bootstrap oraz JavaScript</li>
+                    <li>JUnit 5</li>
+                    <li>AssertJ</li>
+                    <li>Mockito</li>
+                    <li>Mockaroo (do generowania danych testowych)</li>
+                </ul>
+            </div>
+            <div class="white-line-s3-project"></div>
+            <div class="project-tech-desc">
+                <h3>Krótki opis:</h3>
+                <p>
+                    Myśl, aby napisać aplikację internetową do przechowywania przepisów kuchennych zrodziła się w mojej
+                    głowie, gdy byłem w sklepie spożywczym. Nie mając domowej książki kuchennej pod ręką, potrzebowałem
+                    sprawdzić co dokładnie potrzebuję do upieczenia ciasta. Z czasem wykiełkowała ona do pomysłu, aby
+                    napisać projekt z wykorzystaniem technologii, które już znam, oraz z tymi z którymi jeszcze nie było
+                    dane mi się zetknąć. Projekt oparłem o najlepiej znaną mi Javę oraz framework Spring. Do zarządzania
+                    schematami bazy danych wykorzystałem Liquibase, a do mapowania ich w kodzie skorzystałem z
+                    frameworku Hibernate. Backend aplikacji połączyłem z frontendem za pomocą Thymeleafa. Do wygodnego
+                    pisania strony internetowej skorzystałem z nowego dla mnie Bootstrapa. Na koniec projekt połączyłem
+                    z platformą dostarczania wiadomości email (Mailtrap), co wymagało ode mnie zapoznania się z
+                    dokumentacją ich API. Projekt napisałem w celu utrwalenia wiedzy i wystawienia się na nowe wyzwania,
+                    aby poszerzyć swoje kompetencje.
+                </p>
+            </div>
+            <div class="white-line-s3-project"></div>
+            <div class="project-tech-desc">
+                <h3>O projekcie:</h3>
+                <p>
+                    Kolorystyka projektu jest bardzo prosta czarno-biała, ponieważ pisząc ten projekt frontend nie był
+                    moim priorytetem. Skupiłem się w nim na backendzie, oraz zaprezentowaniu moich umiejętności i
+                    znajomości technologii programowania aplikacji webowej. Na stronie głównej prezentuję umiejętności w
+                    rozpoznawaniu zalogowanego użytkownika oraz zarządzanie templatami Thymeleafa. W zależności od
+                    zalogowania dla użytkownika albo wyświetla się strona główna opisująca projekt (Lorem Ipsum…) lub
+                    strona wyświetlające karty z wprowadzonymi do bazy danych przepisami użytkownika.
+                </p>
+                <p>
+                    Wygląd dla niezalogowanego użytkownika:
+                </p>
+                <div class="row">
+                    <div class="col-12 col-md-8 auto-margin">
+                        <img class="w-100" src="/static/img/screens/rm-not-logged-in.png" th:src="@{/img/screens/rm-not-logged-in.png}" alt="niezalogowany">
+                    </div>
+                </div>
+                <p>
+                    Wygląd dla zalogowanego użytkownika:
+                </p>
+                <div class="row">
+                    <div class="col-12 col-md-8 auto-margin">
+                        <img class="w-100" src="/static/img/screens/rm-logged-in.png" th:src="@{/img/screens/rm-logged-in.png}" alt="zalogowany">
+                    </div>
+                </div>
+                <p>
+                    Strony z logowaniem i rejestracją reprezentują moje umiejętności z operowaniem danych wrażliwych
+                    oraz w jaki sposób są przechowywane, a także przesyłane pomiędzy użytkownikiem, a serwerem. Przy
+                    operowaniu na encjach wykorzystuje odpowiednie klasy DTO, aby zabezpieczyć aplikację przed wyciekiem
+                    danych. W każdym endpoincie stosuję klasę DTO mapującą tylko te pola w encji, które są wymagane.
+                </p>
+                <p>
+                    Strona z dodawaniem przepisów jej flow reprezentuje ponownie moją znajomość Thymeleafa. Trudność z
+                    jaką się spotkałem na tej podstronie była nieprzewidywalność liczby składników w przepisie. Musiałem
+                    poznać sposób w jaki sposób Thymeleaf interpretuje oraz zapisuje listy na stronie, oraz sposób
+                    połączenia tego z kontrolerem w Springu. Udało mi się to ostatecznie wprowadzając do modelu
+                    endpointa klasy IngredientsListWrapperDto zawierającą w sobie listę składników i połączenia jej już
+                    w klasie service z przepisem. Przydała się też znajomość JavaScripta, w którym operuję dodawanie pól
+                    do formularza na stronie.
+                </p>
+            </div>
+            <div class="white-line-s3-project"></div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+</body>
+</html>
