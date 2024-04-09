@@ -16,7 +16,7 @@ public class CVController {
 
     @GetMapping(path = "/cv")
     public ResponseEntity<Resource> downloadFile() throws Exception {
-        File downloadFile = new File("/files/CVKlimasSebastian.pdf");
+        File downloadFile = new File("/opt/Portfolio/files/CVKlimasSebastian.pdf");
         InputStreamResource resource = new InputStreamResource(new FileInputStream(downloadFile));
         HttpHeaders header = new HttpHeaders();
         header.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + downloadFile.getName());
