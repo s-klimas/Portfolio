@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio Sebastian Klimas</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/styles/style.css" th:href="@{/styles/style.css}">
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,8 +50,17 @@
                 </div>
                 <div class="col">
                     <a href="#projects">
-                        <p>Projekty</p>
+                        <p data-lang="pl">Projekty</p>
+                        <p style="display: none" data-lang="en">Projects</p>
                     </a>
+                </div>
+                <div class="col language">
+                    <label>
+                        <select class="select-language" name="select-language">
+                            <option value="pl">🇵🇱 PL</option>
+                            <option value="en">🇺🇸 EN</option>
+                        </select>
+                    </label>
                 </div>
             </div>
         </div>
@@ -61,7 +72,7 @@
         <div class="col-sm-12 col-md-6 s1-about">
             <h1 class="s1-about-name">Sebastian Klimas</h1>
             <h3 class="s1-about-profession">Backend Developer</h3>
-            <p class="s1-about-description">
+            <p class="s1-about-description" data-lang="pl">
                 Przez całe życie pasjonowałem się informatyką, a w szczególności programowaniem. Zacząłem naukę w
                 technikum informatycznym w Krakowie z zamiarem zdawania rozszerzonej informatyki na maturze. W
                 przygotowaniach do niej przez pierwsze 3 lata nauki korzystaliśmy z języka C++, a w ostatni rok
@@ -78,6 +89,23 @@
                 kooperację z innymi. Przez większość swojego życia uważałem się za introwertyka, jednak na przestrzeni
                 ostatnich lat, po lepszym poznaniu siebie uważam, że jestem połączeniem jego z ekstrawertykiem.
             </p>
+            <p class="s1-about-description" style="display: none" data-lang="en">
+                I have had a lifelong passion for computer science, especially programming. I started studying at a
+                computer science technical school in Cracow with the intention of passing the extended computer science
+                high school diploma. In preparation for it, we used C++ for the first 3 years of study, and in the last
+                year we also learned Java. After being exposed to a new language, I quickly mastered it. I came to the
+                conclusion that I found Java to be a more enjoyable language for programming, and I made the decision to
+                change the language in which I would write the baccalaureate to Java for my final year, despite having
+                more experience in C++. I consider it a good decision, because I passed my baccalaureate exam with a
+                high score and got into my dream university at the Cracow University of Technology at the time. In the
+                course of my education, I also learned other languages such as PHP and Python, which I compared with
+                Java and its elements for better understanding. To learn the commercial side of programming I also used
+                Java and did courses such as the Spring course, but I don't rule out working in another language because
+                I can adapt, as I did in a start-up where we wrote a website using PHP and the Laravel framework. In my
+                private life, I am interested in politics in the socio-economic aspect, which makes me like cooperation
+                and collaboration with others. For most of my life I considered myself an introvert, but over the past
+                few years, after getting to know myself better, I believe I am a combination of his and extrovert.
+            </p>
         </div>
         <div class="col-sm-12 col-md-4 s1-about-picture">
             <img src="/static/img/sebastian.jpg" th:src="@{/img/sebastian.jpg}" alt="Sebastian" class="s1-my-picture">
@@ -92,7 +120,8 @@
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-10 s2-header">
-                    <p>Umiejętności i kursy</p>
+                    <p data-lang="pl">Umiejętności i kursy</p>
+                    <p data-lang="en" style="display: none;">Skills & Courses</p>
                 </div>
                 <div class="col-1"></div>
             </div>
@@ -102,7 +131,8 @@
             <div class="col-10 s2-body">
                 <div class="row s2-boxes">
                     <div class="col-md-12 col-lg s2-java">
-                        <p class="s2-box-header">Programowanie</p>
+                        <p class="s2-box-header" data-lang="pl">Programowanie</p>
+                        <p class="s2-box-header" data-lang="en" style="display: none;">Programming</p>
                         <hr class="s2-box-header-underline">
                         <ul class="lists">
                             <li>Java 8, 12</li>
@@ -125,7 +155,8 @@
                         </ul>
                     </div>
                     <div class="col-md-12 col-lg s2-devtools">
-                        <p class="s2-box-header">Narzędzia programistyczne</p>
+                        <p class="s2-box-header" data-lang="pl">Narzędzia programistyczne</p>
+                        <p class="s2-box-header" data-lang="en" style="display: none">DevTools</p>
                         <hr class="s2-box-header-underline">
                         <ul class="lists">
                             <li>IntelliJ</li>
@@ -146,15 +177,29 @@
                         </ul>
                     </div>
                     <div class="col-md-12 col-lg s2-courses">
-                        <p class="s2-box-header">Kursy i certyfikaty</p>
+                        <p class="s2-box-header" data-lang="pl">Kursy i certyfikaty</p>
+                        <p class="s2-box-header" data-lang="en" style="display: none;">Courses & certificates</p>
                         <hr class="s2-box-header-underline">
                         <ul class="lists">
-                            <li>Kurs Java <a href="https://javastart.pl/kurs/java">(link)</a></li>
-                            <li>Kurs Spring <a href="https://javastart.pl/kurs/spring">(link)</a></li>
-                            <li>Kurs Testowanie Jednostkowe <a href="https://javastart.pl/kurs/testowanie-jednostkowe">(link)</a>
+                            <li>
+                                <a data-lang="pl">Kurs Java</a><a data-lang="en" style="display: none;">Java Course</a>
+                                <a
+                                        href="https://javastart.pl/kurs/java">(link)</a></li>
+                            <li><a data-lang="pl">Kurs Spring</a><a data-lang="en" style="display: none;">Spring
+                                Course</a> <a
+                                    href="https://javastart.pl/kurs/spring">(link)</a></li>
+                            <li><a data-lang="pl">Kurs Testowanie Jednostkowe</a><a data-lang="en"
+                                                                                    style="display: none">Unit
+                                Testing Course</a> <a
+                                    href="https://javastart.pl/kurs/testowanie-jednostkowe">(link)</a>
                             </li>
-                            <li>Certyfikat ECDL z modułów: B1, B2, B3, B4, S1, S2, S3</li>
-                            <li>Technik Informatyk - kwalfikacje zawodowe: E.12, E.13 i E.14</li>
+                            <li><a data-lang="pl">Certyfikat ECDL z modułów: B1, B2, B3, B4, S1, S2, S3</a><a
+                                    data-lang="en"
+                                    style="display: none">ECDL
+                                certificate in modules: B1, B2, B3, B4, S1, S2, S3</a></li>
+                            <li><a data-lang="pl">Technik Informatyk - kwalfikacje zawodowe: E.12, E.13 i E.14</a><a
+                                    data-lang="en" style="display: none">Information Technology Technician - Vocational
+                                Qualifications: E.12, E.13 and E.14</a></li>
                         </ul>
                     </div>
                 </div>
@@ -169,7 +214,8 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-12 s3-header">
-                    <p>Projekty</p>
+                    <p data-lang="pl">Projekty</p>
+                    <p data-lang="en" style="display: none">Projects</p>
                 </div>
             </div>
         </div>
@@ -188,8 +234,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Mimo zainteresowania backendem zawsze chciałem mieć własną stronę internetową, gdzie
                                 mogę napisać parę zdań o sobie oraz opisać projekty które wykonałem, ponieważ sam kod na
                                 portalu GitHub nie zawsze wystarcza. Uważam, że pomimo zainteresowania backendem
@@ -197,6 +244,15 @@
                                 mnie z nim bardziej oraz zaprezentować moje umiejętności w deploymencie przy którym
                                 wykorzystuje Dockera. Serwer strony napisany jest w Javie w frameworku Spring z
                                 wykorzystaniem Thymeleafa.
+                            </p>
+                            <p data-lang="en" style="display: none">
+                                Despite my interest in the backend, I always wanted to have my own website, where I I
+                                can write a few sentences about myself and describe the projects I have done, because
+                                the code alone on the GitHub portal is not always enough. I believe that despite my
+                                interest in the backend knowledge, at least of the basic frontend is helpful, so this
+                                project is intended to familiarize me more with it, and to present my skills in
+                                deployment at which I uses Docker. The website server is written in Java in the Spring
+                                framework with the using Thymeleaf.
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
@@ -208,7 +264,8 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
                                 <li>Spring Boot</li>
@@ -232,8 +289,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Myśl, aby napisać aplikację internetową do przechowywania przepisów kuchennych zrodziła
                                 się w mojej głowie, gdy byłem w sklepie spożywczym. Nie mając domowej książki kuchennej
                                 pod ręką, potrzebowałem sprawdzić co dokładnie potrzebuję do upieczenia ciasta. Z czasem
@@ -247,10 +305,25 @@
                                 zapoznania się z dokumentacją ich API. Projekt napisałem w celu utrwalenia wiedzy i
                                 wystawienia się na nowe wyzwania, aby poszerzyć swoje kompetencje.
                             </p>
+                            <p data-lang="en" style="display: none">
+                                The thought of writing a web application to store kitchen recipes arose in my mind when
+                                I was at the grocery store. With no home cookbook on hand, I needed to see exactly what
+                                I needed to bake a cake. Over time, it germinated into an idea to write a project using
+                                technologies I was already familiar with and those I hadn't yet encountered. I based the
+                                project on the Java I was most familiar with and the Spring framework. To manage the
+                                database schemas I used Liquibase, and to map them in the code I used the Hibernate
+                                framework. I connected the backend of the application to the frontend using Thymeleaf. I
+                                used Bootstrap, which is new to me, to conveniently write the website. Finally, I
+                                connected the project to an email delivery platform (Mailtrap), which required me to
+                                read their API documentation. I wrote the project to consolidate my knowledge and expose
+                                myself to new challenges to broaden my competence.
+                            </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
                             <p>
-                                <a href="#" th:href="@{/projects/recipe-manager}">Czytaj więcej</a>
+                                <a data-lang="pl" href="#" th:href="@{/projects/recipe-manager}">Czytaj więcej</a>
+                                <a data-lang="en" style="display: none" href="#" th:href="@{/projects/recipe-manager}">Read
+                                    more</a>
                             </p>
                             <p>
                                 <a href="https://github.com/s-klimas/RecipesManager" target="_blank"><img
@@ -260,7 +333,8 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
                                 <li>Spring</li>
@@ -268,11 +342,13 @@
                                 <li>Liquibase</li>
                                 <li>Mailtrap</li>
                                 <li>Thymeleaf</li>
-                                <li>HTML, CSS, Bootstrap oraz JavaScript</li>
+                                <li>HTML, CSS, Bootstrap & JavaScript</li>
                                 <li>JUnit 5</li>
                                 <li>AssertJ</li>
                                 <li>Mockito</li>
-                                <li>Mockaroo (do generowania danych testowych)</li>
+                                <li>Mockaroo <a data-lang="pl">(do generowania danych testowych)</a><a data-lang="en"
+                                                                                                       style="display: none">(to
+                                    generate test data)</a></li>
                             </ul>
                         </div>
                         <div class="col-1"></div>
@@ -290,8 +366,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Ta aplikacja to pierwsza część większego projektu, w których chcę zaprezentować m.in.
                                 swoje umiejętności z łączeniem się z API. Jest ona serwerem postawionym na springu, z
                                 wystawionym 1 endpointem. Na zapytanie GET z parametrami: length, height oraz mines
@@ -301,6 +378,16 @@
                                 drugim. Ponadto w tym projekcie nauczyłem się jak powinno się prawidłowo obsługiwać
                                 wyjątki w Springu, za pomocą @ExceptionHandler. Do testów aplikacji wykorzystałem
                                 bibliotekę JUnit 5 oraz AssertJ.
+                            </p>
+                            <p data-lang="en" style="display: none">
+                                This application is the first part of a larger project, in which I want to demonstrate,
+                                among other things, my skills with connecting to the API. It is a server set up on
+                                spring, with 1 endpoint exposed. On a GET request with parameters: length, height and
+                                mines (where all are ints) it returns a map generated from them to play Saper. To make
+                                the project more interesting and algorithmically advanced, it uses a 1-dimensional array
+                                in which successive rows are arranged one after another. In addition, in this project I
+                                learned how exceptions should be handled properly in Spring, using @ExceptionHandler.
+                                For testing the application, I used the JUnit 5 library and AssertJ.
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
@@ -312,7 +399,8 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
                                 <li>Spring</li>
@@ -336,8 +424,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Aplikacja webowa napisana podczas wykonywania kursu Spring. Projekt był wykonywany i
                                 rozbudowywany w każdym kolejnym etapie kursu. Nauczył mnie on wykorzystywania wiedzy
                                 teoretycznej poznanej na lekcjach w większym projekcie, a nie tylko na odrębnych
@@ -350,10 +439,26 @@
                                 są ograniczone i nie możemy dostać się do panelu z obsługą serwisu. Jednak zalogowany
                                 klient może wciąż oceniać filmy poprzez dawanie im odpowiedniej ilości gwiazdek.
                             </p>
+                            <p data-lang="en" style="display: none">
+                                A web application written during the execution of the Spring course. The project was
+                                performed and expanded in each successive stage of the course. It taught me to apply the
+                                theoretical knowledge learned in the lessons to a larger project, not just to separate
+                                assignments. Thanks to it, I learned the commercial side of projects written in Java
+                                Spring. In the project I came across many programming elements that were new to me, such
+                                as the JPA standard, Hibernate, Liquibase, CrudRepository, APIs and also elements of
+                                Spring Security, among others. The application I wrote is a movie service where we can
+                                log into accounts with different roles. The ADMIN or EDITOR role allows us to add movie
+                                genres and also the movies themselves. Being an ordinary user with the USER role, our
+                                privileges are limited and we can't access the panel with the service. However, a
+                                logged-in customer can still rate movies by giving them the appropriate number of stars.
+                            </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
                             <p>
-                                <a href="#" th:href="@{/projects/java-spring-course-project}">Czytaj więcej</a>
+                                <a data-lang="pl" href="#" th:href="@{/projects/java-spring-course-project}">Czytaj
+                                    więcej</a>
+                                <a data-lang="en" style="display: none" href="#"
+                                   th:href="@{/projects/java-spring-course-project}">Read more</a>
                             </p>
                             <p>
                                 <a href="https://github.com/s-klimas/java-spring-course-project" target="_blank"><img
@@ -363,15 +468,16 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
                                 <li>Spring</li>
                                 <li>Hibernate</li>
                                 <li>Liquibase</li>
-                                <li>Bazy danych H2 i MySQL</li>
+                                <li>Database H2 & MySQL</li>
                                 <li>Thymeleaf</li>
-                                <li>HTML, CSS oraz JavaScript</li>
+                                <li>HTML, CSS & JavaScript</li>
                                 <li>JUnit 5</li>
                                 <li>AssertJ</li>
                                 <li>Mockito</li>
@@ -392,8 +498,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Każdy z nas grał kiedyś w 20 pytań, chęć odwzorowania tej gry zrodziła się u mnie już
                                 dawno temu ze względu na to, że strasznie lubiłem tą grę. Problemem na jaki się
                                 zetknąłem przy pierwszych próbach zaimplementowania tej gry w kodzie to
@@ -405,6 +512,18 @@
                                 grę. Projekt wystawił mnie na kolejne doświadczenie pracowania z dokumentacją techniczną
                                 innych aplikacji oraz integrowania swojego oprogramowania z zewnętrznym API.
                             </p>
+                            <p data-lang="en" style="display: none">
+                                Everyone has played 20 Questions at some point, the desire to replicate this game came
+                                to me a long time ago due to the fact that I liked the game terribly. The problem I
+                                encountered in my first attempts to implement this game in code was the unpredictability
+                                of the user and what questions he might ask. However, when AI started to develop and
+                                ChatGPT conquered the Internet I realized that this problem had just been solved. The
+                                program uses OpenAI's software API and sends queries to their artificial intelligence,
+                                with which we can maintain a conversation and play a guessing game. However, the
+                                artificial intelligence itself is not perfect and sometimes makes the game impossible.
+                                The project exposed me to another experience of working with the technical documentation
+                                of other applications and integrating my software with an external API.
+                            </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
                             <p>
@@ -415,7 +534,8 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
                                 <li>API</li>
@@ -438,8 +558,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Projekt API, który korzystający z zewnętrznego API GitHuba. Dostępny mamy tylko jeden
                                 endpoint GET /github/{username}, który po wywołaniu łączy się z GitHubem i pobiera z
                                 serwera dane na temat repozytoriów użytkownika. Tworzy kolekcję z ich nazw, loginów
@@ -453,6 +574,19 @@
                                 API i operowanie w nim wyjątków zostawiłem sobie na później i opanowałem ten element w
                                 projekcie MinesweeperServer.
                             </p>
+                            <p data-lang="en" style="display: none">
+                                An API project that uses GitHub's external API. We only have one endpoint available, GET
+                                /github/{username}, which, when called, connects to GitHub and retrieves data about the
+                                user's repositories from the server. It creates a collection from their names, owner
+                                logins and for each branch its name and the SHA of the last commit. Requires having the
+                                "Accept" property set to "Application/Json" in the request header to work properly. The
+                                project was the first time I operated in Java with an external API and how to connect to
+                                it and handle responses. And it was also my first commercial exposure to writing my own
+                                API and handling exceptions. However, I was not satisfied with both. Therefore, as part
+                                of learning how to handle an external API, I expanded my knowledge on the subject and
+                                created the ChatGPTGuesser project. I left writing my own API and operating exceptions
+                                in it for later and mastered this element in the MinesweeperServer project.
+                            </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
                             <p>
@@ -463,7 +597,8 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
                                 <li>Spring</li>
@@ -485,8 +620,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Jest to druga odsłona aplikacji edukacyjnej przeze mnie stworzonej do nauki nazw państw.
                                 Zdecydowałem się na stworzenie jej, ponieważ nie mogłem znaleźć na internecie gry, która
                                 spełniałaby moje oczekiwania względem listy państw. W grze znajdują się państwa uznawane
@@ -498,10 +634,24 @@
                                 z najlepszą 10, która jest serializowana przed zamknięciem aplikacji by nie tracić
                                 wyników przy wyłączeniu aplikacji.
                             </p>
+                            <p data-lang="en" style="display: none">
+                                This is the second installment of an educational app I created for learning the names of
+                                countries. I decided to create it because I could not find a game on the Internet that
+                                met my expectations for a list of countries. The game includes internationally
+                                recognized countries, but I created a separate category with countries that are only
+                                partially recognized. The map is not a reflection of my political beliefs. In the
+                                project I used JavaFX technology to create a windowed application. As a learning
+                                enrichment and an attempt at encouragement, I added a point system that depends on the
+                                number of guessed countries and gameplay time. For players who like to compete, there is
+                                also a list created with the best 10, which is serialized before closing the application
+                                to not lose scores when the application is shut down.
+                            </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
                             <p>
-                                <a href="#" th:href="@{/projects/kraje-javaFX}">Czytaj więcej</a>
+                                <a data-lang="pl" href="#" th:href="@{/projects/kraje-javaFX}">Czytaj więcej</a>
+                                <a data-lang="en" style="display: none" href="#" th:href="@{/projects/kraje-javaFX}">Read
+                                    more</a>
                             </p>
                             <p>
                                 <a href="https://github.com/s-klimas/Kraje-JavaFX" target="_blank"><img
@@ -511,15 +661,18 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
                                 <li>JavaFX</li>
                                 <li>SceneBuilder</li>
-                                <li>Serializacja</li>
+                                <li><a data-lang="pl">Serializacja</a><a data-lang="en" style="display: none">Serialization</a>
+                                </li>
                                 <li>OOP</li>
                                 <li>HTML + CSS</li>
-                                <li>Rekurencja</li>
+                                <li><a data-lang="pl">Rekurencja</a><a data-lang="en"
+                                                                       style="display: none">Recursion</a></li>
                             </ul>
                         </div>
                         <div class="col-1"></div>
@@ -537,14 +690,23 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Projekt napisany na zaliczenie zajęć na studiach. Naszym zadaniem było napisanie
                                 aplikacji korzystającej z API Mockaroo do tworzenia randomowych danych na podstawie
                                 szablonu. Po otrzymaniu ich z serwera musieliśmy je przedstawić w przyjazny dla oka
                                 sposób. Ostatecznie projekt musiał być uruchomiony za pomocą GitHub Pages. Na koniec
                                 mieliśmy rozmowy 1 na 1 z profesorem podczas której tłumaczyliśmy, dlaczego napisaliśmy
                                 ją w taki sposób i co odpowiada za co na stronie.
+                            </p>
+                            <p data-lang="en" style="display: none">
+                                A project written for a college class credit. Our task was to write an application using
+                                the Mockaroo API to create random data based on a template. After receiving them from
+                                the server, we had to present them in a user-friendly way. Finally, the project had to
+                                be launched using GitHub Pages. In the end, we had 1-on-1 conversations with the
+                                professor during which we explained why we wrote it the way we did and what is
+                                responsible for what on the page.
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
@@ -556,7 +718,8 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>HTML</li>
                                 <li>CSS</li>
@@ -580,8 +743,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Pierwszy projekt związany z nauką nazw państw. Powstał, kiedy zacząłem interesować się
                                 mapą świata oraz jakie położenie geologiczne na świecie każe z państwa ma. Lista państw
                                 nie jest odzwierciedleniem moich przekonań politycznych, wybrałem państwa powszechnie
@@ -589,6 +753,16 @@
                                 elementy Javy, które poznzłem i nauczyłem się na kursie. Do projektu dodałem także
                                 system punktów oraz listę najlepszych wyników, która jest serializowana przed
                                 zamknięciem aplikacji aby nie tracić wyników przy ponownym uruchomieniu.
+                            </p>
+                            <p data-lang="en" style="display: none">
+                                The first project related to learning the names of countries. It was created when I
+                                began to take an interest in the world map and what geological position in the world
+                                each country has. The list of countries is not a reflection of my political beliefs, I
+                                chose countries that are widely recognized internationally. This is a simple console
+                                application using the Java elements that I learned and learned in the course. I also
+                                added a point system to the project and a list of top scores, which is serialized before
+                                closing the application so that the scores are not lost when the application is
+                                restarted.
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
@@ -600,12 +774,15 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
                                 <li>OOP</li>
-                                <li>Serializacja</li>
-                                <li>Rekurencja</li>
+                                <li><a data-lang="pl">Serializacja</a><a data-lang="en" style="display: none">Serialization</a>
+                                </li>
+                                <li><a data-lang="pl">Rekurencja</a><a data-lang="en"
+                                                                       style="display: none">Recursion</a></li>
                             </ul>
                         </div>
                         <div class="col-1"></div>
@@ -623,8 +800,9 @@
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-sm-10 col-md-8 col-lg-4 s3-project-desc">
-                            <h5>Opis</h5>
-                            <p>
+                            <h5 data-lang="pl">Opis</h5>
+                            <h5 data-lang="en" style="display: none">Description</h5>
+                            <p data-lang="pl">
                                 Aplikacja napisana w Javie w trakcie wykonywania kursu Java. Projekt rozbudowywany o
                                 kolejne elementy w trakcje nauki nowych elementów. Mimo nauki i znajomości Javy
                                 zdecydowałem się na wykonanie tego kursu wraz z projektem, ponieważ chciałem jeszcze raz
@@ -633,6 +811,16 @@
                                 projektach. Projekt zawiera aplikację do zarządzania biblioteką. Wykorzystuję w nim
                                 serializację danych, operowanie na plikach, obsługę wyjątków, strumienie oraz wiele
                                 innych aspektów obiektowego programowania.
+                            </p>
+                            <p data-lang="en" style="display: none">
+                                An application written in Java while doing a Java course. The project expanded with more
+                                elements in the course of learning new elements. Despite learning and knowing Java, I
+                                decided to do this course along with the project because I wanted to consolidate my
+                                knowledge from scratch once again. Thanks to it, I learned elements that I wasn't taught
+                                in school or college, such as serialization, which came in handy in other projects. The
+                                project includes a library management application. In it I use data serialization, file
+                                handling, exception handling, streams and many other aspects of object-oriented
+                                programming.
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-2 col-lg-2 s3-project-links">
@@ -644,11 +832,14 @@
                             </p>
                         </div>
                         <div class="col-sm-10 col-md-10 col-lg-4 s3-project-tech">
-                            <h5>Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="pl">Technologie wykorzystane w projekcie:</h5>
+                            <h5 data-lang="en" style="display: none">Technologies used in the project:</h5>
                             <ul class="lists">
                                 <li>Java</li>
-                                <li>Strumienie</li>
-                                <li>Serializacja</li>
+                                <li><a data-lang="pl">Strumienie</a><a data-lang="en" style="display: none">Streams</a>
+                                </li>
+                                <li><a data-lang="pl">Serializacja</a><a data-lang="en" style="display: none">Serialization</a>
+                                </li>
                                 <li>OOP</li>
                             </ul>
                         </div>

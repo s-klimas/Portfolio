@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Klimas Kraje JavaFX</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/styles/style.css" th:href="@{/styles/style.css}">
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +53,14 @@
                         <p>Home</p>
                     </a>
                 </div>
+                <div class="col language">
+                    <label>
+                        <select class="select-language" name="select-language">
+                            <option value="pl">🇵🇱 PL</option>
+                            <option value="en">🇺🇸 EN</option>
+                        </select>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -64,21 +74,24 @@
             </div>
             <div class="white-line-s3-project"></div>
             <div class="project-tech-desc">
-                <h3>Technologie wykorzystane w projekcie:</h3>
+                <h3 data-lang="pl">Technologie wykorzystane w projekcie:</h3>
+                <h3 data-lang="en" style="display: none;">Technologies used in the project:</h3>
                 <ul class="lists">
                     <li>Java</li>
                     <li>JavaFX</li>
                     <li>SceneBuilder</li>
-                    <li>Serializacja</li>
+                    <li><a data-lang="pl">Serializacja</a><a data-lang="en" style="display: none;">Serialization</a>
+                    </li>
                     <li>OOP</li>
                     <li>HTML + CSS</li>
-                    <li>Rekurencja</li>
+                    <li><a data-lang="pl">Rekurencja</a><a data-lang="en" style="display: none;">Recursion</a></li>
                 </ul>
             </div>
             <div class="white-line-s3-project"></div>
             <div class="project-tech-desc">
-                <h3>Krótki opis:</h3>
-                <p>
+                <h3 data-lang="pl">Krótki opis:</h3>
+                <h3 data-lang="en" style="display: none;">Short description:</h3>
+                <p data-lang="pl">
                     Jest to druga odsłona aplikacji edukacyjnej przeze mnie stworzonej do nauki nazw państw.
                     Zdecydowałem się na stworzenie jej, ponieważ nie mogłem znaleźć na internecie gry, która spełniałaby
                     moje oczekiwania względem listy państw. W grze znajdują się państwa uznawane na arenie
@@ -89,38 +102,68 @@
                     jest także stworzona lista z najlepszą 10, która jest serializowana przed zamknięciem aplikacji by
                     nie tracić wyników przy wyłączeniu aplikacji.
                 </p>
+                <p data-lang="en" style="display: none;">
+                    This is the second installment of an educational app I created for learning the names of countries.
+                    I decided to create it because I could not find a game on the Internet that met my expectations for
+                    a list of countries. The game includes internationally recognized countries, but I created a
+                    separate category with countries that are only partially recognized. The map is not a reflection of
+                    my political beliefs. In the project I used JavaFX technology to create a windowed application. As a
+                    learning enrichment and an attempt at encouragement, I added a point system that depends on the
+                    number of guessed countries and gameplay time. For players who like to compete, there is also a list
+                    created with the best 10, which is serialized before closing the application to not lose scores when
+                    the application is shut down.
+                </p>
             </div>
             <div class="white-line-s3-project"></div>
             <div class="project-tech-desc">
-                <h3>O projekcie:</h3>
-                <p>
+                <h3 data-lang="pl">O projekcie:</h3>
+                <h3 data-lang="en" style="display: none;">About the project:</h3>
+                <p data-lang="pl">
                     Program edukacyjny do nauki nazw państw, napisałem z wykorzystaniem JavyFX. Skorzystałem z tej
                     technologii, ponieważ pisząc ten projekt moje umiejętności frontendowe nie były wystarczające by
                     napisać stronę internetową która zadowalałaby moje oczekiwania. Projekt nauczył mnie korzystania z
                     JavyFX oraz budowania scen w SceneBuilderze. Pozwala na stworzenie z projektu pliku wykonywalnego,
                     który uruchamia aplikację bez uruchamiania IDE.
                 </p>
-                <p>
+                <p data-lang="en" style="display: none;">
+                    An educational program for learning the names of countries, I wrote using JavaFX. I took advantage
+                    of this technology because, when writing this project, my frontend skills were not sufficient to
+                    write a website that would satisfy my expectations. The project taught me how to use JavaFX and
+                    build scenes in SceneBuilder. It allows you to create an executable file from the project that runs
+                    the application without running the IDE.
+                </p>
+                <p data-lang="pl">
                     W projekcie możemy wybierać państwa spośród wszystkich kontynentów oraz państw powszechnie
                     nierozpoznawanych na arenie międzynarodowej:
                 </p>
+                <p data-lang="en" style="display: none;">
+                    In the project, we can choose countries from all continents, as well as countries that are commonly
+                    unrecognized internationally:
+                </p>
                 <div class="row">
                     <div class="col-12 col-md-8 auto-margin">
-                        <img class="w-100" src="/static/img/screens/kjfx-select.png" th:src="@{/img/screens/kjfx-select.png}" alt="Wybór państw">
+                        <img class="w-100" src="/static/img/screens/kjfx-select.png"
+                             th:src="@{/img/screens/kjfx-select.png}" alt="Wybór państw">
                     </div>
                 </div>
-                <p>
+                <p data-lang="pl">
                     Najważniejszy ekran gry to moment odgadywania państw, jak możemy zobaczyć na załączonym screenie
                     państwa podzielone są na trzy kolory: czarny, czerwony i zielony.
                     Czarnym oznaczone są państwa nie zaznaczone do odgadywania, czerwonym państwa, które jeszcze nam
                     zostały do odgadnięcia, a na zielono zmieniają się państwa, gdy już ich nazwę wpiszemy.
                 </p>
+                <p data-lang="en" style="display: none;">
+                    The most important screen of the game is the moment of guessing the countries, as we can see on the
+                    attached screen the countries are divided into three colors: black, red and green. Black marks the
+                    countries that have not been marked for guessing, red marks the countries we still have left to
+                    guess, and green changes the countries once we have typed their name.
+                </p>
                 <div class="row">
                     <div class="col-12 col-md-8 auto-margin">
-                        <img class="w-100" src="/static/img/screens/kjfx-game.png" th:src="@{/img/screens/kjfx-game.png}" alt="Obraz gry">
+                        <img class="w-100" src="/static/img/screens/kjfx-game.png"
+                             th:src="@{/img/screens/kjfx-game.png}" alt="Obraz gry">
                     </div>
                 </div>
-
             </div>
             <div class="white-line-s3-project"></div>
         </div>
