@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Klimas Recipes Manager</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/styles/style.css" th:href="@{/styles/style.css}">
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +16,11 @@
           rel="stylesheet">
 
     <meta name="description" content="Portfolio Sebastian Klimas">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon/favicon.ico"/>
+    <link rel="icon" href="/static/favicon/favicon_32.ico" sizes="32x32"/>
+    <link rel="icon" href="/static/favicon/favicon_48.ico" sizes="48x48"/>
+    <link rel="icon" href="/static/favicon/favicon_96.ico" sizes="96x96"/>
+    <link rel="icon" href="/static/favicon/favicon_144.ico" sizes="144x144"/>
 </head>
 
 <body class="official-purple">
@@ -46,6 +53,14 @@
                         <p>Home</p>
                     </a>
                 </div>
+                <div class="col language">
+                    <label>
+                        <select class="select-language" name="select-language">
+                            <option value="pl" class="option-pl">🇵🇱 PL</option>
+                            <option value="en" class="option-en">🇺🇸 EN</option>
+                        </select>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -59,7 +74,8 @@
             </div>
             <div class="white-line-s3-project"></div>
             <div class="project-tech-desc">
-                <h3>Technologie wykorzystane w projekcie:</h3>
+                <h3 data-lang="pl">Technologie wykorzystane w projekcie:</h3>
+                <h3 data-lang="en" style="display: none;">Technologies used in the project:</h3>
                 <ul class="lists">
                     <li>Java</li>
                     <li>Spring</li>
@@ -67,17 +83,20 @@
                     <li>Liquibase</li>
                     <li>Mailtrap</li>
                     <li>Thymeleaf</li>
-                    <li>HTML, CSS, Bootstrap oraz JavaScript</li>
+                    <li>HTML, CSS, Bootstrap & JavaScript</li>
                     <li>JUnit 5</li>
                     <li>AssertJ</li>
                     <li>Mockito</li>
-                    <li>Mockaroo (do generowania danych testowych)</li>
+                    <li>Mockaroo <a data-lang="pl">(do generowania danych testowych)</a><a data-lang="en"
+                                                                                           style="display: none;">(to
+                        generate test data)</a></li>
                 </ul>
             </div>
             <div class="white-line-s3-project"></div>
             <div class="project-tech-desc">
-                <h3>Krótki opis:</h3>
-                <p>
+                <h3 data-lang="pl">Krótki opis:</h3>
+                <h3 data-lang="en" style="display: none;">Short description:</h3>
+                <p data-lang="pl">
                     Myśl, aby napisać aplikację internetową do przechowywania przepisów kuchennych zrodziła się w mojej
                     głowie, gdy byłem w sklepie spożywczym. Nie mając domowej książki kuchennej pod ręką, potrzebowałem
                     sprawdzić co dokładnie potrzebuję do upieczenia ciasta. Z czasem wykiełkowała ona do pomysłu, aby
@@ -90,11 +109,45 @@
                     dokumentacją ich API. Projekt napisałem w celu utrwalenia wiedzy i wystawienia się na nowe wyzwania,
                     aby poszerzyć swoje kompetencje.
                 </p>
+                <p data-lang="en" style="display: none;">
+                    The thought of writing a web application to store kitchen recipes arose in my mind when I was at the
+                    grocery store. With no home cookbook on hand, I needed to see exactly what I needed to bake a cake.
+                    Over time, it germinated into an idea to write a project using technologies I was already familiar
+                    with and those I hadn't yet encountered. I based the project on the Java I was most familiar with
+                    and the Spring framework. To manage the database schemas I used Liquibase, and to map them in the
+                    code I used the Hibernate framework. I connected the backend of the application to the frontend
+                    using Thymeleaf. I used Bootstrap, which is new to me, to conveniently write the website. Finally, I
+                    connected the project to an email delivery platform (Mailtrap), which required me to read their API
+                    documentation. I wrote the project to consolidate my knowledge and expose myself to new challenges
+                    to broaden my competence.
+                </p>
+                <p data-lang="pl">
+                    Jest to druga odsłona aplikacji edukacyjnej, którą stworzyłem do nauki nazw krajów. Zdecydowałem się
+                    ją stworzyć, ponieważ nie mogłem znaleźć w Internecie gry, która spełniałaby moje oczekiwania
+                    dotyczące listy krajów. Gra zawiera kraje uznawane na całym świecie, ale stworzyłem osobną kategorię
+                    z krajami, które są uznawane tylko częściowo. Mapa nie odzwierciedla moich przekonań politycznych. W
+                    projekcie wykorzystałem technologię JavaFX do stworzenia aplikacji okienkowej. Jako urozmaicenie
+                    nauki i próbę zachęty, dodałem system punktów, który zależy od liczby odgadniętych krajów i czasu
+                    rozgrywki. Dla graczy lubiących rywalizację, stworzona została również lista z 10 najlepszymi, która
+                    jest serializowana przed zamknięciem aplikacji, aby nie stracić wyników po jej wyłączeniu.
+                </p>
+                <p data-lang="en" style="display: none;">
+                    This is the second installment of an educational app I created for learning the names of countries.
+                    I decided to create it because I could not find a game on the Internet that met my expectations for
+                    a list of countries. The game includes countries that are recognized around the world, but I created
+                    a separate category with countries that are only partially recognized. The map does not reflect my
+                    political beliefs. In the project, I used JavaFX technology to create a windowed application. As a
+                    learning enrichment and an attempt at encouragement, I added a point system that depends on the
+                    number of countries guessed and gameplay time. For players who like competition, a list with the top
+                    10 was also created, which is serialized before the application is closed so that scores are not
+                    lost when the application is shut down.
+                </p>
             </div>
             <div class="white-line-s3-project"></div>
             <div class="project-tech-desc">
-                <h3>O projekcie:</h3>
-                <p>
+                <h3 data-lang="pl">O projekcie:</h3>
+                <h3 data-lang="en" style="display: none;">About the project:</h3>
+                <p data-lang="pl">
                     Kolorystyka projektu jest bardzo prosta czarno-biała, ponieważ pisząc ten projekt frontend nie był
                     moim priorytetem. Skupiłem się w nim na backendzie, oraz zaprezentowaniu moich umiejętności i
                     znajomości technologii programowania aplikacji webowej. Na stronie głównej prezentuję umiejętności w
@@ -102,29 +155,51 @@
                     zalogowania dla użytkownika albo wyświetla się strona główna opisująca projekt (Lorem Ipsum…) lub
                     strona wyświetlające karty z wprowadzonymi do bazy danych przepisami użytkownika.
                 </p>
-                <p>
+                <p data-lang="en" style="display: none;">
+                    The color scheme of the project is very simple black and white, because when writing this project
+                    the frontend was not my priority. In it I focused on the backend, and showcasing my skills and
+                    knowledge of web application programming technologies. On the frontend, I demonstrate my skills in
+                    recognizing a logged-in user and managing Thymeleaf templates. Depending on the login for the user,
+                    either a home page describing the project (Lorem Ipsum...) or a page displaying tabs with the user's
+                    recipes entered into the database is displayed.
+                </p>
+                <p data-lang="pl">
                     Wygląd dla niezalogowanego użytkownika:
                 </p>
-                <div class="row">
-                    <div class="col-12 col-md-8 auto-margin">
-                        <img class="w-100" src="/static/img/screens/rm-not-logged-in.png" th:src="@{/img/screens/rm-not-logged-in.png}" alt="niezalogowany">
-                    </div>
-                </div>
-                <p>
-                    Wygląd dla zalogowanego użytkownika:
+                <p data-lang="en" style="display: none;">
+                    Appearance for a non-logged-in user
                 </p>
                 <div class="row">
                     <div class="col-12 col-md-8 auto-margin">
-                        <img class="w-100" src="/static/img/screens/rm-logged-in.png" th:src="@{/img/screens/rm-logged-in.png}" alt="zalogowany">
+                        <img class="w-100" src="/static/img/screens/rm-not-logged-in.png"
+                             th:src="@{/img/screens/rm-not-logged-in.png}" alt="niezalogowany">
                     </div>
                 </div>
-                <p>
+                <p data-lang="pl">
+                    Wygląd dla zalogowanego użytkownika:
+                </p>
+                <p data-lang="en" style="display: none;">
+                    Appearance for the logged-in user
+                </p>
+                <div class="row">
+                    <div class="col-12 col-md-8 auto-margin">
+                        <img class="w-100" src="/static/img/screens/rm-logged-in.png"
+                             th:src="@{/img/screens/rm-logged-in.png}" alt="zalogowany">
+                    </div>
+                </div>
+                <p data-lang="pl">
                     Strony z logowaniem i rejestracją reprezentują moje umiejętności z operowaniem danych wrażliwych
                     oraz w jaki sposób są przechowywane, a także przesyłane pomiędzy użytkownikiem, a serwerem. Przy
                     operowaniu na encjach wykorzystuje odpowiednie klasy DTO, aby zabezpieczyć aplikację przed wyciekiem
                     danych. W każdym endpoincie stosuję klasę DTO mapującą tylko te pola w encji, które są wymagane.
                 </p>
-                <p>
+                <p data-lang="en" style="display: none;">
+                    The login and registration pages represent my skills with handling sensitive data and how it is
+                    stored and also transferred between the user and the server. When operating on entities, I use
+                    appropriate DTO classes to protect the application from data leakage. In each endpoint, I use a DTO
+                    class that maps only those fields in the entity that are required.
+                </p>
+                <p data-lang="pl">
                     Strona z dodawaniem przepisów jej flow reprezentuje ponownie moją znajomość Thymeleafa. Trudność z
                     jaką się spotkałem na tej podstronie była nieprzewidywalność liczby składników w przepisie. Musiałem
                     poznać sposób w jaki sposób Thymeleaf interpretuje oraz zapisuje listy na stronie, oraz sposób
@@ -132,6 +207,15 @@
                     endpointa klasy IngredientsListWrapperDto zawierającą w sobie listę składników i połączenia jej już
                     w klasie service z przepisem. Przydała się też znajomość JavaScripta, w którym operuję dodawanie pól
                     do formularza na stronie.
+                </p>
+                <p data-lang="en" style="display: none;">
+                    The page with the addition of recipes her flow represents again my knowledge of Thymeleaf. The
+                    difficulty I encountered on this subpage was the unpredictability of the number of ingredients in a
+                    recipe. I had to learn how Thymeleaf interprets and saves lists on the page, and how to connect this
+                    to the controller in Spring. I finally succeeded by introducing the IngredientsListWrapperDto class
+                    containing the list of ingredients in the endpoint model and linking it already in the service class
+                    to the recipe. It also came in handy to know JavaScript, where I operate adding fields to the form
+                    on the page.
                 </p>
             </div>
             <div class="white-line-s3-project"></div>
