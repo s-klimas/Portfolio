@@ -76,6 +76,18 @@ html {
     padding: 2px;
 }
 
+.technology-select > div > div > label {
+    color: #121212;
+    font-size: 16px;
+    font-family: "Times New Roman", serif;
+}
+
+.technology-select > div > div > label > select {
+    background-color: #31081F;
+    color: #F2F2F2;
+    padding: 2px;
+}
+
 
 @media(min-width: 992px) {
     .page-menu > div > a > p {
@@ -190,21 +202,17 @@ html {
 
 .s2-boxes > div {
     margin: 35px;
-    /*outline: #B57F02 groove 15px;*/
-    min-height: 400px;
-    /*background-color: #121212;*/
+    min-height: 400px;=
     background: rgb(3,44,28);
     background: linear-gradient(90deg, rgba(3,44,28,1) 0%, rgba(18,18,18,1) 2%, rgba(18,18,18,1) 98%, rgba(3,44,28,1) 100%);
 }
 
 .s2-boxes > div > .s2-box-header {
-    /*color: #121212;*/
     text-align: center;
     margin-top: 20px;
     font-size: 26px;
     font-family: "Times New Roman", serif;
     background: rgb(18,18,18);
-    /*background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(128,89,0,1) 30%, rgba(128,89,0,1) 70%, rgba(18,18,18,1) 100%);*/
     background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(3,44,28,1) 30%, rgba(3,44,28,1) 70%, rgba(18,18,18,1) 100%);
 }
 
@@ -249,7 +257,7 @@ html {
     margin-bottom: 150px;
 }
 
-.s3-project {
+.s3-project, .technology-select {
     color: #F2F2F2;
     font-family: "Roboto Serif", serif;
 }
@@ -282,7 +290,6 @@ html {
     font-family: "Roboto Serif", serif;
     padding: 30px;
     font-size: 14px;
-    /*text-align: justify;*/
 }
 
 .s3-project-links {
