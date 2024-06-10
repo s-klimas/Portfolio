@@ -118,6 +118,18 @@ html {
     .language > label > a {
         display: none;
     }
+
+    .technology-select > div > div > label {
+        color: #121212;
+        font-size: 16px;
+        font-family: "Times New Roman", serif;
+    }
+
+    .technology-select > div > div > label > select {
+        background-color: #31081F;
+        color: #F2F2F2;
+        padding: 2px;
+    }
 }
 
 .section-1 {
