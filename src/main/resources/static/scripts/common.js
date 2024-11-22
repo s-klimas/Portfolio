@@ -37,13 +37,13 @@ selectTech.addEventListener(`change`, e => {
                 element.style.removeProperty(`display`);
             });
             break;
-        case 'ai':
+        case 'AI':
             hideAll();
             document.querySelectorAll(`.ai`).forEach(element => {
                 element.style.removeProperty(`display`);
             })
             break;
-        case 'api':
+        case 'API':
             hideAll();
             document.querySelectorAll(`.api`).forEach(element => {
                 element.style.removeProperty(`display`);
@@ -127,7 +127,7 @@ selectTech.addEventListener(`change`, e => {
                 element.style.removeProperty(`display`);
             })
             break;
-        case 'oop':
+        case 'OOP':
             hideAll();
             document.querySelectorAll(`.oop`).forEach(element => {
                 element.style.removeProperty(`display`);
