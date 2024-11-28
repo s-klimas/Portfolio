@@ -1,0 +1,585 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Klimas Streams</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles/style.css" th:href="@{/styles/style.css}">
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+          rel="stylesheet">
+
+    <meta name="description" content="Portfolio Sebastian Klimas">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon/favicon.ico" th:href="@{/favicon/favicon.ico}"/>
+    <link rel="icon" href="/static/favicon/favicon_32.ico" th:href="@{/favicon/favicon_32.ico}" sizes="32x32"/>
+    <link rel="icon" href="/static/favicon/favicon_48.ico" th:href="@{/favicon/favicon_48.ico}" sizes="48x48"/>
+    <link rel="icon" href="/static/favicon/favicon_96.ico" th:href="@{/favicon/favicon_96.ico}" sizes="96x96"/>
+    <link rel="icon" href="/static/favicon/favicon_144.ico" th:href="@{/favicon/favicon_144.ico}" sizes="144x144"/>
+</head>
+
+<body class="official-purple">
+<div class="container-fluid black-to-purple">
+    <div class="row page-header">
+        <div class="col-1"></div>
+
+        <div class="col-10 col-md-5 page-name-logo">
+            <a href="#" th:href="@{/}"><p>Portfolio</p></a>
+        </div>
+        <div class="col-12 col-md-5">
+            <div class="row page-menu">
+                <div class="col">
+                    <a href="#" th:href="@{/cv}" target="_blank">
+                        <p>CV</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://github.com/s-klimas" target="_blank">
+                        <p>Github</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/sebastian-klimas-433354210/" target="_blank">
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" th:href="@{/}">
+                        <p>Home</p>
+                    </a>
+                </div>
+                <div class="col language">
+                    <label>
+                        <select class="select-language" name="select-language">
+                            <option value="pl" class="option-pl">🇵🇱 PL</option>
+                            <option value="en" class="option-en">🇺🇸 EN</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1"></div>
+    </div>
+    <div class="row project-site">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div>
+                <h1 class="s3-project-title project-title">
+                    <a>Streams</a>
+                    <a href="https://github.com/s-klimas/Streams-1" target="_blank">
+                        <img class="project-github" src="/static/img/github/github-mark-white.png"
+                             th:src="@{/img/github/github-mark-white.png}" alt="github link">
+                    </a>
+                    <a href="https://github.com/s-klimas/Streams-2" target="_blank">
+                        <img class="project-github" src="/static/img/github/github-mark-white.png"
+                             th:src="@{/img/github/github-mark-white.png}" alt="github link">
+                    </a>
+                    <a href="https://github.com/s-klimas/Streams-3" target="_blank">
+                        <img class="project-github" src="/static/img/github/github-mark-white.png"
+                             th:src="@{/img/github/github-mark-white.png}" alt="github link">
+                    </a>
+                </h1>
+            </div>
+            <div class="white-line-s3-project"></div>
+            <div class="project-tech-desc">
+                <h3 data-lang="pl">Technologie wykorzystane w projekcie:</h3>
+                <h3 data-lang="en" style="display: none">Technologies used in the project:</h3>
+                <ul class="lists">
+                    <li>Java</li>
+                    <li>Streams</li>
+                    <li>Spring</li>
+                    <li>Liquibase</li>
+                    <li>OOP</li>
+                </ul>
+            </div>
+            <div class="white-line-s3-project"></div>
+            <div class="project-tech-desc">
+                <h3 data-lang="pl">Krótki opis:</h3>
+                <h3 data-lang="en" style="display: none;">Short description:</h3>
+                <p data-lang="pl">
+                    W pogoni za rozwojem postanowiłem lepiej poznać Java Stream API i doszkolić się z jego
+                    zakresu. Aby tego dokonać podjąłem się wykonania serii zadań, które udało mi się znaleźć
+                    w internecie. Projekt podzielony jest na 3 repozytoria zawierające kilkadziesiąt zadań,
+                    w których zagłębiam się w strumieniach. Użyj listy do nawigacji:
+                </p>
+                <p data-lang="en" style="display: none;">
+                    In the pursuit of development, I decided to become better acquainted with the Java
+                    Stream API and get some training on it. To do this, I undertook a series of tasks that I
+                    managed to find on the Internet. The project is divided into 3 repositories containing
+                    dozens of tasks in which I delve into streams. Use the list to navigate:
+                </p>
+                <ul>
+                    <li><a href="#streams-1">Streams-1</a></li>
+                    <li><a href="#streams-2">Streams-2</a></li>
+                    <li><a href="#streams-3">Streams-3</a></li>
+                </ul>
+            </div>
+            <div class="white-line-s3-project"></div>
+            <div class="project-tech-desc">
+                <h3 data-lang="pl">O projekcie:</h3>
+                <h3 data-lang="en" style="display: none">About the project:</h3>
+                <p data-lang="pl">
+                    Aby poszerzyć swoją wiedzę na temat jednego z kluczowych elementów Javy 8 – strumieni –
+                    zrealizowałem szereg zadań, które pozwoliły mi zrozumieć, jak efektywnie wykorzystywać tę
+                    funkcjonalność do przetwarzania danych. W poniższych repozytoriach zająłem się różnorodnymi
+                    scenariuszami danych wejściowych, w tym: danymi symulującymi zawartość bazy danych z użyciem
+                    frameworka Spring, prostymi strukturami, takimi jak tablice i listy, oraz plikiem tekstowym. Poniżej
+                    przedstawiam szczegółowy opis każdego z repozytoriów wraz z listą wykonanych zadań.
+                </p>
+                <p data-lang="en" style="display: none">
+                    To expand my knowledge of one of Java 8's key elements - streams - I completed a series of tasks to
+                    understand how to effectively use this functionality for data processing. In the following
+                    repositories, I tackled a variety of input data scenarios, including: data simulating the contents
+                    of a database using the Spring framework, simple structures such as arrays and lists, and a text
+                    file. Below I provide a detailed description of each repository, along with a list of the tasks
+                    performed.
+                </p>
+                <div class="white-line-s3-project"></div>
+                <div class="project-streams-repos" id="streams-1">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Streams-1</h3>
+                        </div>
+                        <div class="col-12">
+                            <p data-lang="pl">
+                                W tym repozytorium znajduje się projekt oparty na Java Spring Boot, który ćwiczy
+                                wykorzystania Java Streams API w kontekście aplikacji webowych. Celem ćwiczeń jest
+                                przetwarzanie danych z bazy danych z wykorzystaniem funkcji takich jak filtrowanie,
+                                sortowanie, grupowanie oraz mapowanie. Repozytorium opierają się na modelu danych -
+                                klient, zamówienie i produkt. Odnosząc się do poniższego diagramu relacji encji, klienci
+                                mogą składać wiele zamówień, więc jest to relacja jeden-do-wielu, podczas gdy relacja
+                                między produktami i zamówieniami jest wiele-do-wielu.
+                            </p>
+                            <p data-lang="en" style="display: none">
+                                This repository contains a Java Spring Boot-based project that exercises the use of the
+                                Java Streams API in the context of web applications. The purpose of the exercises is to
+                                process data from a database using functions such as filtering, sorting, grouping and
+                                mapping. The repository is based on a data model - customer, order and product.
+                                Referring to the entity relationship diagram below, customers can place multiple orders,
+                                so it is a one-to-many relationship, while the relationship between products and orders
+                                is many-to-many.
+                            </p>
+                        </div>
+                        <div class="col-12 row">
+                            <div class="col-12 col-md-8 auto-margin">
+                                <img class="w-100" src="/static/img/screens/s-1-models.jpg"
+                                     th:src="@{/img/screens/s-1-models.jpg}" alt="s1-modele">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div data-lang="pl">
+                                <p>Lista ćwiczeń:</p>
+                                <ol>
+                                    <li>Uzyskaj listę produktów należących do kategorii "Książki" z ceną > 100</li>
+                                    <li>Uzyskaj listę zamówień z produktami należącymi do kategorii "Dziecko"</li>
+                                    <li>Uzyskaj listę produktów z kategorią "Zabawki", a następnie zastosuj 10% zniżki
+                                    </li>
+                                    <li>Uzyskaj listę produktów zamówionych przez klientów poziomu 2 w okresie od
+                                        01.02.2021 r. do 01.04.2021 r.
+                                    </li>
+                                    <li>Uzyskaj najtańsze produkty z kategorii "Książki"</li>
+                                    <li>Uzyskaj 3 ostatnio złożone zamówienia</li>
+                                    <li>Uzyskaj listę zamówień, które zostały zamówione w dniu 15 marca 2021 r.,
+                                        zarejestruj rekordy zamówień w konsoli, a następnie zwróć listę produktów
+                                    </li>
+                                    <li>Oblicz łączną kwotę ryczałtową wszystkich zamówień złożonych w lutym 2021 r.
+                                    </li>
+                                    <li>Oblicz średnią płatność za zamówienia złożone 14 marca 2021 r.</li>
+                                    <li>Uzyskaj zbiór danych statystycznych (tj. suma, średnia, maksimum, minimum,
+                                        liczebność) dla wszystkich produktów z kategorii "Książki"
+                                    </li>
+                                    <li>Uzyskaj mapę danych z identyfikatorem zamówienia i liczbą produktów zamówienia
+                                    </li>
+                                    <li>Uzyskaj mapę danych z rekordami zamówień pogrupowanymi według klientów</li>
+                                    <li>Uzyskaj mapę danych z rekordem zamówienia i sumą produktu</li>
+                                    <li>Uzyskaj mapę danych z listą nazw produktów według kategorii</li>
+                                    <li>Uzyskaj najdroższy produkt według kategorii</li>
+                                </ol>
+                            </div>
+                            <div data-lang="en" style="display: none">
+                                <p>List of exercises:</p>
+                                <ol>
+                                    <li>Obtain a list of products belongs to category "Books" with price > 100</li>
+                                    <li>Obtain a list of order with products belong to category "Baby"</li>
+                                    <li>Obtain a list of product with category = "Toys" and then apply 10% discount</li>
+                                    <li>Obtain a list of products ordered by customer of tier 2 between 01-Feb-2021 and
+                                        01-Apr-2021
+                                    </li>
+                                    <li>Get the cheapest products of "Books" category</li>
+                                    <li>Get the 3 most recent placed order</li>
+                                    <li>Get a list of orders which were ordered on 15-Mar-2021, log the order records to
+                                        the console and then return its product list
+                                    </li>
+                                    <li>Calculate total lump sum of all orders placed in Feb 2021</li>
+                                    <li>Calculate order average payment placed on 14-Mar-2021</li>
+                                    <li>Obtain a collection of statistic figures (i.e. sum, average, max, min, count)
+                                        for all products of category "Books"
+                                    </li>
+                                    <li>Obtain a data map with order id and order’s product count</li>
+                                    <li>Produce a data map with order records grouped by customer</li>
+                                    <li>Produce a data map with order record and product total sum</li>
+                                    <li>Obtain a data map with list of product name by category</li>
+                                    <li>Get the most expensive product by category</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-line-s3-project"></div>
+                <div class="project-streams-repos" id="streams-2">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Streams-2</h3>
+                        </div>
+                        <div class="col-12">
+                            <p data-lang="pl">
+                                Repozytorium zostało podzielone na dwa zbiory zadań, w których dane wejściowe stanowią
+                                proste struktury. W pierwszym zbiorze pracujemy na danych zapisanych na stałe w kodzie.
+                                W drugim natomiast dane wejściowe są przekazywane dynamicznie jako jeden z parametrów
+                                metody.
+                            </p>
+                            <p data-lang="en" style="display: none">
+                                The repository is divided into two sets of tasks, where the input data are simple
+                                structures. In the first set, we work on data stored permanently in the code. In the
+                                second, on the other hand, the input data is passed dynamically as one of the method
+                                parameters.
+                            </p>
+                        </div>
+                    </div>
+                    <div data-lang="pl" class="row">
+                        <div class="col-12">
+                            <p>Zbiór #1</p>
+                            <ol>
+                                <li>Użyj Stream API, aby podnieść do kwadratu każdą liczbę na liście i zebrać wynik do
+                                    nowej listy
+                                </li>
+                                <li>Użyj Stream API, aby znaleźć długość najdłuższej nazwy na liście</li>
+                                <li>Użyj Stream API, aby policzyć całkowitą liczbę odrębnych słów (bez uwzględniania
+                                    wielkości liter) we wszystkich zdaniach
+                                </li>
+                                <li>Użyj Stream API, aby znaleźć konkatenację dwóch pierwszych słów o równej długości
+                                </li>
+                                <li>Użyj interfejsu API Stream, aby znaleźć sumę kwadratów liczb parzystych na liście
+                                </li>
+                                <li>Użyj Stream API, aby pogrupować słowa według ich długości i zebrać wynik do mapy
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-12">
+                            <p>Zbiór #2</p>
+                            <ol>
+                                <li>Napisz program w języku Java obliczający średnią z listy liczb całkowitych przy
+                                    użyciu strumieni
+                                </li>
+                                <li>Napisz program w języku Java konwertujący listę ciągów znaków na wielkie lub małe
+                                    litery przy użyciu strumieni
+                                </li>
+                                <li>Napisz program w języku Java obliczający sumę wszystkich parzystych, nieparzystych
+                                    liczb na liście przy użyciu strumieni
+                                </li>
+                                <li>Napisz program w języku Java usuwający wszystkie zduplikowane elementy z listy przy
+                                    użyciu strumieni
+                                </li>
+                                <li>Napisz program w języku Java, aby policzyć liczbę ciągów na liście, które zaczynają
+                                    się od określonej litery przy użyciu strumieni
+                                </li>
+                                <li>Napisz program w języku Java, aby posortowanać listę ciągów w kolejności
+                                    alfabetycznej, rosnąco i malejąco przy użyciu strumieni
+                                </li>
+                                <li>Napisz program w języku Java, aby znaleźć maksymalne i minimalne wartości na liście
+                                    liczb całkowitych przy użyciu strumieni
+                                </li>
+                                <li>Napisz program w języku Java, aby znaleźć drugi najmniejszy i największy element na
+                                    liście liczb całkowitych przy użyciu strumieni
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div data-lang="en" style="display: none" class="row">
+                        <div class="col-12">
+                            <p>Set #1</p>
+                            <ol>
+                                <li>Use Stream API to square each number in the list and collect the result into a new
+                                    list
+                                </li>
+                                <li>Use Stream API to find the length of the longest name in the list</li>
+                                <li>Use Stream API to count the total number of distinct words (case-insensitive) in all
+                                    the sentences
+                                </li>
+                                <li>Use Stream API to find the concatenation of the first two words that have even
+                                    lengths
+                                </li>
+                                <li>Use Stream API to find the sum of the squares of even numbers in the list</li>
+                                <li>Use Stream API to group words by their lengths and collect the result into a Map
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-12">
+                            <p>Set #2</p>
+                            <ol>
+                                <li>Write a Java program to calculate the average of a list of integers using streams
+                                </li>
+                                <li>Write a Java program to convert a list of strings to uppercase or lowercase using
+                                    streams
+                                </li>
+                                <li>Write a Java program to calculate the sum of all even, odd numbers in a list using
+                                    streams
+                                </li>
+                                <li>Write a Java program to remove all duplicate elements from a list using streams</li>
+                                <li>Write a Java program to count the number of strings in a list that start with a
+                                    specific letter using streams
+                                </li>
+                                <li>Write a Java program to sort a list of strings in alphabetical order, ascending and
+                                    descending using streams
+                                </li>
+                                <li>Write a Java program to find the maximum and minimum values in a list of integers
+                                    using streams
+                                </li>
+                                <li>Write a Java program to find the second smallest and largest elements in a list of
+                                    integers using streams
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-line-s3-project"></div>
+                <div class="project-streams-repos" id="streams-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Streams-3</h3>
+                        </div>
+                        <div class="col-12">
+                            <p data-lang="pl">
+                                Ostatnie repozytorium składa się z trzech części. W pierwszych dwóch wykorzystujemy dane
+                                symulujące zawartość bazy danych jako dane wejściowe. Ćwiczenia w trzeciej części
+                                koncentrują się na obsłudze danych I/O w połączeniu ze strumieniami, dlatego dane
+                                wejściowe zostały zapisane w pliku tekstowym (.txt).
+                            </p>
+                            <p data-lang="en" style="display: none">
+                                The last repository consists of three parts. In the first two, we use data simulating
+                                the contents of a database as input. The exercises in the third part focus on handling
+                                I/O data in conjunction with streams, so the input data was stored in a text file
+                                (.txt).
+                            </p>
+                        </div>
+                    </div>
+                    <div data-lang="pl" class="row">
+                        <div class="col-12">
+                            <h4>Część #1</h4>
+                            <p>
+                                Pierwsza część obejmuje 18 ćwiczeń, w których wykorzystano pięć klas: Miasto, Kraj,
+                                Gatunek, Film i Reżyser. Klasy te są powiązane następującymi relacjami:
+                            </p>
+                        </div>
+                    </div>
+                    <div data-lang="en" style="display: none" class="row">
+                        <div class="col-12">
+                            <h4>Part #1</h4>
+                            <p>
+                                The first part includes 18 exercises using five classes: City, Country, Genre, Film and
+                                Director. These classes are related by the following relationships:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="col-12 col-md-8 auto-margin">
+                            <img class="w-100" src="/static/img/screens/s-3-p-1-1.png"
+                                 th:src="@{/img/screens/s-3-p-1-1.png}" alt="s3-p1-modele-1">
+                        </div>
+                        <div class="col-12 col-md-8 auto-margin">
+                            <img class="w-100" src="/static/img/screens/s-3-p-1-2.png"
+                                 th:src="@{/img/screens/s-3-p-1-2.png}" alt="s3-p1-modele-2">
+                        </div>
+                    </div>
+                    <div data-lang="pl" class="row">
+                        <div class="col-12">
+                            <p>Lista ćwiczeń:</p>
+                            <ol>
+                                <li>Znajdź liczbę filmów każdego reżysera</li>
+                                <li>Znajdź najbardziej zaludnione miasto na każdym kontynencie</li>
+                                <li>Znajdź liczbę gatunków filmów każdego reżysera</li>
+                                <li>Znajdź najbardziej zaludnioną stolicę</li>
+                                <li>Znajdź najbardziej zaludnioną stolicę każdego kontynentu</li>
+                                <li>Posortuj kraje według liczby ich miast w porządku malejącym</li>
+                                <li>Znajdź listę filmów zawierających tylko gatunki "Dramat" i "Komedia"</li>
+                                <li>Pogrupuj filmy według roku i wymień je</li>
+                                <li>Posortuj kraje według gęstości zaludnienia w porządku malejącym, pomijając kraje o
+                                    zerowej populacji
+                                </li>
+                                <li>Znajdź najbogatszy kraj na każdym kontynencie pod względem wartości PNB (Produktu
+                                    Narodowego Brutto)
+                                </li>
+                                <li>Znajdź minimalną, maksymalną i średnią populację krajów świata</li>
+                                <li>Znajdź minimalną, maksymalną i średnią populację każdego kontynentu</li>
+                                <li>Znajdź kraje o minimalnej i maksymalnej liczbie ludności</li>
+                                <li>Znajdź kraje na każdym kontynencie z minimalną i maksymalną liczbą ludności</li>
+                                <li>Pogrupuj kraje według kontynentów, a następnie posortuj kraje według liczby miast
+                                </li>
+                                <li>Znajdź miasta o minimalnej i maksymalnej liczbie ludności w krajach</li>
+                                <li>Znajdź minimum, maksimum, średnią i odchylenie standardowe wartości PNB</li>
+                                <li>Znajdź rok, w którym dostępna jest maksymalna liczba filmów</li>
+                            </ol>
+                            <h4>Część #2</h4>
+                            <p>
+                                Druga część składa się z trzech klas, jednej klasy abstrakcyjnej oraz interfejsu.
+                                Relacje pomiędzy tymi elementami są następujące:
+                            </p>
+                        </div>
+                    </div>
+                    <div data-lang="en" style="display: none" class="row">
+                        <div class="col-12">
+                            <p>List of exercises:</p>
+                            <ol>
+                                <li>Find the number of movies of each director</li>
+                                <li>Find the most populated city of each continent</li>
+                                <li>Find the number of genres of each director's movies</li>
+                                <li>Find the highest populated capital city</li>
+                                <li>Find the highest populated capital city of each continent</li>
+                                <li>Sort the countries by number of their cities in descending order</li>
+                                <li>Find the list of movies having the genres "Drama" and "Comedy" only</li>
+                                <li>Group the movies by the year and list them</li>
+                                <li>Sort the countries by their population densities in descending order ignoring zero
+                                    population countries
+                                </li>
+                                <li>Find the richest country of each continent with respect to their GNP (Gross National
+                                    Product) values
+                                </li>
+                                <li>Find the minimum, the maximum and the average population of world countries</li>
+                                <li>Find the minimum, the maximum and the average population of each continent</li>
+                                <li>Find the countries with the minimum and the maximum population</li>
+                                <li>Find the countries of each continent with the minimum and the maximum population
+                                </li>
+                                <li>Group the countries by continent, and then sort the countries in continent by number
+                                    of cities in each continent
+                                </li>
+                                <li>Find the cities with the minimum and the maximum population in countries</li>
+                                <li>Find the minimum, the maximum, the average, and the standard deviation of GNP
+                                    values
+                                </li>
+                                <li>Find the year, where the maximum number of movie is available</li>
+                            </ol>
+                            <h4>Part #2</h4>
+                            <p>
+                                The second part consists of three classes, one abstract class and an interface. The
+                                relationships between these elements are as follows:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="col-12 col-md-8 auto-margin">
+                            <img class="w-100" src="/static/img/screens/s-3-p-2.png"
+                                 th:src="@{/img/screens/s-3-p-2.png}" alt="s3-p1-modele-2">
+                        </div>
+                    </div>
+                    <div data-lang="pl" class="row">
+                        <div class="col-12">
+                            <p>Lista ćwiczeń:</p>
+                            <ol>
+                                <li>Zrób listę dzikich zwierząt</li>
+                                <li>Zrób listę zwierząt domowych</li>
+                                <li>Znajdź zwierzę z największą liczbą nóg</li>
+                                <li>Zrób listę 100 losowych zwierząt</li>
+                                <li>Znajdź całkowitą liczbę nóg</li>
+                                <li>Pogrupuj zwierzęta według liczby nóg</li>
+                                <li>Policz liczbę zwierząt w każdym gatunku</li>
+                                <li>Policz liczbę gatunków</li>
+                            </ol>
+                            <h4>Część #3</h4>
+                        </div>
+                    </div>
+                    <div data-lang="en" style="display: none" class="row">
+                        <div class="col-12">
+                            <p>List of exercises:</p>
+                            <ol>
+                                <li>Take a list of wild animals</li>
+                                <li>Take a list of pets</li>
+                                <li>Find the animal with the highest number of legs</li>
+                                <li>Take a list of 100 random animals</li>
+                                <li>Find the total number of legs</li>
+                                <li>Group the animals by their number of legs</li>
+                                <li>Count the number of animals in each specie</li>
+                                <li>Count the number of species</li>
+                            </ol>
+                            <h4>Part #3</h4>
+                            <p>
+                                The last, third part of the repository focuses on the use of streams in I/O operations.
+                                The input is a dictionary.txt file, containing a list of words. On this basis, we
+                                perform operations such as filtering, grouping or mapping to solve the tasks provided in
+                                the exercises.
+                            </p>
+                            <p>List of exercises:</p>
+                            <ol>
+                                <li>Find the words starting with letters a to m</li>
+                                <li>Find the words starting with the letter n to the end of the dictionary</li>
+                                <li>Group the dictionary words by their first three letters</li>
+                                <li>Find the palindromes in the dictionary. A palindrome is a word, number, phrase, or
+                                    other sequence of characters which reads the same backward as forward
+                                </li>
+                                <li>Count the vowels used in words</li>
+                                <li>Find the words starting with the letter a, and ends with the letter z</li>
+                                <li>Find the longest word in the dictionary</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div data-lang="pl" class="row">
+                        <div class="col-12">
+                            <p>
+                                Ostatnia, trzecia część repozytorium koncentruje się na wykorzystaniu strumieni w
+                                operacjach I/O. Dane wejściowe stanowi plik dictionary.txt, zawierający listę wyrazów.
+                                Na tej bazie wykonujemy operacje takie jak filtrowanie, grupowanie czy mapowanie, aby
+                                rozwiązać zadania przewidziane w ćwiczeniach.
+                            </p>
+                            <p>Lista ćwiczeń:</p>
+                            <ol>
+                                <li>Znajdź słowa zaczynające się na litery od a do m</li>
+                                <li>Znajdź słowa zaczynające się na literę od n do końca słownika</li>
+                                <li>Pogrupuj słowa słownika według pierwszych trzech liter</li>
+                                <li>Znajdź palindromy w słowniku. Palindrom to słowo, liczba, fraza lub inny ciąg
+                                    znaków, który czyta się tak samo do tyłu, jak do przodu
+                                </li>
+                                <li>Policz samogłoski użyte w słowach</li>
+                                <li>Znajdź słowa zaczynające się na literę a i kończące się na literę z</li>
+                                <li>Znajdź najdłuższe słowo w słowniku</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="white-line-s3-project"></div>
+            <div class="project-credits row">
+                <div class="col-12">
+                    <p data-lang="pl">Linki do ćwiczeń:</p>
+                    <p data-lang="en" style="display: none">Links to exercises:</p>
+                    <p>
+                        <a target="_blank" href="https://blog.devgenius.io/15-practical-exercises-help-you-master-java-stream-api-3f9c86b1cf82">Streams-1</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://codefinity.com/courses/v2/190d2568-3d25-44d0-832f-da03468004c9/c0bcd017-ff39-46ec-bc93-acd569f3497d/d56d7f54-9992-491a-a50f-64ceee652f04">Streams-2
+                            Set #1</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://www.w3resource.com/java-exercises/stream/index.php">Streams-2 Set #2</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://github.com/deepcloudlabs/stream-api-exercises-part1">Streams-3 Part #1</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://github.com/deepcloudlabs/stream-api-exercises-part2">Streams-3 Part #2</a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://github.com/deepcloudlabs/stream-api-exercises-part3">Streams-3 Part #3</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+</body>
+</html>
