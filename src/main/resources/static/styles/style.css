@@ -24,7 +24,7 @@ html {
 
 .black-to-purple {
     background: rgb(18,18,18);
-    background: linear-gradient(0deg, rgba(49,8,31,1) 0%, rgba(18,18,18,1) 100%);
+    background: linear-gradient(0deg, rgba(49,8,31,1) 0%,  rgba(18,18,18,1) 85%, rgba(18,18,18,1) 100%);
 }
 
 .golden-border {
@@ -83,7 +83,7 @@ html {
 }
 
 .technology-select > div > div > label > select {
-    background-color: #31081F;
+    background-color: #121212;
     color: #F2F2F2;
     padding: 2px;
 }
@@ -126,7 +126,7 @@ html {
     }
 
     .technology-select > div > div > label > select {
-        background-color: #31081F;
+        background-color: #121212;
         color: #F2F2F2;
         padding: 2px;
     }
@@ -147,7 +147,7 @@ html {
 }
 
 .s1-about-name {
-    font-size: 54px;
+    font-size: 5rem;
     font-family: "Roboto Serif", serif;
 }
 
@@ -158,6 +158,7 @@ html {
 }
 
 .s1-about-description {
+    font-size: 1.5rem;
     text-indent: 30px;
 }
 
@@ -166,13 +167,12 @@ html {
 }
 
 .s1-my-picture {
-    border-radius: 10px;
-    max-height: 300px;
+    border-radius: 5px;
+    max-height: 400px;
 }
 
 .section-1-to-section-2 {
     min-height: 200px;
-    background-image: linear-gradient(#121212, #032C1C);
     display: flex;
 }
 
@@ -183,13 +183,13 @@ html {
 }
 
 .section-2 {
-    background-color: #032C1C;
+    background-color: #121212;
 }
 
 .s2-header {
     color: #F2F2F2;
     text-align: center;
-    font-size: 42px;
+    font-size: 3.5rem;
     font-family: "Times New Roman", serif;
     font-variant-caps: small-caps;
     letter-spacing: 10px;
@@ -204,6 +204,13 @@ html {
     align-content: center;
 }
 
+.s2-box:hover {
+    transition-duration: 0.5s;
+    background-color: #032C1C;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .s2-boxes > * {
     color: #F2F2F2;
 }
@@ -216,27 +223,42 @@ html {
     margin: 35px;
     min-height: 400px;=
     background: rgb(3,44,28);
-    background: linear-gradient(90deg, rgba(3,44,28,1) 0%, rgba(18,18,18,1) 2%, rgba(18,18,18,1) 98%, rgba(3,44,28,1) 100%);
 }
 
-.s2-boxes > div > .s2-box-header {
+.s2-box > .s2-box-header {
     text-align: center;
     margin-top: 20px;
-    font-size: 26px;
+    font-size: 2rem;
     font-family: "Times New Roman", serif;
+    font-variant-caps: small-caps;
     background: rgb(18,18,18);
-    background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(3,44,28,1) 30%, rgba(3,44,28,1) 70%, rgba(18,18,18,1) 100%);
+    background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(3,44,28,1) 10%, rgba(3,44,28,1) 90%, rgba(18,18,18,1) 100%);
+}
+.s2-box:hover > .s2-box-header {
+    background: rgb(18,18,18);
+    background: linear-gradient(90deg, rgba(3,44,28,1) 0%, rgba(18,18,18,1) 10%, rgba(18,18,18,1) 90%, rgba(3,44,28,1) 100%);
+    transition-duration: 0.5s;
 }
 
-.s2-box-header-underline {
-    border-width: 3px;
-    color: #B57F02;
+
+.s2-golder-line {
+    background-color: #B57F02;
+    height: 2px;
+    border-radius: 100%;
+    margin-bottom: 25px;
+}
+
+.s2-green-line {
+    background-color: #032C1C;
+    height: 2px;
+    border-radius: 100%;
+    width: 200px;
 }
 
 .lists > li {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-family: "Roboto Serif", serif;
-    list-style-type: "️☑️ ";
+    list-style-type: "♢ ";
     margin-bottom: 5px;
 }
 
@@ -247,18 +269,20 @@ html {
 
 .section-2-to-section-3 {
     min-height: 200px;
-    background-image: linear-gradient(#032C1C, #31081F);
     display: flex;
 }
 
-.section-3 {
+.s3-purple-line {
     background-color: #31081F;
+    height: 2px;
+    border-radius: 100%;
+    width: 200px;
 }
 
 .s3-header {
     color: #F2F2F2;
     text-align: center;
-    font-size: 42px;
+    font-size: 3.5rem;
     font-family: "Times New Roman", serif;
     font-variant-caps: small-caps;
     letter-spacing: 10px;
@@ -274,15 +298,22 @@ html {
     font-family: "Roboto Serif", serif;
 }
 
+.purple-line-s3-project {
+    background-color: #31081F;
+    height: 4px;
+    border-radius: 100%;
+    width: 70%;
+}
+
 .white-line-s3-project {
     background-color: #F2F2F2;
-    height: 2px;
+    height: 4px;
     border-radius: 100%;
     width: 70%;
 }
 
 .s3-project-title {
-    font-size: 36px;
+    font-size: 3rem;
     font-family: "Times New Roman", serif;
     font-variant: small-caps;
     letter-spacing: 5px;
@@ -304,7 +335,7 @@ html {
     }
 
     .technology-select > div > div > label > select {
-        background-color: #31081F;
+        background-color: #121212;
         color: #F2F2F2;
         padding: 2px;
     }
@@ -313,7 +344,11 @@ html {
 .s3-project-desc {
     font-family: "Roboto Serif", serif;
     padding: 30px;
-    font-size: 14px;
+    font-size: 1.2rem;
+}
+
+.s3-project-desc > h5 {
+    font-size: 1.5rem;
 }
 
 .s3-project-links {
@@ -349,15 +384,43 @@ html {
     font-size: 50px;
 }
 
+.project-title > a {
+    text-decoration: none;
+}
+
 .project-tech-desc {
     margin-top: 30px;
     padding: 25px;
     color: #F2F2F2;
     font-family: "Roboto Serif", serif;
+    font-size: 1.3rem;
 }
 
 .project-tech-desc > h3 {
     margin-bottom: 20px;
+}
+
+.project-tech-desc > ul > li > a {
+    color: #F2F2F2;
+}
+
+.project-credits {
+    margin-top: 30px;
+    color: #F2F2F2;
+    font-family: "Roboto Serif", serif;
+    font-size: 1.3rem;
+}
+
+.project-credits > div > p > a {
+    color: #F2F2F2;
+}
+
+.project-github {
+    height: 60px;
+}
+
+.project-streams-repos {
+    margin-top: 50px;
 }
 
 .auto-margin {

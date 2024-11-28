@@ -21,4 +21,9 @@ public class ProjectsController {
     public String krajeJavaFX() {
         return "kraje-javaFX";
     }
+
+    @GetMapping("/streams")
+    public String streams() {
+        return "streams";
+    }
 }
