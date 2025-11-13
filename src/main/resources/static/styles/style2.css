@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #1B1B1B;
+    color: #D9D9D9;
+    padding: 26px 42px 35px 50px;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+}
+
+.nav-right {
+    float: right;
+}
+
+.nav-right > * {
+    float: left;
+    margin-left: 10px;
+}
+
+.nav-left {
+    padding-top: 10px;
+}
+
+.git-logo {
+    display: block;
+    height: 36px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-light {
+    font-weight: 300;
+}
