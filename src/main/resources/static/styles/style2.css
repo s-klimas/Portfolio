@@ -1,43 +1,97 @@
+:root {
+    --Dark-Theme: #1B1B1B;
+    --Light-Text: #D9D9D9;
+    --Gold: #B57F02;
+    --Light-Dark-Text: #5D5D5D;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-.nav {
-    background-color: #1B1B1B;
-    color: #D9D9D9;
-    padding: 26px 42px 35px 50px;
-    font-family: "Inter", sans-serif;
-    font-size: 24px;
+.header {
+    flex-shrink: 0;
+    background: var(--Dark-Theme, #1B1B1B);
+    padding: 25px 50px 30px 50px;
 }
 
-.nav-right {
+.header-right {
     float: right;
 }
 
-.nav-right > * {
+.header-right > * {
     float: left;
 }
 
-.nav-left {
-    padding-top: 10px;
+.header-left-name {
+    color: var(--Light-Text, #D9D9D9);
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.header-left-position {
+    color: var(--Light-Text, #D9D9D9);
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
 
 .git-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
     display: block;
-    height: 36px;
     margin-left: 20px;
+    color: var(--Gold, #B57F02);
 }
 
 .linkedin-logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
     display: block;
-    height: 36px;
+    color: var(--Gold, #B57F02);
 }
 
-.text-bold {
-    font-weight: bold;
+.nav {
+    flex-shrink: 0;
+    background: var(--Dark-Theme, #1B1B1B);
+    padding: 25px 50px 30px 50px;
 }
 
-.text-light {
+.nav-items {
+    height: 1.8125rem;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.nav-item-selected {
+    color: var(--Gold, #B57F02);
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.nav-item {
+    color: var(--Light-Dark-Text, #5D5D5D);
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
     font-weight: 300;
+    line-height: normal;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
 }
