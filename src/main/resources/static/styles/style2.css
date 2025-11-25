@@ -3,6 +3,11 @@
     --Light-Text: #D9D9D9;
     --Gold: #B57F02;
     --Light-Dark-Text: #5D5D5D;
+    --Mustard: #D3CFBA;
+}
+
+html, body {
+    background-color: var(--Dark-Theme, #1B1B1B);
 }
 
 * {
@@ -32,6 +37,7 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 .header-left-position {
@@ -41,23 +47,26 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    cursor: pointer;
 }
 
 .git-logo {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     flex-shrink: 0;
     display: block;
     margin-left: 20px;
     color: var(--Gold, #B57F02);
+    cursor: pointer;
 }
 
 .linkedin-logo {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     flex-shrink: 0;
     display: block;
     color: var(--Gold, #B57F02);
+    cursor: pointer;
 }
 
 .nav {
@@ -70,6 +79,11 @@
     height: 1.8125rem;
     flex-shrink: 0;
     text-align: center;
+    cursor: pointer;
+}
+
+.nav-item > div {
+    display: inline-block;
 }
 
 .nav-item-selected {
@@ -82,6 +96,11 @@
     line-height: normal;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+    cursor: pointer;
+}
+
+.nav-item-selected > div {
+    display: inline-block;
 }
 
 .nav-item {
@@ -94,4 +113,90 @@
     line-height: normal;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+}
+
+.container {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.center-title {
+    flex-shrink: 0;
+    color: var(--Mustard, #D3CFBA);
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.grid {
+    width: 90%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 5rem 1fr;
+    grid-template-rows: 1fr 1rem 1fr;
+    row-gap: 4rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.label {
+    height: 3.65rem;
+    flex-shrink: 0;
+    color: var(--Mustard, #D3CFBA);
+    font-family: "Inter", sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.label:hover {
+    transform: scale(1.1);
+}
+
+.label:active {
+    transform: scale(1.3);
+}
+
+.circle {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--Mustard, #D3CFBA);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    transform: rotate(-0.001deg);
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.circle:active {
+    transform: scale(1.3);
 }
