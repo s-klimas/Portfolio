@@ -243,7 +243,7 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 40%;
-    padding-top: 3rem;
+    padding-top: 1.5rem;
 }
 
 .skill-line > ul > li {
@@ -268,7 +268,7 @@ html, body {
     font-weight: 700;
 }
 
-.skill-description {
+.skill-info {
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -286,15 +286,43 @@ html, body {
 }
 
 .skill-name {
-
+    color: var(--Dark-Text, #1F1F1F);
+    font-family: Inter, sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
 .skill-subnames {
+    color: var(--Light-Dark-Text, #5D5D5D);
+    font-family: Inter, sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
 
+.line-under-subnames {
+    width: 80%;
+    height: 0.1rem;
+    background: var(--Dark-Text, #1F1F1F);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .skill-description {
+    color: var(--Dark-Text, #1F1F1F);
+    font-family: Inter, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 70%;
+    text-align: justify;
+}
 
+.skill-info {
 }
 
 .line-under-skills {
@@ -319,7 +347,6 @@ html, body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    /*letter-spacing: 0.2rem;*/
     margin: 1rem 2rem;
 }
 
