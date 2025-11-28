@@ -182,3 +182,43 @@ function postman() {
     document.querySelector(`.skill-point-postman`).classList.add("skill-point-active");
     document.querySelector(`.skill-postman`).style.display = "flex";
 }
+
+function frontend() {
+    console.log("frontend");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-frontend`).classList.add("skill-point-active");
+    document.querySelector(`.skill-frontend`).style.display = "flex";
+}
+
+function figma() {
+    console.log("figma");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-figma`).classList.add("skill-point-active");
+    document.querySelector(`.skill-figma`).style.display = "flex";
+}
+
+function php() {
+    console.log("php");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-php`).classList.add("skill-point-active");
+    document.querySelector(`.skill-php`).style.display = "flex";
+}
+
+function python() {
+    console.log("python");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-python`).classList.add("skill-point-active");
+    document.querySelector(`.skill-python`).style.display = "flex";
+}
