@@ -7,6 +7,7 @@
     --Mustard: #D3CFBA;
     --Dark-Green: #032C1C;
     --Dark-Purple: #31081F;
+    --Middle-Dark-Theme: #262626;
 }
 
 html, body {
@@ -264,8 +265,8 @@ html, body {
     padding-top: 3rem;
 }
 
-.full-box {
-    margin: 0 auto;
+.skills-full-box {
+    margin: 0 auto 5rem;
     width: 80vw;
     min-height: 40rem;
     background-color: var(--Mustard, #D3CFBA);
@@ -443,5 +444,151 @@ html, body {
 
 .skill-others-name > a {
     color: var(--Dark-Text, #1F1F1F);
+    text-decoration: none;
+}
+
+.about-me-full-box {
+    background: var(--Middle-Dark-Theme, #262626);
+    margin: 0 auto 5rem;
+    width: 80vw;
+    min-height: 40rem;
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.about-me-left {
+    grid-area: 1 / 1 / 6 / 4;
+    padding-top: 2.5rem;
+    padding-left: 5rem;
+}
+
+.about-me-name {
+    color: var(--Light-Text, #D9D9D9);
+    font-family: Inter, sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.about-me-title {
+    color: var(--Gold, #B57F02);
+    font-family: Inter, sans-serif;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.about-me-description {
+    color: var(--Light-Text, #D9D9D9);
+    text-align: justify;
+    font-family: Inter, sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.about-me-description > div > b {
+    font-weight: 900;
+    color: var(--Gold, #B57F02); /* TODO jeszcze nie wiem jaki kolor */
+}
+
+.about-me-description > * {
+    margin-top: 0.8rem;
+}
+
+.about-me-right {
+    grid-area: 1 / 4 / 6 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-photo-box {
+
+}
+
+.about-me-photo {
+    width: 15rem;
+    height: 15.4375rem;
+    aspect-ratio: 240/247;
+    border-radius: 2.5rem;
+}
+
+.about-me-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-links > * {
+    margin-top: 0.5rem;
+}
+
+.about-me-links-github {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: .25rem;
+}
+
+.about-me-links-github > a >  svg {
+    width: 1.5rem;
+}
+
+.about-me-links-github > * {
+    color: var(--Light-Text, #D9D9D9);
+    text-align: justify;
+    font-family: Inter, sans-serif;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.about-me-links-linkedin {
+    display: flex;
+    align-items: baseline;
+    flex-shrink: 0;
+}
+
+.about-me-links-linkedin > a > svg {
+    width: 1.5rem;
+}
+
+.about-me-links-linkedin > * {
+    color: var(--Light-Text, #D9D9D9);
+    text-align: justify;
+    font-family: Inter, sans-serif;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.about-me-links-linkedin-small {
+    font-size: 0.6rem;
+    text-decoration: none;
+}
+
+.about-me-links-cv > a {
+    color: var(--Light-Text, #D9D9D9);
+    text-align: justify;
+    font-family: Inter, sans-serif;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
     text-decoration: none;
 }
