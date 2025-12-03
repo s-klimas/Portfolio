@@ -65,14 +65,17 @@ html, body {
 
 .git-logo > a {
     color: var(--Gold, #B57F02);
+    transition: 0.2s ease-in-out;
 }
 
 .git-logo > a:hover {
     color: var(--Light-Text, #D9D9D9);
+    transition: 0.2s ease-in-out;
 }
 
 .git-logo > a:active {
     color: var(--Dark-Purple, #032C1C);
+    transition: 0.2s ease-in-out;
 }
 
 .linkedin-logo {
@@ -82,18 +85,22 @@ html, body {
     display: block;
     color: var(--Gold, #B57F02);
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 .linkedin-logo > a {
     color: var(--Gold, #B57F02);
+    transition: 0.2s ease-in-out;
 }
 
 .linkedin-logo > a:hover {
     color: var(--Light-Text, #D9D9D9);
+    transition: 0.2s ease-in-out;
 }
 
 .linkedin-logo > a:active {
     color: var(--Dark-Purple, #032C1C);
+    transition: 0.2s ease-in-out;
 }
 
 .nav {
@@ -541,7 +548,7 @@ html, body {
     gap: .25rem;
 }
 
-.about-me-links-github > a >  svg {
+.about-me-links-github > a > svg {
     width: 1.5rem;
 }
 
@@ -591,4 +598,293 @@ html, body {
     font-weight: 600;
     line-height: normal;
     text-decoration: none;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.project {
+    min-width: 500px;
+    max-width: 600px;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 22rem;
+    border-radius: 1rem;
+    background: var(--Middle-Dark-Theme, #262626);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.project:hover {
+    color: var(--Dark-Text, #1F1F1F);
+    background: var(--Light-Text, #D9D9D9);
+    /*transition: 0.5s;*/
+    transition: 0.5s ease-in-out;
+}
+
+.project:hover * {
+    color: var(--Dark-Text, #1F1F1F);
+    transition: 0.5s;
+}
+
+.project:hover .gold-color {
+    color: var(--Dark-Purple, #31081F);
+    transition: 0.5s;
+}
+
+.project:hover .gold-color * {
+    color: var(--Dark-Purple, #31081F);
+    transition: 0.5s;
+}
+
+@media (min-width: 1980px) {
+    .project {
+        height: 25rem;
+    }
+}
+
+.project-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: end;
+}
+
+.project-2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.project-3 {
+    grid-area: 2 / 1 / 3 / 2;
+    justify-self: end;
+}
+
+.project-4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.project-header {
+    padding-top: 2rem;
+    margin-left: -5%;
+}
+
+.project-title {
+    color: var(--Light-Text, #D9D9D9);
+    font-family: Inter, sans-serif;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: inline;
+}
+
+.project-github {
+    display: inline;
+    flex-shrink: 0;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.project-github > a > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.gold-color {
+    color: var(--Gold, #B57F02);
+}
+
+.project-github > a:hover {
+    color: var(--Light-Text, #D9D9D9);
+}
+
+.project-github > a:active {
+    color: var(--Dark-Purple, #032C1C);
+}
+
+.project-text {
+    margin-top: 1.75rem;
+    height: 7rem;
+}
+
+.project-description {
+    width: 100%;
+    color: var(--Light-Text, #D9D9D9);
+    text-align: justify;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.project-show-more {
+    font-family: Inter, sans-serif;
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    float: right;
+}
+
+.project-technologies {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: var(--Light-Text, #D9D9D9);
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.project-technologies-1 > * {
+    margin: 10px;
+}
+
+.project-technologies-2 > * {
+    margin: 10px;
+}
+
+.projects-full {
+    display: grid;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-self: center;
+}
+
+.project-full {
+    width: 100%;
+    min-height: 724px;
+    background: var(--Light-Text, #D9D9D9);
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.project-full-header {
+    padding-top: 2rem;
+    margin-left: 5%;
+}
+
+.project-full-title {
+    color: var(--Dark-Text, #1F1F1F);
+    font-family: Inter, sans-serif;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: inline;
+}
+
+.project-full-github {
+    display: inline;
+    flex-shrink: 0;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.project-full-github > a > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.project-full-github > a:hover {
+    color: var(--Dark-Text, #1F1F1F);
+    transition: 0.3s ease-in-out;
+}
+
+.project-full-github > a:active {
+    color: var(--Dark-Purple, #032C1C);
+    transition: 0.3s ease-in-out;
+}
+
+.project-full-texts {
+    margin: 1rem 4%;
+}
+
+.project-full-description-header {
+    margin-top: 2rem;
+}
+
+.project-full-description-header > * {
+    display: inline;
+}
+
+.project-full-description-header > .project-full-description-question {
+    color: var(--Dark-Text, #1F1F1F);
+    font-family: Inter, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.project-full-description-header > .project-full-description-answer {
+    color: var(--Dark-Text, #1F1F1F);
+    font-family: Inter, sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.project-full-text {
+    color: var(--Dark-Text, #1F1F1F);
+    font-family: Inter, sans-serif;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 2%;
+}
+
+.project-full-smaller-tittle {
+    color: var(--Dark-Text, #1F1F1F);
+    font-family: Inter, sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 2rem;
+}
+
+.project-full-line {
+    height: 0.2rem;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: var(--Dark-Theme, #1B1B1B);
+    width: 80%;
+}
+
+.project-full-technologies-box {
+    padding-left: 4%;
+}
+
+.project-full-technologies {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.project-full-technologies > a {
+    color: var(--Light-Dark-Text, #5D5D5D);
+    font-family: Inter, sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-right: 1.4rem;
 }
