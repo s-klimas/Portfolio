@@ -845,6 +845,7 @@ html, body {
     font-weight: 400;
     line-height: normal;
     margin-left: 2%;
+    margin-top: 0.5rem;
 }
 
 .project-full-smaller-tittle {
@@ -866,11 +867,10 @@ html, body {
 }
 
 .project-full-technologies-box {
-    padding-left: 4%;
+    padding-left: 2%;
 }
 
 .project-full-technologies {
-    width: 100%;
     display: flex;
     flex-direction: row;
     margin-left: 2rem;
@@ -882,9 +882,9 @@ html, body {
 .project-full-technologies > a {
     color: var(--Light-Dark-Text, #5D5D5D);
     font-family: Inter, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    margin-right: 1.4rem;
+    margin-right: 0.7rem;
 }
