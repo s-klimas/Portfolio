@@ -222,3 +222,15 @@ function python() {
     document.querySelector(`.skill-point-python`).classList.add("skill-point-active");
     document.querySelector(`.skill-python`).style.display = "flex";
 }
+
+document.querySelectorAll('.project').forEach(project => {
+    project.addEventListener('click', () => {
+        location.href = project.dataset.link;
+    });
+});
+
+document.querySelectorAll('.project-full').forEach(project => {
+    project.addEventListener('click', () => {
+        location.href = project.dataset.link;
+    });
+});
