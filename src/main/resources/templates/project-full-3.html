@@ -53,7 +53,7 @@
     <div class="projects-full">
         <div class="project-full">
             <div class="project-full-header">
-                <div class="project-full-title">COUPON CALCULATOR</div>
+                <div class="project-full-title">AI GUESSER</div>
                 <div class="project-full-github">
                     <a href="#" class="gold-color">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -68,50 +68,48 @@
             <div class="project-full-texts">
                 <div class="project-full-description-header">
                     <div class="project-full-description-question">What motivated me?</div>
-                    <div class="project-full-description-answer">The desire to save some money.</div>
-                </div>
-                <div class="project-full-text">The idea for Coupon Calculator came about in a completely everyday
-                    situation – while shopping online. I noticed that shopping apps, in my case SHEIN, automatically
-                    suggest the most cost-effective coupon for the entire basket, but do not fully utilise the potential
-                    of available discounts. It is often more advantageous to split the list of products into several
-                    smaller orders and use more coupons. This idea became the starting point for creating an application
-                    that automatically calculates the best combinations of products and coupons, allowing you to save
-                    even more. The first version was created out of curiosity and a desire to see if it could be done
-                    purely algorithmically. Initially, everything worked flawlessly – until we had to deal with a larger
-                    data set, which revealed that the seemingly simple calculator turned out to be a <b>small
-                        computational monster</b> in practice.
-                </div>
-                <div class="project-full-description-header">
-                    <div class="project-full-description-question">What is crucial in this project?</div>
-                    <div class="project-full-description-answer">A solution to an unsolvable problem.</div>
-                </div>
-                <div class="project-full-text">Every possible combination of products and coupons meant that a huge
-                    number of combinations had to be generated – exactly <b>2^n subsets of products</b>, each of which
-                    had to be multiplied by the number of available coupons. This meant that with a list of 16 products
-                    sent by my girlfriend, the number of combinations exceeded the capabilities of modern computers. It
-                    was then that I realised that the problem was not in my code (at least not only), but in the very
-                    nature of the task. And so began the second iteration of the project, whose main goal was to <b>optimise
-                        performance</b>. The solution turned out to be the use of <b>heuristic algorithms</b>, which,
-                    instead of searching for the absolute best solution, allow you to find a solution that is ‘good
-                    enough’ but achievable in a reasonable amount of time. In short - large data sets are divided into
-                    smaller batches, the size of which is controlled by configuration variables, making it possible to
-                    maintain a balance between accuracy and performance.
-                </div>
-                <div class="project-full-description-header">
-                    <div class="project-full-description-question">What did I learn from this project?</div>
-                    <div class="project-full-description-answer">Your daily task could be a project that teaches you
-                        something new.
+                    <div class="project-full-description-answer">Curiosity about AI and new opportunities it creates.
                     </div>
                 </div>
-                <div class="project-full-text">Today, Coupon Calculator is not only an example of <b>successful
-                    optimisation</b>, but also proof of how a practical problem can become the starting point for an<b>ambitious
-                    engineering project</b>. The application shows how the art of compromise between precision and
-                    performance can translate into practical benefits — in this case, saving the user money and time. It
-                    is also a story about how <b>curiosity</b>, <b>observation</b> and the desire to solve an everyday
-                    problem can turn into a project with a solid engineering background and potential for further
-                    development. Coupon Calculator has thus become not only a <b>technical exercise</b>, but also a <b>story</b>
-                    about the pursuit of efficiency, learning through experimentation, and combining theoretical
-                    knowledge with practical application in the everyday world.
+                <div class="project-full-text">The idea to create the AI Guesser project was born out of pure curiosity
+                    and fascination with the new era of <b>artificial intelligence</b> that began with the launch of
+                    ChatGPT. When the world was just beginning to discover the possibilities of large language models, I
+                    was experimenting with them myself, testing their limits and looking for ways to apply this
+                    technology in practice. At some point, I felt the need to create <b>something of my own</b>. This is
+                    how the first version of the game "20 Questions with ChatGPT" was created, which I called <b>ChatGPTGuesser</b>.
+                    Initially, it was a fairly simple implementation based on raw HTTP queries, in which I had to take
+                    care of the conversation memory and user context myself. Each message was an object storing the
+                    author and content, and the entire conversation history was attached to subsequent queries – a
+                    simple solution, but it had to suffice at the time.
+                </div>
+                <div class="project-full-description-header">
+                    <div class="project-full-description-question">What have changed?</div>
+                    <div class="project-full-description-answer">New technology opens up new possibilities.</div>
+                </div>
+                <div class="project-full-text">Over time, when the <b>Spring AI</b> library appeared, I felt that the
+                    moment had come to refresh this idea and use new tools that revolutionised the way AI models are
+                    integrated with Java applications. This is how the AI Guesser project was born – a <b>modern
+                        version</b> of my earlier idea. Thanks to this combination, I was able to create an API that
+                    allows you to play ‘20 questions’ with different language models. That is why I created a new
+                    project with a different name that fits better, because using <b>Spring AI</b> does not limit me to
+                    just one model. The new solution allows for a <b>smooth change of AI models</b> through a simple
+                    configuration modification, which greatly facilitates experimentation and system development.
+                </div>
+                <div class="project-full-description-header">
+                    <div class="project-full-description-question">What does this project represent?</div>
+                    <div class="project-full-description-answer">That I am not lagging behind, but learning the latest
+                        technologies.
+                    </div>
+                </div>
+                <div class="project-full-text">For me, AI Guesser is <b>more than</b> just playing around with a
+                    language model – it's the story of my development in the world of AI and programming. Both projects
+                    show how I've evolved from simple experiments with ChatGPT to creating professional solutions that
+                    integrate artificial intelligence with modern application architecture. Although the game of "20
+                    Questions" may seem like a trivial idea, it is actually a <b>testing ground</b> where I learn how to
+                    effectively build and develop LLM-based systems. Thanks to this project, I was able to combine my
+                    passion for technology with engineering practice, creating an application that not only entertains
+                    but also inspires – both me and anyone who wants to see how artificial intelligence can become an
+                    integral part of modern software.
                 </div>
                 <div class="project-full-smaller-tittle">You can find the technical description on GitHub.</div>
             </div>
@@ -121,22 +119,18 @@
                 <div class="project-full-technologies project-full-technologies-1">
                     <a>Java</a>
                     <a>•</a>
-                    <a>Spring Web</a>
+                    <a>Spring (AI, Web)</a>
                     <a>•</a>
-                    <a>Heuristic algorithms</a>
-                    <a>•</a>
-                    <a>Streams (sequential, parallel)</a>
+                    <a>Swagger</a>
                 </div>
                 <div class="project-full-technologies project-full-technologies-2">
                     <a>Lombok</a>
                     <a>•</a>
-                    <a>Swagger</a>
-                    <a>•</a>
                     <a>JUnit5</a>
                     <a>•</a>
-                    <a>AssertJ</a>
-                    <a>•</a>
                     <a>Mockito</a>
+                    <a>•</a>
+                    <a>AssertJ</a>
                 </div>
             </div>
         </div>
