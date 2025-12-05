@@ -234,3 +234,9 @@ document.querySelectorAll('.project-full').forEach(project => {
         location.href = project.dataset.link;
     });
 });
+
+document.querySelectorAll('.project-full a').forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});

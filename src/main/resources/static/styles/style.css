@@ -117,7 +117,6 @@ html, body {
     min-height: 1.8125rem;
     flex-shrink: 0;
     text-align: center;
-    cursor: pointer;
 }
 
 .nav-item > div {
@@ -461,7 +460,7 @@ html, body {
 .about-me-full-box {
     background: var(--Middle-Dark-Theme, #262626);
     margin: 0 auto 5rem;
-    width: 80vw;
+    width: 1400px;
     min-height: 40rem;
     border-radius: 10px;
     flex-shrink: 0;
@@ -475,7 +474,7 @@ html, body {
 .about-me-left {
     grid-area: 1 / 1 / 6 / 4;
     padding-top: 2.5rem;
-    padding-left: 5rem;
+    padding-left: 6rem;
 }
 
 .about-me-name {
@@ -857,6 +856,20 @@ html, body {
     font-weight: 700;
     line-height: normal;
     margin-top: 2rem;
+}
+
+.project-full-smaller-tittle-github {
+    color: var(--Dark-Text, #1F1F1F);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.project-full-smaller-tittle-github:hover {
+    color: var(--Light-Dark-Text, #5D5D5D);
+}
+
+.project-full-smaller-tittle-github:active {
+    color: var(--Gold, #B57F02);
 }
 
 .project-full-line {
