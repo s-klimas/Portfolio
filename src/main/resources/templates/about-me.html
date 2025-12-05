@@ -18,7 +18,7 @@
 <div class="header">
     <div class="header-right">
         <div class="linkedin-logo">
-            <a href="#">
+            <a href="https://www.linkedin.com/in/sebastian-klimas-433354210/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      class="lucide lucide-linkedin-icon lucide-linkedin">
@@ -29,7 +29,7 @@
             </a>
         </div>
         <div class="git-logo">
-            <a href="#">
+            <a href="https://github.com/s-klimas" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      class="lucide lucide-github-icon lucide-github">
@@ -40,19 +40,19 @@
         </div>
     </div>
     <div class="header-left">
-        <p><a href="#"><a class="header-left-name">SEBASTIAN KLIMAS</a> <a class="header-left-position">&lt;BACKEND
-            DEVELOPER&gt;</a></a></p>
+        <p><a th:href="@{/}" class="header-left-name">SEBASTIAN KLIMAS</a> <a th:href="@{/}" class="header-left-position">&lt;BACKEND
+            DEVELOPER&gt;</a></p>
     </div>
 </div>
 <div class="nav">
     <div class="nav-items">
-        <a class="nav-item" href="#">
+        <a class="nav-item" href="#" th:href="@{/skills}">
             <div>SKILLS</div>
         </a>
-        <a class="nav-item" href="#">
+        <a class="nav-item" href="#" th:href="@{/}">
             <div>PROJECTS</div>
         </a>
-        <a class="nav-item-selected" href="#">
+        <a class="nav-item-selected" href="#" th:href="@{/about-me}">
             <div>ABOUT ME</div>
         </a>
     </div>
@@ -90,7 +90,7 @@
             </div>
             <div class="about-me-links">
                 <div class="about-me-links-github">
-                    <a href="#">
+                    <a href="https://github.com/s-klimas" target="_blank">
                         https://
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -102,7 +102,7 @@
                     </a>
                 </div>
                 <div class="about-me-links-linkedin">
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/sebastian-klimas-433354210/" target="_blank">
                         https://
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -113,10 +113,10 @@
                         </svg>
                         /sebastian-klimas
                     </a>
-                    <a href="#" class="about-me-links-linkedin-small">-433354210</a>
+                    <a href="#" th:href="@{/skills}" class="about-me-links-linkedin-small">-433354210</a>
                 </div>
                 <div class="about-me-links-cv">
-                    <a href="#">Download my CV!</a>
+                    <a href="#" th:href="@{/cv}">Download my CV!</a>
                 </div>
             </div>
         </div>
