@@ -246,3 +246,9 @@ document.querySelectorAll('.project-full a').forEach(a => {
         e.stopPropagation();
     });
 });
+
+document.querySelectorAll('.circle').forEach(project => {
+    project.addEventListener('click', () => {
+        location.href = project.dataset.link;
+    });
+});

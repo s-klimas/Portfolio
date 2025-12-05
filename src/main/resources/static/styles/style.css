@@ -230,7 +230,6 @@ html, body {
 .label {
     height: 3.65rem;
     flex-shrink: 0;
-    color: var(--Mustard, #D3CFBA);
     font-family: "Inter", sans-serif;
     font-size: 2.5rem;
     font-style: normal;
@@ -248,6 +247,11 @@ html, body {
     transform: scale(1.3);
 }
 
+.label > a {
+    color: var(--Mustard, #D3CFBA);
+    text-decoration: none;
+}
+
 .circle {
     width: 5rem;
     height: 5rem;
@@ -258,17 +262,17 @@ html, body {
     align-items: center;
     font-size: 1.4rem;
     cursor: pointer;
-    transition: all 1s ease;
+    transition: transform 0.2s ease;
     flex-shrink: 0;
     transform: rotate(-0.001deg);
 }
 
 .circle:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .circle:active {
-    transform: scale(1.3);
+    transform: scale(1.4);
 }
 
 .body {
