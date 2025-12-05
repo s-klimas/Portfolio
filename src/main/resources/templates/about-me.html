@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>👨‍💻S-Klimas | Portfolio🚀</title>
-    <link rel="stylesheet" href="/static/styles/style2.css">
-    <script defer src="../static/scripts/common.js"></script>
+    <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
+
+    <meta name="description" content="Portfolio Sebastian Klimas">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon/favicon.ico" th:href="@{/favicon/favicon.ico}"/>
+    <link rel="icon" href="/static/favicon/favicon_32.ico" th:href="@{/favicon/favicon_32.ico}" sizes="32x32"/>
+    <link rel="icon" href="/static/favicon/favicon_48.ico" th:href="@{/favicon/favicon_48.ico}" sizes="48x48"/>
+    <link rel="icon" href="/static/favicon/favicon_96.ico" th:href="@{/favicon/favicon_96.ico}" sizes="96x96"/>
+    <link rel="icon" href="/static/favicon/favicon_144.ico" th:href="@{/favicon/favicon_144.ico}" sizes="144x144"/>
+
 </head>
 <body>
 <div class="header">
@@ -78,7 +86,7 @@
         </div>
         <div class="about-me-right">
             <div class="about-me-photo-box">
-                <img class="about-me-photo" src="/static/img/sebastian.jpg" alt="me">
+                <img class="about-me-photo" src="/static/img/sebastian.jpg" th:src="@{/img/sebastian.jpg}" alt="me">
             </div>
             <div class="about-me-links">
                 <div class="about-me-links-github">

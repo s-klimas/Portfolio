@@ -7,23 +7,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/projects")
 public class ProjectsController {
-    @GetMapping("/recipe-manager")
-    public String recipeManager() {
-        return "recipe-manager";
+
+    @GetMapping
+    public String projects() {
+        return "projects";
     }
 
-    @GetMapping("/java-spring-course-project")
-    public String jscp() {
-        return "java-spring-course-project";
+    @GetMapping("/recipes-manager")
+    public String recipesManager() {
+        return "project-full-1";
     }
 
-    @GetMapping("/kraje-javaFX")
-    public String krajeJavaFX() {
-        return "kraje-javaFX";
+    @GetMapping("/coupon-calculator")
+    public String couponCalculator() {
+        return "project-full-2";
     }
 
-    @GetMapping("/streams")
-    public String streams() {
-        return "streams";
+    @GetMapping("/ai-guesser")
+    public String aiGuesser() {
+        return "project-full-3";
+    }
+
+    @GetMapping("/portfolio")
+    public String portfolio() {
+        return "project-full-4";
     }
 }
