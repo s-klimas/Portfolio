@@ -229,6 +229,12 @@ document.querySelectorAll('.project').forEach(project => {
     });
 });
 
+document.querySelectorAll('.project a').forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
 document.querySelectorAll('.project-full').forEach(project => {
     project.addEventListener('click', () => {
         location.href = project.dataset.link;
