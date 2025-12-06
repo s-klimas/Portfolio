@@ -906,3 +906,30 @@ html, body {
     line-height: normal;
     margin-right: 0.7rem;
 }
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.not-found > h1 {
+    color: var(--Light-Text, #D9D9D9);
+    font-family: Inter, sans-serif;
+    font-size: 10rem;
+}
+
+.not-found > h4 {
+    margin-bottom: 1rem;
+    color: var(--Light-Text, #D9D9D9);
+    font-family: Inter, sans-serif;
+    font-size: 3rem;
+}
+
+.not-found > p > a {
+    color: var(--Light-Text, #D9D9D9);
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+}
