@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>👨‍💻S-Klimas | Portfolio🚀</title>
+    <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
+
+    <meta name="description" content="Portfolio Sebastian Klimas">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon/favicon.ico" th:href="@{/favicon/favicon.ico}"/>
+    <link rel="icon" href="/static/favicon/favicon_32.ico" th:href="@{/favicon/favicon_32.ico}" sizes="32x32"/>
+    <link rel="icon" href="/static/favicon/favicon_48.ico" th:href="@{/favicon/favicon_48.ico}" sizes="48x48"/>
+    <link rel="icon" href="/static/favicon/favicon_96.ico" th:href="@{/favicon/favicon_96.ico}" sizes="96x96"/>
+    <link rel="icon" href="/static/favicon/favicon_144.ico" th:href="@{/favicon/favicon_144.ico}" sizes="144x144"/>
+
+</head>
+<body>
+<div class="header">
+    <div class="header-right">
+        <div class="linkedin-logo">
+            <a href="https://www.linkedin.com/in/sebastian-klimas-433354210/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-linkedin-icon lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect width="4" height="12" x="2" y="9"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+        </div>
+        <div class="git-logo">
+            <a href="https://github.com/s-klimas" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-github-icon lucide-github">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                    <path d="M9 18c-4.51 2-5-2-7-2"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="header-left">
+        <p><a th:href="@{/}" class="header-left-name">SEBASTIAN KLIMAS</a> <a th:href="@{/}" class="header-left-position">&lt;BACKEND
+            DEVELOPER&gt;</a></p>
+    </div>
+</div>
+<div class="nav">
+    <div class="nav-items">
+        <a class="nav-item" href="#" th:href="@{/skills}">
+            <div>SKILLS</div>
+        </a>
+        <a class="nav-item-selected" href="#" th:href="@{/}">
+            <div>PROJECTS</div>
+        </a>
+        <a class="nav-item" href="#" th:href="@{/about-me}">
+            <div>ABOUT ME</div>
+        </a>
+    </div>
+</div>
+<div class="body">
+    <div class="projects">
+        <div class="project project-1" data-link="/projects/recipes-manager">
+            <div class="project-header">
+                <div class="project-title">RECIPES MANAGER</div>
+                <div class="project-github">
+                    <a href="https://github.com/s-klimas/recipes-manager" class="gold-color" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-github-icon lucide-github">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                            <path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-text">
+                <div class="project-description">The idea to create ‘Recipes Manager’ came to me while searching
+                    through
+                    a notebook with recipes. I wanted to build something that would allow me to organise this
+                    culinary
+                    knowledge, and later, in the era of artificial intelligence, I expanded it with AI. This is how
+                    the
+                    project came about, designed to showcase both my skills in creating and securing REST API
+                    applications and my ability to integrate AI solutions with classic backend architecture…
+                </div>
+                <div class="project-show-more gold-color">
+                    SHOW ME MORE
+                </div>
+            </div>
+            <div class="project-technologies project-technologies-1">
+                <a>Spring (AI, Web, Security)</a>
+                <a>Lombok</a>
+                <a>Mapstruct</a>
+            </div>
+            <div class="project-technologies project-technologies-2">
+                <a>Hibernate</a>
+                <a>Liquibase</a>
+                <a>Swagger</a>
+                <a>JUnit5</a>
+                <a>AssertJ</a>
+            </div>
+        </div>
+        <div class="project project-2" data-link="/projects/coupon-calculator">
+            <div class="project-header">
+                <div class="project-title">COUPON CALCULATOR</div>
+                <div class="project-github">
+                    <a href="https://github.com/s-klimas/coupon-calculator" class="gold-color" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-github-icon lucide-github">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                            <path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-text">
+                <div class="project-description">The idea for Coupon Calculator came about in a completely mundane
+                    situation - while shopping online. I noticed that shopping apps, in my case SHEIN, automatically
+                    suggest the most cost-effective coupon for the entire basket, but do not fully utilise the potential
+                    of available discounts. It is often more advantageous to split the list of products into several
+                    smaller orders and use more coupons…
+                </div>
+                <div class="project-show-more gold-color">
+                    SHOW ME MORE
+                </div>
+            </div>
+            <div class="project-technologies project-technologies-1">
+                <a>Java</a>
+                <a>Spring Web</a>
+                <a>Heuristic algorithms</a>
+            </div>
+            <div class="project-technologies project-technologies-2">
+                <a>Streams (sequential, parallel)</a>
+            </div>
+        </div>
+        <div class="project project-3" data-link="/projects/ai-guesser">
+            <div class="project-header">
+                <div class="project-title">AI GUESSER</div>
+                <div class="project-github">
+                    <a href="https://github.com/s-klimas/ai-guesser" class="gold-color" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-github-icon lucide-github">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                            <path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-text">
+                <div class="project-description">The idea to create the AI Guesser project was born out of pure
+                    curiosity and fascination with the new era of artificial intelligence that began with the launch of
+                    ChatGPT. When the world was just beginning to discover the possibilities of large language models, I
+                    was experimenting with them myself, testing their limits and looking for ways to apply this
+                    technology in practice…
+                </div>
+                <div class="project-show-more gold-color">
+                    SHOW ME MORE
+                </div>
+            </div>
+            <div class="project-technologies project-technologies-1">
+                <a>Java</a>
+                <a>Spring (AI, Web)</a>
+            </div>
+            <div class="project-technologies project-technologies-2">
+                <a>Lombok</a>
+                <a>JUnit5</a>
+                <a>Mockito</a>
+                <a>AssertJ</a>
+            </div>
+        </div>
+        <div class="project project-4" data-link="/projects/portfolio">
+            <div class="project-header">
+                <div class="project-title">PORTFOLIO</div>
+                <div class="project-github">
+                    <a href="https://github.com/s-klimas/Portfolio" class="gold-color" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-github-icon lucide-github">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                            <path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="project-text">
+                <div class="project-description">The origin of this project stemmed from a very practical need - I
+                    wanted to find an effective way to present myself as a programmer. While browsing job offers, I
+                    noticed that a GitHub portfolio alone is often not enough to stand out from other candidates. So I
+                    wanted to create a space where I could not only show my code, but also talk about my career path,
+                    projects and motivations…
+                </div>
+                <div class="project-show-more gold-color">
+                    SHOW ME MORE
+                </div>
+            </div>
+            <div class="project-technologies project-technologies-1">
+                <a>Java</a>
+                <a>Spring (Web, MVC)</a>
+                <a>Thymeleaf</a>
+            </div>
+            <div class="project-technologies project-technologies-2">
+                <a>Figma</a>
+                <a>Docker</a>
+                <a>HTML</a>
+                <a>CSS</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

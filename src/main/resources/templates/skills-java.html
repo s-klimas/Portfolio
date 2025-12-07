@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>👨‍💻S-Klimas | Portfolio🚀</title>
+    <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
+    <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
+
+    <meta name="description" content="Portfolio Sebastian Klimas">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon/favicon.ico" th:href="@{/favicon/favicon.ico}"/>
+    <link rel="icon" href="/static/favicon/favicon_32.ico" th:href="@{/favicon/favicon_32.ico}" sizes="32x32"/>
+    <link rel="icon" href="/static/favicon/favicon_48.ico" th:href="@{/favicon/favicon_48.ico}" sizes="48x48"/>
+    <link rel="icon" href="/static/favicon/favicon_96.ico" th:href="@{/favicon/favicon_96.ico}" sizes="96x96"/>
+    <link rel="icon" href="/static/favicon/favicon_144.ico" th:href="@{/favicon/favicon_144.ico}" sizes="144x144"/>
+
+</head>
+<body>
+<div class="header">
+    <div class="header-right">
+        <div class="linkedin-logo">
+            <a href="https://www.linkedin.com/in/sebastian-klimas-433354210/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-linkedin-icon lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect width="4" height="12" x="2" y="9"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+        </div>
+        <div class="git-logo">
+            <a href="https://github.com/s-klimas" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-github-icon lucide-github">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                    <path d="M9 18c-4.51 2-5-2-7-2"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="header-left">
+        <p><a th:href="@{/}" class="header-left-name">SEBASTIAN KLIMAS</a> <a th:href="@{/}" class="header-left-position">&lt;BACKEND
+            DEVELOPER&gt;</a></p>
+    </div>
+</div>
+<div class="nav">
+    <div class="nav-items">
+        <a class="nav-item-selected" th:href="@{/skills}">
+            <div>SKILLS</div>
+        </a>
+        <a class="nav-item" th:href="@{/}">
+            <div>PROJECTS</div>
+        </a>
+        <a class="nav-item" th:href="@{/about-me}">
+            <div>ABOUT ME</div>
+        </a>
+    </div>
+</div>
+<div class="body">
+    <div class="skills-full-box">
+        <div class="skills-title">JAVA AND FRAMEWORKS</div>
+        <div class="line-under-title"></div>
+        <div class="skill-line">
+            <ul>
+                <li class="skill-point skill-point-java" onclick="java()"><a>Java</a><img src="/static/img/svg/java.svg"
+                                                                                          th:src="@{/img/svg/java.svg}"
+                                                                                          alt="java"></li>
+                <li class="skill-point skill-point-spring" onclick="spring()"><a>Spring</a><img
+                        src="/static/img/svg/spring.svg" th:src="@{/img/svg/spring.svg}" alt="spring"></li>
+                <li class="skill-point skill-point-orm" onclick="orm()"><a>ORM</a></li>
+                <li class="skill-point skill-point-testing" onclick="testing()"><a>Testing</a></li>
+                <li class="skill-point skill-point-java-tooling" onclick="javaTooling()"><a>Java Tooling</a></li>
+                <li class="skill-point skill-point-mvc" onclick="mvc()"><a>MVC</a></li>
+                <li class="skill-point skill-point-desktop" onclick="desktop()"><a>Desktop Apps</a></li>
+            </ul>
+        </div>
+        <div class="skill-info">
+            <div class="skill-select-info">Choose the skill that interests you</div>
+            <div class="skill skill-java">
+                <div class="skill-name"><a>Java</a><img src="/static/img/svg/java.svg" height="48"
+                                                        th:src="@{/img/svg/java.svg}" alt="java"></div>
+                <div class="skill-subnames"></div>
+                <div class="line-under-subnames"></div>
+                <div class="skill-description">My main programming language is Java.</div>
+            </div>
+            <div class="skill skill-spring">
+                <div class="skill-name"><a>Spring</a><img src="/static/img/svg/spring.svg" height="48"
+                                                          th:src="@{/img/svg/spring.svg}" alt="spring">
+                </div>
+                <div class="skill-subnames">AI, Boot, Data, MVC, Security</div>
+                <div class="line-under-subnames"></div>
+                <div class="skill-description">I specialize in the <b>Spring</b> ecosystem. With <b>Spring AI</b>, I
+                    create intelligent solutions that interact with databases, analyze images, and extract meaningful
+                    insights.
+                </div>
+            </div>
+            <div class="skill skill-orm">
+                <div class="skill-name"><a>ORM</a></div>
+                <div class="skill-subnames">Hibernate<img src="/static/img/svg/hibernate.svg" height="36"
+                                                          th:src="@{/img/svg/hibernate.svg}" alt="hibernate">, JPA standards
+                </div>
+                <div class="line-under-subnames"></div>
+                <div class="skill-description">I design software using a clean, layered architecture and handle data
+                    access with <b>Spring Data JPA</b> and <b>Hibernate</b>.
+                </div>
+            </div>
+            <div class="skill skill-testing">
+                <div class="skill-name"><a>Testing</a></div>
+                <div class="skill-subnames">JUnit <img src="/static/img/svg/junit5.svg" height="36"
+                                                       th:src="@{/img/svg/junit5.svg}" alt="junit5">, AssertJ, Mockito
+                </div>
+                <div class="line-under-subnames"></div>
+                <div class="skill-description">My testing toolkit includes <b>JUnit 5</b>, <b>Mockito</b>, and <b>AssertJ</b>,
+                    ensuring code
+                    quality and reliability.
+                </div>
+            </div>
+            <div class="skill skill-java-tooling">
+                <div class="skill-name"><a>Java Tooling</a></div>
+                <div class="skill-subnames">Lombok, MapStruck, Swagger / OpenAPI<img src="/static/img/svg/swagger.svg"
+                                                                                     height="36"
+                                                                                     th:src="@{/img/svg/swagger.svg}"
+                                                                                     alt="swagger"></div>
+                <div class="line-under-subnames"></div>
+                <div class="skill-description">To keep code bases clear and maintainable, I rely on <b>Lombok</b> and
+                    <b>MapStruct</b>, and I document my APIs with <b>Swagger/OpenAPI</b>.
+                </div>
+            </div>
+            <div class="skill skill-mvc">
+                <div class="skill-name"><a>MVC</a></div>
+                <div class="skill-subnames">Thymeleaf<img src="/static/img/svg/thymeleaf.svg" height="36"
+                                                          th:src="@{/img/svg/thymeleaf.svg}" alt="thymeleaf">, Spring MVC<img
+                        src="/static/img/svg/spring.svg" height="36" th:src="@{/img/svg/spring.svg}" alt="spring"></div>
+                <div class="line-under-subnames"></div>
+                <div class="skill-description">When developing web interfaces, I work with <b>Spring MVC</b> and <b>Thymeleaf</b>
+                    to
+                    deliver user-friendly, responsive pages.
+                </div>
+            </div>
+            <div class="skill skill-desktop">
+                <div class="skill-name"><a>Desktop Apps</a></div>
+                <div class="skill-subnames">JavaFX, SceneBuilder</div>
+                <div class="line-under-subnames"></div>
+                <div class="skill-description">I also have hands-on experience developing desktop applications with
+                    <b>JavaFX</b> and <b>SceneBuilder</b>, rounding out my ability to deliver end-to-end Java solutions.
+                </div>
+            </div>
+        </div>
+        <div class="line-under-skills"></div>
+        <div class="skill-footer">
+            <div class="skill-others">
+                <div class="skill-others-name"><a href="#" th:href="@{/skills/databases}">Databases</a></div>
+                <div class="skill-others-name"><a href="#" th:href="@{/skills/tools}">Tools and platforms</a></div>
+                <div class="skill-others-name"><a href="#" th:href="@{/skills/others}">Others</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

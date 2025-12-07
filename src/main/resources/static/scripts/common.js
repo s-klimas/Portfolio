@@ -1,211 +1,254 @@
-const selectLanguage = document.querySelector(`.select-language`);
-const optionPl = document.querySelector(`.option-pl`);
-const optionEn = document.querySelector(`.option-en`);
-const selectTech = document.querySelector(`.select-tech`);
+function hideAll() {
+    const toHide = document.querySelector(`.skill-select-info`);
+    toHide.style.display = "none";
 
-window.addEventListener('DOMContentLoaded', async () => {
-    let currentLanguage = getCookie("language");
-    if (currentLanguage === "en") {
-        optionEn.setAttribute('selected', true);
-        loadEnVer();
-    } else {
-        optionPl.setAttribute('selected', true);
-        loadPlVer();
-    }
+    document.querySelectorAll(`.skill`).forEach((item) => {
+        item.style.display = "none";
+    })
+}
+
+function deactivateAll() {
+    document.querySelectorAll(`.skill-point`).forEach((element) => {
+        element.classList.remove("skill-point-active");
+    });
+}
+
+function java() {
+    console.log("java");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-java`).classList.add("skill-point-active");
+    document.querySelector(`.skill-java`).style.display = "flex";
+}
+
+function spring() {
+    console.log("spring");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-spring`).classList.add("skill-point-active");
+    document.querySelector(`.skill-spring`).style.display = "flex";
+}
+
+function orm() {
+    console.log("orm");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-orm`).classList.add("skill-point-active");
+    document.querySelector(`.skill-orm`).style.display = "flex";
+}
+
+function testing() {
+    console.log("testing");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-testing`).classList.add("skill-point-active");
+    document.querySelector(`.skill-testing`).style.display = "flex";
+}
+
+function javaTooling() {
+    console.log("javaTooling");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-java-tooling`).classList.add("skill-point-active");
+    document.querySelector(`.skill-java-tooling`).style.display = "flex";
+}
+
+function mvc() {
+    console.log("mvc");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-mvc`).classList.add("skill-point-active");
+    document.querySelector(`.skill-mvc`).style.display = "flex";
+}
+
+function desktop() {
+    console.log("desktop");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-desktop`).classList.add("skill-point-active");
+    document.querySelector(`.skill-desktop`).style.display = "flex";
+}
+
+function postgresql() {
+    console.log("postgresql");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-postgresql`).classList.add("skill-point-active");
+    document.querySelector(`.skill-postgresql`).style.display = "flex";
+}
+
+function h2() {
+    console.log("h2");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-h2`).classList.add("skill-point-active");
+    document.querySelector(`.skill-h2`).style.display = "flex";
+}
+
+function mysql() {
+    console.log("mysql");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-mysql`).classList.add("skill-point-active");
+    document.querySelector(`.skill-mysql`).style.display = "flex";
+}
+
+function liquibase() {
+    console.log("liquibase");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-liquibase`).classList.add("skill-point-active");
+    document.querySelector(`.skill-liquibase`).style.display = "flex";
+}
+
+function nosql() {
+    console.log("nosql");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-nosql`).classList.add("skill-point-active");
+    document.querySelector(`.skill-nosql`).style.display = "flex";
+}
+
+function intellij() {
+    console.log("intellij");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-intellij`).classList.add("skill-point-active");
+    document.querySelector(`.skill-intellij`).style.display = "flex";
+}
+
+function github() {
+    console.log("github");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-github`).classList.add("skill-point-active");
+    document.querySelector(`.skill-github`).style.display = "flex";
+}
+
+function gitlab() {
+    console.log("gitlab");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-gitlab`).classList.add("skill-point-active");
+    document.querySelector(`.skill-gitlab`).style.display = "flex";
+}
+
+function docker() {
+    console.log("docker");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-docker`).classList.add("skill-point-active");
+    document.querySelector(`.skill-docker`).style.display = "flex";
+}
+
+function postman() {
+    console.log("postman");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-postman`).classList.add("skill-point-active");
+    document.querySelector(`.skill-postman`).style.display = "flex";
+}
+
+function frontend() {
+    console.log("frontend");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-frontend`).classList.add("skill-point-active");
+    document.querySelector(`.skill-frontend`).style.display = "flex";
+}
+
+function figma() {
+    console.log("figma");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-figma`).classList.add("skill-point-active");
+    document.querySelector(`.skill-figma`).style.display = "flex";
+}
+
+function php() {
+    console.log("php");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-php`).classList.add("skill-point-active");
+    document.querySelector(`.skill-php`).style.display = "flex";
+}
+
+function python() {
+    console.log("python");
+
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(`.skill-point-python`).classList.add("skill-point-active");
+    document.querySelector(`.skill-python`).style.display = "flex";
+}
+
+document.querySelectorAll('.project').forEach(project => {
+    project.addEventListener('click', () => {
+        location.href = project.dataset.link;
+    });
 });
 
-selectLanguage.addEventListener(`change`, e => {
-    e.preventDefault();
-
-    if (e.target.value === "pl") {
-        document.cookie = "language=pl; path=/;";
-        loadPlVer();
-    } else if (e.target.value === "en") {
-        document.cookie = "language=en; path=/;";
-        loadEnVer();
-    } else {
-        console.log("Unknown value")
-    }
-})
-
-selectTech.addEventListener(`change`, e => {
-    e.preventDefault();
-
-    switch (e.target.value) {
-        case 'all':
-            document.querySelectorAll(`.all`).forEach(element => {
-                element.style.removeProperty(`display`);
-            });
-            break;
-        case 'AI':
-            hideAll();
-            document.querySelectorAll(`.ai`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'API':
-            hideAll();
-            document.querySelectorAll(`.api`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'assertj':
-            hideAll();
-            document.querySelectorAll(`.assertj`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'h2-mysql':
-            hideAll();
-            document.querySelectorAll(`.h2-mysql`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'docker':
-            hideAll();
-            document.querySelectorAll(`.docker`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'github-pages':
-            hideAll();
-            document.querySelectorAll(`.github-pages`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'hibernate':
-            hideAll();
-            document.querySelectorAll(`.hibernate`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'frontend':
-            hideAll();
-            document.querySelectorAll(`.frontend`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'java':
-            hideAll();
-            document.querySelectorAll(`.java`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'java-fx':
-            hideAll();
-            document.querySelectorAll(`.java-fx`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'junit-5':
-            hideAll();
-            document.querySelectorAll(`.junit-5`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'liquibase':
-            hideAll();
-            document.querySelectorAll(`.liquibase`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'mailtrap':
-            hideAll();
-            document.querySelectorAll(`.mailtrap`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'mackaroo':
-            hideAll();
-            document.querySelectorAll(`.mackaroo`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'mockito':
-            hideAll();
-            document.querySelectorAll(`.mockito`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'OOP':
-            hideAll();
-            document.querySelectorAll(`.oop`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'scene-builder':
-            hideAll();
-            document.querySelectorAll(`.scene-builder`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'serialization':
-            hideAll();
-            document.querySelectorAll(`.serialization`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'spring':
-            hideAll();
-            document.querySelectorAll(`.spring`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'streams':
-            hideAll();
-            document.querySelectorAll(`.streams`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-        case 'thymeleaf':
-            hideAll();
-            document.querySelectorAll(`.thymeleaf`).forEach(element => {
-                element.style.removeProperty(`display`);
-            })
-            break;
-    }
-})
-
-function hideAll() {
-    document.querySelectorAll(`.all`).forEach(element => {
-        element.style.display = `none`;
+document.querySelectorAll('.project a').forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
-}
+});
 
-function loadPlVer() {
-    document.querySelectorAll("[data-lang]").forEach(element => {
-        if (element.getAttribute(`data-lang`) === "pl") {
-            element.style.removeProperty(`display`);
-        }
-        if (element.getAttribute(`data-lang`) === "en") {
-            element.style.display = `none`;
-        }
+document.querySelectorAll('.project-full').forEach(project => {
+    project.addEventListener('click', () => {
+        location.href = project.dataset.link;
     });
-}
+});
 
-function loadEnVer() {
-    document.querySelectorAll("[data-lang]").forEach(element => {
-        if (element.getAttribute(`data-lang`) === "en") {
-            element.style.removeProperty(`display`);
-        }
-        if (element.getAttribute(`data-lang`) === "pl") {
-            element.style.display = `none`;
-        }
+document.querySelectorAll('.project-full a').forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
-}
+});
 
-function getCookie(cookieName) {
-    let cookies = document.cookie;
-    let cookieArray = cookies.split("; ");
-
-    for (let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i];
-        let [name, value] = cookie.split("=");
-
-        if (name === cookieName) {
-            return decodeURIComponent(value);
-        }
-    }
-
-    return null;
-}
+document.querySelectorAll('.circle').forEach(project => {
+    project.addEventListener('click', () => {
+        location.href = project.dataset.link;
+    });
+});
