@@ -186,7 +186,7 @@ html, body {
 
 .container {
     width: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,13 +276,14 @@ html, body {
 }
 
 .body {
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 .skills-full-box {
-    margin: 0 auto 5rem;
-    width: 80vw;
-    min-height: 40rem;
+    margin: 0 auto 1rem;
+    min-width: 70vw;
+    max-width: 1400px;
+    min-height: 35rem;
     background-color: var(--Mustard, #D3CFBA);
     border-radius: 10px;
     flex-shrink: 0;
@@ -306,15 +307,25 @@ html, body {
     background: var(--Dark-Text, #1F1F1F);
 }
 
+.skill-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    width: 100%;
+}
+
 .skill-line > * {
     list-style-type: none;
 }
 
 .skill-line {
-    float: left;
+    grid-area: 1 / 1 / 2 / 2;
+    /*float: left;*/
     display: flex;
     flex-direction: column;
-    width: 40%;
+    /*width: 40%;*/
     padding-top: 1.5rem;
 }
 
@@ -355,6 +366,7 @@ html, body {
 }
 
 .skill-info {
+    grid-area: 1 / 2 / 2 / 3;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -622,12 +634,18 @@ html, body {
     max-width: 500px;
     padding-left: 10%;
     padding-right: 10%;
-    height: 22rem;
+    min-height: 20rem;
     border-radius: 1rem;
     background: var(--Middle-Dark-Theme, #262626);
     cursor: pointer;
     transition: 0.3s ease-in-out;
     border: 2px outset #000000;
+}
+
+@media (min-height: 1200px) {
+    .project {
+        min-height: 22rem;
+    }
 }
 
 .project * {
@@ -713,7 +731,7 @@ html, body {
 }
 
 .project-text {
-    margin-top: 1.75rem;
+    margin-top: 1.4rem;
     height: 7rem;
 }
 
@@ -750,11 +768,24 @@ html, body {
 }
 
 .project-technologies-1 > * {
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .project-technologies-2 > * {
-    margin: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (min-height: 1200px) {
+    .project-technologies-1 > * {
+        margin: 15px;
+    }
+
+    .project-technologies-2 > * {
+        margin: 15px;
+    }
 }
 
 .projects-full {
@@ -765,7 +796,7 @@ html, body {
 .project-full {
     border: 4px outset #000000;
     width: 1400px;
-    min-height: 600px;
+    min-height: 500px;
     padding-bottom: 1rem;
     background: var(--Light-Text, #D9D9D9);
     border-radius: 1rem;
@@ -859,11 +890,12 @@ html, body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .project-full-smaller-tittle-github {
     color: var(--Dark-Text, #1F1F1F);
+    font-size: 1.1rem;
     text-decoration: none;
     transition: 0.2s ease-in-out;
 }
