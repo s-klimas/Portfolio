@@ -40,7 +40,8 @@
         </div>
     </div>
     <div class="header-left">
-        <p><a th:href="@{/}" class="header-left-name">SEBASTIAN KLIMAS</a> <a th:href="@{/}" class="header-left-position">&lt;BACKEND
+        <p><a th:href="@{/}" class="header-left-name">SEBASTIAN KLIMAS</a> <a th:href="@{/}"
+                                                                              class="header-left-position">&lt;BACKEND
             DEVELOPER&gt;</a></p>
     </div>
 </div>
@@ -61,89 +62,100 @@
     <div class="skills-full-box">
         <div class="skills-title">JAVA AND FRAMEWORKS</div>
         <div class="line-under-title"></div>
-        <div class="skill-line">
-            <ul>
-                <li class="skill-point skill-point-java" onclick="java()"><a>Java</a><img src="/static/img/svg/java.svg"
-                                                                                          th:src="@{/img/svg/java.svg}"
-                                                                                          alt="java"></li>
-                <li class="skill-point skill-point-spring" onclick="spring()"><a>Spring</a><img
-                        src="/static/img/svg/spring.svg" th:src="@{/img/svg/spring.svg}" alt="spring"></li>
-                <li class="skill-point skill-point-orm" onclick="orm()"><a>ORM</a></li>
-                <li class="skill-point skill-point-testing" onclick="testing()"><a>Testing</a></li>
-                <li class="skill-point skill-point-java-tooling" onclick="javaTooling()"><a>Java Tooling</a></li>
-                <li class="skill-point skill-point-mvc" onclick="mvc()"><a>MVC</a></li>
-                <li class="skill-point skill-point-desktop" onclick="desktop()"><a>Desktop Apps</a></li>
-            </ul>
-        </div>
-        <div class="skill-info">
-            <div class="skill-select-info">Choose the skill that interests you</div>
-            <div class="skill skill-java">
-                <div class="skill-name"><a>Java</a><img src="/static/img/svg/java.svg" height="48"
-                                                        th:src="@{/img/svg/java.svg}" alt="java"></div>
-                <div class="skill-subnames"></div>
-                <div class="line-under-subnames"></div>
-                <div class="skill-description">My main programming language is Java.</div>
+        <div class="skill-body">
+            <div class="skill-line">
+                <ul>
+                    <li class="skill-point skill-point-java" onclick="java()"><a>Java</a><img
+                            src="/static/img/svg/java.svg"
+                            th:src="@{/img/svg/java.svg}"
+                            alt="java"></li>
+                    <li class="skill-point skill-point-spring" onclick="spring()"><a>Spring</a><img
+                            src="/static/img/svg/spring.svg" th:src="@{/img/svg/spring.svg}" alt="spring"></li>
+                    <li class="skill-point skill-point-orm" onclick="orm()"><a>ORM</a></li>
+                    <li class="skill-point skill-point-testing" onclick="testing()"><a>Testing</a></li>
+                    <li class="skill-point skill-point-java-tooling" onclick="javaTooling()"><a>Java Tooling</a></li>
+                    <li class="skill-point skill-point-mvc" onclick="mvc()"><a>MVC</a></li>
+                    <li class="skill-point skill-point-desktop" onclick="desktop()"><a>Desktop Apps</a></li>
+                </ul>
             </div>
-            <div class="skill skill-spring">
-                <div class="skill-name"><a>Spring</a><img src="/static/img/svg/spring.svg" height="48"
-                                                          th:src="@{/img/svg/spring.svg}" alt="spring">
+            <div class="skill-info">
+                <div class="skill-select-info">Choose the skill that interests you</div>
+                <div class="skill skill-java">
+                    <div class="skill-name"><a>Java</a><img src="/static/img/svg/java.svg" height="48"
+                                                            th:src="@{/img/svg/java.svg}" alt="java"></div>
+                    <div class="skill-subnames"></div>
+                    <div class="line-under-subnames"></div>
+                    <div class="skill-description">My main programming language is Java.</div>
                 </div>
-                <div class="skill-subnames">AI, Boot, Data, MVC, Security</div>
-                <div class="line-under-subnames"></div>
-                <div class="skill-description">I specialize in the <b>Spring</b> ecosystem. With <b>Spring AI</b>, I
-                    create intelligent solutions that interact with databases, analyze images, and extract meaningful
-                    insights.
+                <div class="skill skill-spring">
+                    <div class="skill-name"><a>Spring</a><img src="/static/img/svg/spring.svg" height="48"
+                                                              th:src="@{/img/svg/spring.svg}" alt="spring">
+                    </div>
+                    <div class="skill-subnames">AI, Boot, Data, MVC, Security</div>
+                    <div class="line-under-subnames"></div>
+                    <div class="skill-description">I specialize in the <b>Spring</b> ecosystem. With <b>Spring AI</b>, I
+                        create intelligent solutions that interact with databases, analyze images, and extract
+                        meaningful
+                        insights.
+                    </div>
                 </div>
-            </div>
-            <div class="skill skill-orm">
-                <div class="skill-name"><a>ORM</a></div>
-                <div class="skill-subnames">Hibernate<img src="/static/img/svg/hibernate.svg" height="36"
-                                                          th:src="@{/img/svg/hibernate.svg}" alt="hibernate">, JPA standards
+                <div class="skill skill-orm">
+                    <div class="skill-name"><a>ORM</a></div>
+                    <div class="skill-subnames">Hibernate<img src="/static/img/svg/hibernate.svg" height="36"
+                                                              th:src="@{/img/svg/hibernate.svg}" alt="hibernate">, JPA
+                        standards
+                    </div>
+                    <div class="line-under-subnames"></div>
+                    <div class="skill-description">I design software using a clean, layered architecture and handle data
+                        access with <b>Spring Data JPA</b> and <b>Hibernate</b>.
+                    </div>
                 </div>
-                <div class="line-under-subnames"></div>
-                <div class="skill-description">I design software using a clean, layered architecture and handle data
-                    access with <b>Spring Data JPA</b> and <b>Hibernate</b>.
+                <div class="skill skill-testing">
+                    <div class="skill-name"><a>Testing</a></div>
+                    <div class="skill-subnames">JUnit <img src="/static/img/svg/junit5.svg" height="36"
+                                                           th:src="@{/img/svg/junit5.svg}" alt="junit5">, AssertJ,
+                        Mockito
+                    </div>
+                    <div class="line-under-subnames"></div>
+                    <div class="skill-description">My testing toolkit includes <b>JUnit 5</b>, <b>Mockito</b>, and <b>AssertJ</b>,
+                        ensuring code
+                        quality and reliability.
+                    </div>
                 </div>
-            </div>
-            <div class="skill skill-testing">
-                <div class="skill-name"><a>Testing</a></div>
-                <div class="skill-subnames">JUnit <img src="/static/img/svg/junit5.svg" height="36"
-                                                       th:src="@{/img/svg/junit5.svg}" alt="junit5">, AssertJ, Mockito
+                <div class="skill skill-java-tooling">
+                    <div class="skill-name"><a>Java Tooling</a></div>
+                    <div class="skill-subnames">Lombok, MapStruck, Swagger / OpenAPI<img
+                            src="/static/img/svg/swagger.svg"
+                            height="36"
+                            th:src="@{/img/svg/swagger.svg}"
+                            alt="swagger"></div>
+                    <div class="line-under-subnames"></div>
+                    <div class="skill-description">To keep code bases clear and maintainable, I rely on <b>Lombok</b>
+                        and
+                        <b>MapStruct</b>, and I document my APIs with <b>Swagger/OpenAPI</b>.
+                    </div>
                 </div>
-                <div class="line-under-subnames"></div>
-                <div class="skill-description">My testing toolkit includes <b>JUnit 5</b>, <b>Mockito</b>, and <b>AssertJ</b>,
-                    ensuring code
-                    quality and reliability.
+                <div class="skill skill-mvc">
+                    <div class="skill-name"><a>MVC</a></div>
+                    <div class="skill-subnames">Thymeleaf<img src="/static/img/svg/thymeleaf.svg" height="36"
+                                                              th:src="@{/img/svg/thymeleaf.svg}" alt="thymeleaf">,
+                        Spring MVC<img
+                                src="/static/img/svg/spring.svg" height="36" th:src="@{/img/svg/spring.svg}"
+                                alt="spring"></div>
+                    <div class="line-under-subnames"></div>
+                    <div class="skill-description">When developing web interfaces, I work with <b>Spring MVC</b> and <b>Thymeleaf</b>
+                        to
+                        deliver user-friendly, responsive pages.
+                    </div>
                 </div>
-            </div>
-            <div class="skill skill-java-tooling">
-                <div class="skill-name"><a>Java Tooling</a></div>
-                <div class="skill-subnames">Lombok, MapStruck, Swagger / OpenAPI<img src="/static/img/svg/swagger.svg"
-                                                                                     height="36"
-                                                                                     th:src="@{/img/svg/swagger.svg}"
-                                                                                     alt="swagger"></div>
-                <div class="line-under-subnames"></div>
-                <div class="skill-description">To keep code bases clear and maintainable, I rely on <b>Lombok</b> and
-                    <b>MapStruct</b>, and I document my APIs with <b>Swagger/OpenAPI</b>.
-                </div>
-            </div>
-            <div class="skill skill-mvc">
-                <div class="skill-name"><a>MVC</a></div>
-                <div class="skill-subnames">Thymeleaf<img src="/static/img/svg/thymeleaf.svg" height="36"
-                                                          th:src="@{/img/svg/thymeleaf.svg}" alt="thymeleaf">, Spring MVC<img
-                        src="/static/img/svg/spring.svg" height="36" th:src="@{/img/svg/spring.svg}" alt="spring"></div>
-                <div class="line-under-subnames"></div>
-                <div class="skill-description">When developing web interfaces, I work with <b>Spring MVC</b> and <b>Thymeleaf</b>
-                    to
-                    deliver user-friendly, responsive pages.
-                </div>
-            </div>
-            <div class="skill skill-desktop">
-                <div class="skill-name"><a>Desktop Apps</a></div>
-                <div class="skill-subnames">JavaFX, SceneBuilder</div>
-                <div class="line-under-subnames"></div>
-                <div class="skill-description">I also have hands-on experience developing desktop applications with
-                    <b>JavaFX</b> and <b>SceneBuilder</b>, rounding out my ability to deliver end-to-end Java solutions.
+                <div class="skill skill-desktop">
+                    <div class="skill-name"><a>Desktop Apps</a></div>
+                    <div class="skill-subnames">JavaFX, SceneBuilder</div>
+                    <div class="line-under-subnames"></div>
+                    <div class="skill-description">I also have hands-on experience developing desktop applications with
+                        <b>JavaFX</b> and <b>SceneBuilder</b>, rounding out my ability to deliver end-to-end Java
+                        solutions.
+                    </div>
                 </div>
             </div>
         </div>

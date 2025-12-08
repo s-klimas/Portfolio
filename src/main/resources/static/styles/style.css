@@ -307,15 +307,25 @@ html, body {
     background: var(--Dark-Text, #1F1F1F);
 }
 
+.skill-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    width: 100%;
+}
+
 .skill-line > * {
     list-style-type: none;
 }
 
 .skill-line {
-    float: left;
+    grid-area: 1 / 1 / 2 / 2;
+    /*float: left;*/
     display: flex;
     flex-direction: column;
-    width: 40%;
+    /*width: 40%;*/
     padding-top: 1.5rem;
 }
 
@@ -356,6 +366,7 @@ html, body {
 }
 
 .skill-info {
+    grid-area: 1 / 2 / 2 / 3;
     height: 50vh;
     display: flex;
     flex-direction: column;
