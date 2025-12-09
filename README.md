@@ -1,30 +1,26 @@
-# Portfolio
+# 💼 Portfolio
 
-Choć moim głównym zainteresowaniem jest backend, zawsze marzyłem o stworzeniu własnej strony internetowej, na której mógłbym napisać kilka słów o sobie oraz zaprezentować swoje projekty. Uważam, że sam kod udostępniony na GitHubie nie zawsze w pełni oddaje charakter pracy, dlatego taka strona może stanowić uzupełnienie mojego portfolio. Pomimo zamiłowania do backendu, uważam, że znajomość choćby podstaw frontendu jest niezwykle przydatna. Ten projekt ma na celu pogłębienie mojej wiedzy w tym zakresie oraz zaprezentowanie umiejętności związanych z wdrażaniem aplikacji, w tym z wykorzystaniem Dockera. Strona została zbudowana na serwerze napisanym w Javie z użyciem frameworka Spring i szablonów Thymeleaf.
+> 🏆 Using a sledgehammer to crack a nut. A simple portfolio website built with **Java**, **Spring Web**, **Spring MVC**, **Thymeleaf**. Designed in **Figma** and deployed using **Docker**. 
 
-Projekt podzielony jest na 3 sekcje: wstęp, umiejętności oraz projekty. W ostatniej sekcji dodałemm możliwość filtrowania projektów w oparciu na technologie wykorzystane w nim. 
+---
 
-Link do strony: https://sebastianklimas.pl
+## 🚀 Tech Stack
 
-W projekcie zawarłem kilka podstron, dla najciekawszych projektów:
+| Category       | Technologies |
+|----------------|--------------|
+| **Backend**    | ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![Spring](https://img.shields.io/badge/Spring_Web-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![SpringMVC](https://img.shields.io/badge/Spring_MVC-6DB33F?style=for-the-badge&logo=spring&logoColor=white) |
+| **Templating** | ![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white) |
+| **Frontend**   | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
+| **Design**     | ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) |
+| **DevOps**     | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) |
 
-Streams:
-https://sebastianklimas.pl/projects/streams
+---
 
-Recipe Manager: 
-https://sebastianklimas.pl/projects/recipe-manager
+## 📝 Description
 
-Java Spring Course:
-https://sebastianklimas.pl/projects/java-spring-course-project
+This project renders its pages using classic Spring MVC controllers.  
+Each section of the site (`projects`, `skills`, `about-me`) is tied to a specific HTML template rendered by Thymeleaf.  
+The front-end stays lightweight, using only custom CSS and JavaScript for layout, navigation, and animations.
 
-Kraje JavaFX:
-https://sebastianklimas.pl/projects/kraje-javaFX
+The site also contains a server-side file download endpoint that streams a PDF CV from the application's resources.
 
-Technologie wykorzystane w projekcie:
-```
-    - Java
-    - Spring
-    - HTML + CSS z Bootstrap
-    - Thymeleaf
-    - Docker
-```
