@@ -24,3 +24,44 @@ The front-end stays lightweight, using only custom CSS and JavaScript for layout
 
 The site also contains a server-side file download endpoint that streams a PDF CV from the application's resources.
 
+---
+
+## 💡 Interesting Techniques
+
+### 1. Controller-Based Template Rendering
+Controllers return simple view names such as `"projects"`, `"skills"`, or `"project-full-1"`, letting Spring and Thymeleaf resolve the corresponding `.html` templates automatically.
+
+### 2. Server-Side File Streaming (CV Download)
+The `/cv` endpoint streams a PDF from the classpath using:
+- `ClassPathResource`
+- `response.getOutputStream()`
+- Manual buffer copy loop
+
+A straightforward approach for binary file download.
+
+### 3. Modular Routing via `@RequestMapping`
+Each controller handles a clean vertical slice of the site:
+- `/` and `/about-me` in `HomeController`
+- `/projects/**` in `ProjectsController`
+- `/skills/**` in `SkillsController`
+
+This keeps the routing readable and scalable.
+
+---
+
+## 🏫 Notable Technologies and Libraries
+
+### Spring Web + Spring MVC
+Used for controller-based routing, template resolution, and response handling.
+
+### Thymeleaf
+Handles dynamic server-side HTML rendering.
+
+### Figma
+Source for UI layout, spacing, and color structure.
+
+### Docker Multi-Stage Build
+The JAR is built in a Maven JDK image and shipped in a minimal OpenJDK runtime container.
+
+---
+
