@@ -65,3 +65,49 @@ The JAR is built in a Maven JDK image and shipped in a minimal OpenJDK runtime c
 
 ---
 
+## 🧩 Project Structure
+
+```
+/src
+  /main
+    /java/pl/sebastianklimas/portfolio/web          → REST API endponts
+    /resources
+        /files          → files available to download
+        /static
+            /favicon    → website's favicons
+            /img        → main catalog with pictures
+                /svg    → technology logos
+            /scripts    → JS script
+            /styles     → CSS file
+        /templates      → HTML templates for Thymeleaf
+```
+
+
+## 🔧 Deployment Setup
+
+### Dockerfile
+
+```dockerfile
+FROM maven:3.8.7-openjdk-18-slim  AS MAVEN_BUILD
+COPY ./pom.xml ./pom.xml
+RUN mvn dependency:go-offline -B
+COPY ./src ./src
+RUN mvn package
+
+FROM openjdk:21-slim-bookworm
+EXPOSE 8080
+COPY --from=MAVEN_BUILD /target/Portfolio-*.jar /app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+```
+
+### build-and-restart.sh
+
+```sh
+docker build . -t portfolio
+docker stop portfolio || true
+docker rm portfolio || true
+docker run -d -p 8080:8080 --name=portfolio -e SPRING_PROFILES_ACTIVE=prod --network portfolio-network --restart unless-stopped portfolio
+```
+
+---
+
