@@ -53,21 +53,9 @@ This keeps the routing readable and scalable.
 
 ### Spring Web + Spring MVC
 Used for controller-based routing, template resolution, and response handling.
+ 
 
-### Thymeleaf
-Handles dynamic server-side HTML rendering.
-
-### Figma
-Source for UI layout, spacing, and color structure.
-
-### Docker Multi-Stage Build
-The JAR is built in a Maven JDK image and shipped in a minimal OpenJDK runtime container.
-
----
-
-## 🧩 Project Structure
-
-```
+```[Strona startowa.url](../../AppData/Local/Temp/Strona%20startowa.url)
 /src
   /main
     /java/pl/sebastianklimas/portfolio/web          → REST API endponts
@@ -81,7 +69,12 @@ The JAR is built in a Maven JDK image and shipped in a minimal OpenJDK runtime c
             /styles     → CSS file
         /templates      → HTML templates for Thymeleaf
 ```
-
+- **/web**: defines REST endpoints
+- **/files**: downloadable files
+- **/static/img**: all img files used on website
+- **/static/scripts**: JS scripts used to reduce the number of subpages
+- **/static/styles**: CSS file making site look fine
+- **/templates**: HTML files used on website
 
 ## 🔧 Deployment Setup
 
@@ -111,3 +104,13 @@ docker run -d -p 8080:8080 --name=portfolio -e SPRING_PROFILES_ACTIVE=prod --net
 
 ---
 
+## ✔️ Key Features
+
+- Grid and Flexbox layout
+- JavaScript handles navigation, skill switching, and event control
+- Project tiles with click-through behavior
+- Server-side routing with Spring MVC
+- PDF download in `CVController`
+- Templates rendered with Thymeleaf
+- Figma used for UI design
+- Containerized build and deployment
