@@ -41,25 +41,38 @@ html, body {
     text-decoration: none;
 }
 
-.header-left-name {
+.header-left-text {
     color: var(--Light-Text, #D9D9D9);
     font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
-    letter-spacing: 1px;
     cursor: pointer;
 }
 
+.header-left-text p {
+    display: inline-block;
+}
+
+.header-left-name {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+    .header-left-name {
+        font-size: 1rem;
+    }
+}
+
 .header-left-position {
-    color: var(--Light-Text, #D9D9D9);
-    font-family: "Inter", sans-serif;
-    font-size: 1.5rem;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
-    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .header-left-position {
+        font-size: 0.85rem;
+    }
 }
 
 .git-logo {
@@ -117,6 +130,12 @@ html, body {
     padding: 25px 50px 30px 50px;
 }
 
+@media (max-width: 800px) {
+    .nav {
+        padding: 25px 25px 30px 25px;
+    }
+}
+
 .nav-items {
     min-height: 1.8125rem;
     flex-shrink: 0;
@@ -125,6 +144,7 @@ html, body {
 
 .nav-item > div {
     display: inline-block;
+    margin-top: 0.5rem;
 }
 
 .nav-item-selected {
@@ -175,6 +195,20 @@ html, body {
     text-decoration: none;
 }
 
+@media (max-width: 800px) {
+    .nav-item-selected {
+        font-size: 0.85rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .nav-item {
+        font-size: 0.85rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
 .nav-item > div {
     transition: all 0.5s ease;
 }
@@ -200,6 +234,12 @@ html, body {
     text-align: center;
 }
 
+@media (max-width: 800px) {
+    .container {
+        min-height: 50vh;
+    }
+}
+
 .center-title {
     flex-shrink: 0;
     color: var(--Mustard, #D3CFBA);
@@ -214,6 +254,14 @@ html, body {
     text-align: center;
 }
 
+@media (max-width: 800px) {
+    .center-title {
+        /*grid-area: 1 / 1 / 2 / 2;*/
+        grid-area: 5 / 1 / 6 / 2;
+        /*display: none;*/
+    }
+}
+
 .grid {
     width: 90%;
     max-width: 1100px;
@@ -224,11 +272,32 @@ html, body {
     transition: all 1s ease;
 }
 
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 2rem;
+    }
+}
+
 .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+@media (max-width: 800px) {
+    .skill {
+        scale: 0.8;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .grid-empty-div {
+        display: none;
+    }
 }
 
 .label {
@@ -241,6 +310,16 @@ html, body {
     line-height: normal;
     transition: transform 0.2s ease;
     cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .label {
+        width: 250px;
+        min-height: 110%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .label:hover {
@@ -271,12 +350,28 @@ html, body {
     transform: rotate(-0.001deg);
 }
 
+@media (max-width: 800px) {
+    .circle {
+        scale: 0.8;
+    }
+}
+
 .circle:hover {
     transform: scale(1.2);
 }
 
 .circle:active {
     transform: scale(1.4);
+}
+
+@media (max-width: 800px) {
+    .skill-tools {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .skill-others {
+        grid-area: 4 / 1 / 5 / 2;
+    }
 }
 
 .skills-full-box {
@@ -874,6 +969,13 @@ html, body {
     cursor: pointer;
 }
 
+@media(max-width: 800px) {
+    .project-full {
+        min-width: 200px;
+        max-width: 350px;
+    }
+}
+
 .project-full-header {
     padding-top: 2rem;
     margin-left: 5%;
@@ -887,6 +989,12 @@ html, body {
     font-weight: 700;
     line-height: normal;
     display: inline;
+}
+
+@media(max-width: 800px) {
+    .project-full-title {
+        font-size: 1.7rem;
+    }
 }
 
 .project-full-github {
@@ -940,6 +1048,12 @@ html, body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+@media(max-width: 800px) {
+    .project-full-description-header {
+        transform: scale(0.9);
+    }
 }
 
 .project-full-text {
@@ -1007,6 +1121,20 @@ html, body {
     font-weight: 800;
     line-height: normal;
     margin-right: 0.7rem;
+}
+
+@media (max-width: 800px) {
+    .project-full-technologies {
+        display: inline;
+        margin-left: 10px;
+    }
+
+    .project-full-technologies > a {
+        transform: scale(0.9);
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
 
 .not-found {
