@@ -1,226 +1,117 @@
-function hideAll() {
-    const toHide = document.querySelector(`.skill-select-info`);
-    toHide.style.display = "none";
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.skill-select-info').classList.add('active');
+});
 
-    document.querySelectorAll(`.skill`).forEach((item) => {
-        item.style.display = "none";
-    })
+function hideChoose() {
+    document.querySelector('.skill-select-info').style.display = 'none';
+}
+
+function hideAll() {
+    document
+        .querySelectorAll('.skill, .skill-select-info')
+        .forEach(el => el.classList.remove('active'));
 }
 
 function deactivateAll() {
-    document.querySelectorAll(`.skill-point`).forEach((element) => {
-        element.classList.remove("skill-point-active");
-    });
+    document
+        .querySelectorAll('.skill-point')
+        .forEach(el => el.classList.remove('skill-point-active'));
+}
+
+function show(skillClass, pointClass) {
+    hideChoose();
+    hideAll();
+    deactivateAll();
+
+    document.querySelector(pointClass).classList.add('skill-point-active');
+    document.querySelector(skillClass).classList.add('active');
+
+    // Dodajemy klasę "active" do skill-info, aby wysokość była dynamiczna
+    document.querySelector('.skill-info').classList.add('active');
 }
 
 function java() {
-    console.log("java");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-java`).classList.add("skill-point-active");
-    document.querySelector(`.skill-java`).style.display = "flex";
+    show('.skill-java', '.skill-point-java');
 }
 
 function spring() {
-    console.log("spring");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-spring`).classList.add("skill-point-active");
-    document.querySelector(`.skill-spring`).style.display = "flex";
+    show('.skill-spring', '.skill-point-spring');
 }
 
 function orm() {
-    console.log("orm");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-orm`).classList.add("skill-point-active");
-    document.querySelector(`.skill-orm`).style.display = "flex";
+    show('.skill-orm', '.skill-point-orm');
 }
 
 function testing() {
-    console.log("testing");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-testing`).classList.add("skill-point-active");
-    document.querySelector(`.skill-testing`).style.display = "flex";
+    show('.skill-testing', '.skill-point-testing');
 }
 
 function javaTooling() {
-    console.log("javaTooling");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-java-tooling`).classList.add("skill-point-active");
-    document.querySelector(`.skill-java-tooling`).style.display = "flex";
+    show('.skill-java-tooling', '.skill-point-java-tooling');
 }
 
 function mvc() {
-    console.log("mvc");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-mvc`).classList.add("skill-point-active");
-    document.querySelector(`.skill-mvc`).style.display = "flex";
+    show('.skill-mvc', '.skill-point-mvc');
 }
 
 function desktop() {
-    console.log("desktop");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-desktop`).classList.add("skill-point-active");
-    document.querySelector(`.skill-desktop`).style.display = "flex";
+    show('.skill-desktop', '.skill-point-desktop');
 }
 
 function postgresql() {
-    console.log("postgresql");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-postgresql`).classList.add("skill-point-active");
-    document.querySelector(`.skill-postgresql`).style.display = "flex";
+    show('.skill-postgresql', '.skill-point-postgresql');
 }
 
 function h2() {
-    console.log("h2");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-h2`).classList.add("skill-point-active");
-    document.querySelector(`.skill-h2`).style.display = "flex";
+    show('.skill-h2', '.skill-point-h2');
 }
 
 function mysql() {
-    console.log("mysql");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-mysql`).classList.add("skill-point-active");
-    document.querySelector(`.skill-mysql`).style.display = "flex";
+    show('.skill-mysql', '.skill-point-mysql');
 }
 
 function liquibase() {
-    console.log("liquibase");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-liquibase`).classList.add("skill-point-active");
-    document.querySelector(`.skill-liquibase`).style.display = "flex";
+    show('.skill-liquibase', '.skill-point-liquibase');
 }
 
 function nosql() {
-    console.log("nosql");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-nosql`).classList.add("skill-point-active");
-    document.querySelector(`.skill-nosql`).style.display = "flex";
+    show('.skill-nosql', '.skill-point-nosql');
 }
 
 function intellij() {
-    console.log("intellij");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-intellij`).classList.add("skill-point-active");
-    document.querySelector(`.skill-intellij`).style.display = "flex";
+    show('.skill-intellij', '.skill-point-intellij');
 }
 
 function github() {
-    console.log("github");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-github`).classList.add("skill-point-active");
-    document.querySelector(`.skill-github`).style.display = "flex";
+    show('.skill-github', '.skill-point-github');
 }
 
 function gitlab() {
-    console.log("gitlab");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-gitlab`).classList.add("skill-point-active");
-    document.querySelector(`.skill-gitlab`).style.display = "flex";
+    show('.skill-gitlab', '.skill-point-gitlab');
 }
 
 function docker() {
-    console.log("docker");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-docker`).classList.add("skill-point-active");
-    document.querySelector(`.skill-docker`).style.display = "flex";
+    show('.skill-docker', '.skill-point-docker');
 }
 
 function postman() {
-    console.log("postman");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-postman`).classList.add("skill-point-active");
-    document.querySelector(`.skill-postman`).style.display = "flex";
+    show('.skill-postman', '.skill-point-postman');
 }
 
 function frontend() {
-    console.log("frontend");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-frontend`).classList.add("skill-point-active");
-    document.querySelector(`.skill-frontend`).style.display = "flex";
+    show('.skill-frontend', '.skill-point-frontend');
 }
 
 function figma() {
-    console.log("figma");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-figma`).classList.add("skill-point-active");
-    document.querySelector(`.skill-figma`).style.display = "flex";
+    show('.skill-figma', '.skill-point-figma');
 }
 
 function php() {
-    console.log("php");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-php`).classList.add("skill-point-active");
-    document.querySelector(`.skill-php`).style.display = "flex";
+    show('.skill-php', '.skill-point-php');
 }
 
 function python() {
-    console.log("python");
-
-    hideAll();
-    deactivateAll();
-
-    document.querySelector(`.skill-point-python`).classList.add("skill-point-active");
-    document.querySelector(`.skill-python`).style.display = "flex";
+    show('.skill-python', '.skill-point-python');
 }
 
 document.querySelectorAll('.project').forEach(project => {
