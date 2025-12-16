@@ -382,6 +382,13 @@ html, body {
     background-color: var(--Mustard, #D3CFBA);
     border-radius: 10px;
     flex-shrink: 0;
+    border: 4px outset #f4f1e5;
+}
+
+@media (max-width: 800px) {
+    .skills-full-box {
+        max-width: 350px;
+    }
 }
 
 .skills-title {
@@ -393,6 +400,12 @@ html, body {
     font-weight: 700;
     line-height: normal;
     padding-top: 2rem;
+}
+
+@media (max-width: 800px) {
+    .skills-title {
+        font-size: 2rem;
+    }
 }
 
 .line-under-title {
@@ -411,17 +424,48 @@ html, body {
     width: 100%;
 }
 
+@media (max-width: 800px) {
+    .skill-body {
+        grid-template-columns: 1fr;
+        /*grid-template-rows: repeat(2, 1fr);*/
+        grid-auto-rows: max-content;
+    }
+}
+
 .skill-line > * {
     list-style-type: none;
 }
 
 .skill-line {
     grid-area: 1 / 1 / 2 / 2;
-    /*float: left;*/
     display: flex;
     flex-direction: column;
-    /*width: 40%;*/
+    justify-content: center;
+    height: 100%;
     padding-top: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .skill-line {
+        grid-area: 2 / 1 / 3 / 2;
+        display: inline-block;
+        /*flex-direction: column;*/
+        /*align-self: flex-end;*/
+    }
+
+    .skill-line ul {
+        /*display: inline-block;*/
+    }
+
+    .skill-line ul li {
+        /*grid-area: 1 / 2 / 2 / 3;*/
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        /*flex-direction: row;*/
+        /*align-self: flex-end;*/
+        /*margin-right: 1rem;*/
+    }
 }
 
 .skill-point {
@@ -437,9 +481,27 @@ html, body {
     transition: all 0.1s ease;
 }
 
+@media (max-width: 800px) {
+    .skill-point {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .skill-point img {
+        height: 24px;
+    }
+}
+
 .skill-point > a {
     margin-top: 20px;
     margin-right: 0.5rem;
+}
+
+@media (max-width: 800px) {
+    .skill-point > a {
+        margin-top: 0;
+    }
 }
 
 .skill-point:hover {
@@ -460,13 +522,36 @@ html, body {
     font-weight: 700;
 }
 
+@media (max-width: 800px) {
+    .skill-point-active {
+        transform: scale(1);
+    }
+
+    .skill-point-active:hover {
+        transform: scale(1);
+    }
+}
+
 .skill-info {
     grid-area: 1 / 2 / 2 / 3;
-    height: 50vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.skill-info {
+    position: relative!important;
+    overflow: hidden!important;
+    transition: height 0.5s ease!important;
+}
+
+@media (max-width: 800px) {
+    .skill-info {
+        grid-area: 1 / 1 / 2 / 2;
+        min-height: 20vh;
+    }
 }
 
 .skill-info > .skill {
@@ -483,6 +568,8 @@ html, body {
     font-style: italic;
     font-weight: 200;
     line-height: normal;
+    text-align: center;
+
 }
 
 .skill-name {
@@ -492,6 +579,13 @@ html, body {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .skill-name {
+        font-size: 1.75rem;
+    }
 }
 
 .skill-name > a {
@@ -506,6 +600,24 @@ html, body {
     font-weight: 800;
     line-height: normal;
     text-align: center;
+}
+
+.skill-subnames p {
+    display: inline-block;
+}
+
+@media (max-width: 800px) {
+    .skill-subnames {
+        font-size: 1.3rem;
+    }
+
+    .skill-name img {
+        height: 24px;
+    }
+
+    .skill-subnames img {
+        height: 24px;
+    }
 }
 
 .line-under-subnames {
@@ -525,6 +637,40 @@ html, body {
     line-height: normal;
     width: 70%;
     text-align: justify;
+}
+
+@media (max-width: 800px) {
+    .skill-description {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+}
+
+.skill,
+.skill-select-info {
+    position: absolute!important;
+    inset: 0!important;
+    display: flex!important;
+    flex-direction: column!important;
+
+    opacity: 0!important;
+    transform: translateY(10px)!important;
+    pointer-events: none!important;
+
+    transition:
+            opacity 0.4s ease,
+            transform 0.4s ease!important;
+}
+
+.skill.active,
+.skill-select-info.active {
+    opacity: 1!important;
+    transform: translateY(0)!important;
+    pointer-events: auto!important;
+}
+
+.skill-info.active {
+    height: auto!important;
 }
 
 .line-under-skills {
@@ -552,6 +698,12 @@ html, body {
     line-height: normal;
     margin: 1rem 2rem;
     transition: all 0.2s ease;
+}
+
+@media (max-width: 800px) {
+    .skill-others-name {
+        font-size: 1.5rem;
+    }
 }
 
 .skill-others-name:hover {
@@ -828,6 +980,7 @@ html, body {
 .project:hover {
     color: var(--Dark-Text, #1F1F1F);
     background: var(--Light-Text, #D9D9D9);
+    border: 2px outset #FFFFFF;
     transition: 0.5s ease-in-out;
 }
 
@@ -849,6 +1002,9 @@ html, body {
 .project-header {
     padding-top: 2rem;
     margin-left: -5%;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
 }
 
 .project-title {
