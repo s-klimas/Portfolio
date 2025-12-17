@@ -26,7 +26,6 @@ function show(skillClass, pointClass) {
     document.querySelector(pointClass).classList.add('skill-point-active');
     document.querySelector(skillClass).classList.add('active');
 
-    // Dodajemy klasę "active" do skill-info, aby wysokość była dynamiczna
     document.querySelector('.skill-info').classList.add('active');
 }
 

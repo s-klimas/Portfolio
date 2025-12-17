@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👨‍💻S-Klimas | Portfolio🚀</title>
     <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
     <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
@@ -40,8 +41,8 @@
         </div>
     </div>
     <div class="header-left">
-        <p><a th:href="@{/}" class="header-left-name">SEBASTIAN KLIMAS</a> <a th:href="@{/}"
-                                                                              class="header-left-position">&lt;BACKEND
+        <p><a th:href="@{/}" class="header-left-text header-left-name">SEBASTIAN KLIMAS</a></p>
+        <p><a th:href="@{/}" class="header-left-text header-left-position">&lt;BACKEND
             DEVELOPER&gt;</a></p>
     </div>
 </div>
@@ -66,13 +67,9 @@
             <div class="skill-line">
                 <ul>
                     <li class="skill-point skill-point-frontend" onclick="frontend()"><a>Frontend</a></li>
-                    <li class="skill-point skill-point-figma" onclick="figma()"><a>Figma</a><img
-                            src="/static/img/svg/figma.svg" height="32" th:src="@{/img/svg/figma.svg}" alt="figma"></li>
-                    <li class="skill-point skill-point-php" onclick="php()"><a>PHP & more</a><img
-                            src="/static/img/svg/php.svg"
-                            height="32" th:src="@{/img/svg/php.svg}" alt="php"></li>
-                    <li class="skill-point skill-point-python" onclick="python()"><a>Python & more</a><img
-                            src="/static/img/svg/python.svg" height="32" th:src="@{/img/svg/python.svg}" alt="python">
+                    <li class="skill-point skill-point-figma" onclick="figma()"><a>Figma</a><img src="/static/img/svg/figma.svg" height="32" th:src="@{/img/svg/figma.svg}" alt="figma"></li>
+                    <li class="skill-point skill-point-php" onclick="php()"><a>PHP & more</a><img src="/static/img/svg/php.svg" height="32" th:src="@{/img/svg/php.svg}" alt="php"></li>
+                    <li class="skill-point skill-point-python" onclick="python()"><a>Python & more</a><img src="/static/img/svg/python.svg" height="32" th:src="@{/img/svg/python.svg}" alt="python">
                     </li>
                 </ul>
             </div>
@@ -80,64 +77,38 @@
                 <div class="skill-select-info">Choose the skill that interests you</div>
                 <div class="skill skill-frontend">
                     <div class="skill-name"><a>Frontend</a></div>
-                    <div class="skill-subnames">HTML <img src="/static/img/svg/html.svg" height="36"
-                                                          th:src="@{/img/svg/html.svg}" alt="html">, CSS <img
-                            src="/static/img/svg/css.svg" height="36" th:src="@{/img/svg/css.svg}" alt="css">, Bootstrap
-                        <img
-                                src="/static/img/svg/bootstrap.svg" height="36" th:src="@{/img/svg/bootstrap.svg}"
-                                alt="bootstrap">, JS <img
-                                src="/static/img/svg/javascript.svg" height="36" th:src="@{/img/svg/javascript.svg}"
-                                alt="javascript">
+                    <div class="skill-subnames">
+                        <p>HTML <img src="/static/img/svg/html.svg" height="36"th:src="@{/img/svg/html.svg}" alt="html">,</p>
+                        <p>CSS <img src="/static/img/svg/css.svg" height="36" th:src="@{/img/svg/css.svg}" alt="css">,</p>
+                        <p>Bootstrap <img src="/static/img/svg/bootstrap.svg" height="36" th:src="@{/img/svg/bootstrap.svg}" alt="bootstrap">,</p>
+                        <p>JS <img src="/static/img/svg/javascript.svg" height="36" th:src="@{/img/svg/javascript.svg}" alt="javascript"></p>
                     </div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">While working on my own projects, I also developed front-end skills,
-                        using <b>HTML</b>, <b>CSS</b>, and the <b>Bootstrap</b> framework to create responsive user
-                        interfaces. I used <b>JavaScript</b> to make the pages interactive. The combination of these
-                        technologies allows me to create modern websites, such as this one.
-                    </div>
+                    <div class="skill-description">While working on my own projects, I also developed front-end skills, using <b>HTML</b>, <b>CSS</b>, and the <b>Bootstrap</b> framework to create responsive user interfaces. I used <b>JavaScript</b> to make the pages interactive. The combination of these technologies allows me to create modern websites, such as this one.</div>
                 </div>
                 <div class="skill skill-figma">
-                    <div class="skill-name"><a>Figma</a><img src="/static/img/svg/figma.svg" height="48"
-                                                             th:src="@{/img/svg/figma.svg}" alt="figma"></div>
+                    <div class="skill-name"><a>Figma</a><img src="/static/img/svg/figma.svg" height="48" th:src="@{/img/svg/figma.svg}" alt="figma"></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">I designed the new version of my portfolio using <b>Figma</b>. It is
-                        a
-                        very good tool that allows you to graphically design the appearance of a website, and later,
-                        during
-                        programming, it has many useful add-ons. I also tried using Figma Make, but I was disappointed
-                        with
-                        the AI results when generating HTML code, which is why I am writing this page myself.
-                    </div>
+                    <div class="skill-description">I designed the new version of my portfolio using <b>Figma</b>. It is a very good tool that allows you to graphically design the appearance of a website, and later, during programming, it has many useful add-ons. I also tried using Figma Make, but I was disappointed with the AI results when generating HTML code, which is why I am writing this page myself.</div>
                 </div>
                 <div class="skill skill-php">
                     <div class="skill-name"><a>PHP & more</a></div>
-                    <div class="skill-subnames">PHP <img src="/static/img/svg/php.svg" height="36"
-                                                         th:src="@{/img/svg/php.svg}" alt="php">, Laravel <img
-                            src="/static/img/svg/laravel.svg" height="36" th:src="@{/img/svg/laravel.svg}"
-                            alt="laravel">, PhpStorm <img
-                            src="/static/img/svg/phpstorm.svg" height="36" th:src="@{/img/svg/phpstorm.svg}"
-                            alt="phpstorm"></div>
+                    <div class="skill-subnames">
+                        <p>PHP <img src="/static/img/svg/php.svg" height="36" th:src="@{/img/svg/php.svg}" alt="php">,</p>
+                        <p>Laravel <img src="/static/img/svg/laravel.svg" height="36" th:src="@{/img/svg/laravel.svg}" alt="laravel">,</p>
+                        <p>PhpStorm <img src="/static/img/svg/phpstorm.svg" height="36" th:src="@{/img/svg/phpstorm.svg}" alt="phpstorm"></p></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">I have professional experience in software development in a start-up,
-                        where I developed applications in <b>PHP</b> using the <b>Laravel</b> framework and the
-                        <b>PhpStorm</b> environment. Working in a small team, we created a solution for psychologists by
-                        creating a virtual office for them. This enabled them to meet with patients online via our
-                        website.
-                    </div>
+                    <div class="skill-description">I have professional experience in software development in a start-up, where I developed applications in <b>PHP</b> using the <b>Laravel</b> framework and the <b>PhpStorm</b> environment. Working in a small team, we created a solution for psychologists by creating a virtual office for them. This enabled them to meet with patients online via our website.</div>
                 </div>
                 <div class="skill skill-python">
                     <div class="skill-name"><a>Python & more</a></div>
-                    <div class="skill-subnames">Python <img src="/static/img/svg/python.svg" height="36"
-                                                            th:src="@{/img/svg/python.svg}" alt="python">,
-                        PyCharm <img src="/static/img/svg/pycharm.svg" height="36" th:src="@{/img/svg/pycharm.svg}"
-                                     alt="pycharm"></div>
-                    <div class="line-under-subnames"></div>
-                    <div class="skill-description">While working in the e-commerce industry, I expanded my skills in <b>Python</b>
-                        by writing and optimizing automation scripts and implementing an object-oriented product
-                        management
-                        system. For this project, I chose <b>JetBrains' PyCharm</b> as my IDE.
+                    <div class="skill-subnames">
+                        <p>Python <img src="/static/img/svg/python.svg" height="36" th:src="@{/img/svg/python.svg}" alt="python">,</p>
+                        <p>PyCharm <img src="/static/img/svg/pycharm.svg" height="36" th:src="@{/img/svg/pycharm.svg}" alt="pycharm"></p>
                     </div>
+                    <div class="line-under-subnames"></div>
+                    <div class="skill-description">While working in the e-commerce industry, I expanded my skills in <b>Python</b> by writing and optimizing automation scripts and implementing an object-oriented product management system. For this project, I chose <b>JetBrains' PyCharm</b> as my IDE.</div>
                 </div>
             </div>
         </div>

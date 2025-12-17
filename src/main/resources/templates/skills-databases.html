@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👨‍💻S-Klimas | Portfolio🚀</title>
     <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
     <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
@@ -40,8 +41,8 @@
         </div>
     </div>
     <div class="header-left">
-        <p><a th:href="@{/}" class="header-left-name">SEBASTIAN KLIMAS</a> <a th:href="@{/}" class="header-left-position">&lt;BACKEND
-            DEVELOPER&gt;</a></p>
+        <p><a th:href="@{/}" class="header-left-text header-left-name">SEBASTIAN KLIMAS</a></p> <p><a th:href="@{/}" class="header-left-text header-left-position">&lt;BACKEND
+        DEVELOPER&gt;</a></p>
     </div>
 </div>
 <div class="nav">
@@ -64,8 +65,7 @@
         <div class="skill-body">
             <div class="skill-line">
                 <ul>
-                    <li class="skill-point skill-point-postgresql" onclick="postgresql()"><a>PostGreSQL</a><img
-                            src="/static/img/svg/postgresql.svg" th:src="@{/img/svg/postgresql.svg}" alt="postgresql"></li>
+                    <li class="skill-point skill-point-postgresql" onclick="postgresql()"><a>PostGreSQL</a><img src="/static/img/svg/postgresql.svg" th:src="@{/img/svg/postgresql.svg}" alt="postgresql"></li>
                     <li class="skill-point skill-point-h2" onclick="h2()"><a>H2</a></li>
                     <li class="skill-point skill-point-mysql" onclick="mysql()"><a>MySQL</a><img src="/static/img/svg/mysql.svg" height="32" th:src="@{/img/svg/mysql.svg}" alt="mysql"></li>
                     <li class="skill-point skill-point-liquibase" onclick="liquibase()"><a>Liquibase</a><img src="/static/img/svg/liquibase.svg" height="32" th:src="@{/img/svg/liquibase.svg}" alt="liquibase"></li>
@@ -75,55 +75,34 @@
             <div class="skill-info">
                 <div class="skill-select-info">Choose the skill that interests you</div>
                 <div class="skill skill-postgresql">
-                    <div class="skill-name"><a>PostGreSQL</a><img src="/static/img/svg/postgresql.svg" height="48"
-                                                                  th:src="@{/img/svg/postgresql.svg}" alt="postgresql">
-                    </div>
+                    <div class="skill-name"><a>PostGreSQL</a><img src="/static/img/svg/postgresql.svg" height="48" th:src="@{/img/svg/postgresql.svg}" alt="postgresql"></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">On a daily basis, I mainly work with relational databases, which form the
-                        basis of most of my projects. I rely on the proven <b>PostGreSQL</b> solution due to its stability
-                        and flexibility.
-                    </div>
+                    <div class="skill-description">On a daily basis, I mainly work with relational databases, which form the basis of most of my projects. I rely on the proven <b>PostGreSQL</b> solution due to its stability and flexibility.</div>
                 </div>
                 <div class="skill skill-h2">
                     <div class="skill-name"><a>H2</a></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">During development, depending on the needs of the project, I use <b>PostgreSQL</b>
-                        or <b>H2</b> databases. When launching a project, I often choose <b>H2</b> because it allows me to
-                        easily recreate the database each time, which is especially useful during testing when I require a
-                        fixed set of data each time the application is launched.
-                    </div>
+                    <div class="skill-description">During development, depending on the needs of the project, I use <b>PostgreSQL</b> or <b>H2</b> databases. When launching a project, I often choose <b>H2</b> because it allows me to easily recreate the database each time, which is especially useful during testing when I require a fixed set of data each time the application is launched.</div>
                 </div>
                 <div class="skill skill-mysql">
-                    <div class="skill-name"><a>MySQL</a><img src="/static/img/svg/mysql.svg" height="48" th:src="@{/img/svg/mysql.svg}" alt="mysql">
-                    </div>
+                    <div class="skill-name"><a>MySQL</a><img src="/static/img/svg/mysql.svg" height="48" th:src="@{/img/svg/mysql.svg}" alt="mysql"></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">I began my education at a technical college, working with <b>MySQL</b>.
-                        There, I learned the basics of how databases work—their structure, how they function, and the
-                        principles behind individual instructions and the order in which they are executed.
-                    </div>
+                    <div class="skill-description">I began my education at a technical college, working with <b>MySQL</b>. There, I learned the basics of how databases work—their structure, how they function, and the principles behind individual instructions and the order in which they are executed.</div>
                 </div>
                 <div class="skill skill-liquibase">
-                    <div class="skill-name"><a>Liquibase</a><img src="/static/img/svg/liquibase.svg" height="48"
-                                                                 th:src="@{/img/svg/liquibase.svg}" alt="liquibase"></div>
+                    <div class="skill-name"><a>Liquibase</a><img src="/static/img/svg/liquibase.svg" height="48" th:src="@{/img/svg/liquibase.svg}" alt="liquibase"></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">I use <b>Liquibase</b> to manage the database structure, track changes,
-                        and implement migrations directly from the project level, which allows me to maintain consistency
-                        across environments and facilitates the CI/CD process.
-                    </div>
+                    <div class="skill-description">I use <b>Liquibase</b> to manage the database structure, track changes, and implement migrations directly from the project level, which allows me to maintain consistency across environments and facilitates the CI/CD process.</div>
                 </div>
                 <div class="skill skill-nosql">
                     <div class="skill-name"><a>NoSQL</a></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">During my studies, I also gained experience with non-relational databases
-                        during a project in which we used <b>Firebase</b>, thanks to which I have a good understanding of
-                        their usage. Although my projects have not required the use of this technology so far, I am prepared
-                        to use it effectively if necessary.
-                    </div>
+                    <div class="skill-description">During my studies, I also gained experience with non-relational databases during a project in which we used <b>Firebase</b>, thanks to which I have a good understanding of their usage. Although my projects have not required the use of this technology so far, I am prepared to use it effectively if necessary.</div>
                 </div>
             </div>
         </div>
