@@ -2,6 +2,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.skill-select-info').classList.add('active');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const isMobile = window.matchMedia('(max-width: 800px)').matches;
+
+    if (isMobile) {
+        const skillsBox = document.getElementById('skills');
+
+        if (skillsBox) {
+            setTimeout(() => {
+                skillsBox.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 150);
+        }
+    }
+});
+
 function hideChoose() {
     document.querySelector('.skill-select-info').style.display = 'none';
 }

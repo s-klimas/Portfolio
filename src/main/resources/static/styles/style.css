@@ -691,7 +691,7 @@ html, body {
     display: inline-block;
     color: var(--Dark-Text, #1F1F1F);
     font-family: Inter, sans-serif;
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -699,25 +699,33 @@ html, body {
     transition: all 0.2s ease;
 }
 
-@media (max-width: 800px) {
-    .skill-others-name {
-        display: block;
-        font-size: 1.5rem;
-    }
-}
-
 .skill-others-name:hover {
     transition: all 0.2s ease;
     transform: scale(1.1);
 }
 
-.skill-others-name:active {
-
+.skill-others-name.active {
+    scale: 1.3;
 }
 
 .skill-others-name > a {
     color: var(--Dark-Text, #1F1F1F);
     text-decoration: none;
+}
+
+.skill-others-name.active > a {
+    color: var(--Gold, #B57F02);
+}
+
+@media (max-width: 800px) {
+    .skill-others-name {
+        display: block;
+        font-size: 0.8rem;
+    }
+
+    .skill-others-name.active {
+        scale: 1.1;
+    }
 }
 
 .about-me-full-box {
