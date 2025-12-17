@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👨‍💻S-Klimas | Portfolio🚀</title>
     <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
     <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
@@ -40,9 +41,8 @@
         </div>
     </div>
     <div class="header-left">
-        <p><a th:href="@{/}" class="header-left-name">SEBASTIAN KLIMAS</a> <a th:href="@{/}"
-                                                                              class="header-left-position">&lt;BACKEND
-            DEVELOPER&gt;</a></p>
+        <p><a th:href="@{/}" class="header-left-text header-left-name">SEBASTIAN KLIMAS</a></p> <p><a th:href="@{/}" class="header-left-text header-left-position">&lt;BACKEND
+        DEVELOPER&gt;</a></p>
     </div>
 </div>
 <div class="nav">
@@ -59,84 +59,50 @@
     </div>
 </div>
 <div class="body">
-    <div class="skills-full-box">
+    <div class="skills-full-box" id="skills">
         <div class="skills-title">TOOLS AND PLATFORMS</div>
         <div class="line-under-title"></div>
         <div class="skill-body">
             <div class="skill-line">
                 <ul>
-                    <li class="skill-point skill-point-intellij" onclick="intellij()"><a>IntelliJ</a><img
-                            src="/static/img/svg/intellij.svg" height="32" th:src="@{/img/svg/intellij.svg}"
-                            alt="intellij"></li>
-                    <li class="skill-point skill-point-github" onclick="github()"><a>GitHub</a><img
-                            src="/static/img/svg/github-dark.svg" height="32" th:src="@{/img/svg/github-dark.svg}"
-                            alt="github"></li>
-                    <li class="skill-point skill-point-gitlab" onclick="gitlab()"><a>GitLab</a><img
-                            src="/static/img/svg/gitlab.svg" height="32" th:src="@{/img/svg/gitlab.svg}" alt="gitlab">
-                    </li>
-                    <li class="skill-point skill-point-docker" onclick="docker()"><a>Docker</a><img
-                            src="/static/img/svg/docker.svg" height="32" th:src="@{/img/svg/docker.svg}" alt="docker">
-                    </li>
-                    <li class="skill-point skill-point-postman" onclick="postman()"><a>Postman</a><img
-                            src="/static/img/svg/postman.svg" height="32" th:src="@{/img/svg/postman.svg}"
-                            alt="postman"></li>
+                    <li class="skill-point skill-point-intellij" onclick="intellij()"><a>IntelliJ</a><img src="/static/img/svg/intellij.svg" height="32" th:src="@{/img/svg/intellij.svg}" alt="intellij"></li>
+                    <li class="skill-point skill-point-github" onclick="github()"><a>GitHub</a><img src="/static/img/svg/github-dark.svg" height="32" th:src="@{/img/svg/github-dark.svg}" alt="github"></li>
+                    <li class="skill-point skill-point-gitlab" onclick="gitlab()"><a>GitLab</a><img src="/static/img/svg/gitlab.svg" height="32" th:src="@{/img/svg/gitlab.svg}" alt="gitlab"></li>
+                    <li class="skill-point skill-point-docker" onclick="docker()"><a>Docker</a><img src="/static/img/svg/docker.svg" height="32" th:src="@{/img/svg/docker.svg}" alt="docker"></li>
+                    <li class="skill-point skill-point-postman" onclick="postman()"><a>Postman</a><img src="/static/img/svg/postman.svg" height="32" th:src="@{/img/svg/postman.svg}" alt="postman"></li>
                 </ul>
             </div>
             <div class="skill-info">
                 <div class="skill-select-info">Choose the skill that interests you</div>
                 <div class="skill skill-intellij">
-                    <div class="skill-name"><a>IntelliJ</a><img src="/static/img/svg/intellij.svg" height="48"
-                                                                th:src="@{/img/svg/intellij.svg}" alt="intellij">
-                    </div>
+                    <div class="skill-name"><a>IntelliJ</a><img src="/static/img/svg/intellij.svg" height="48" th:src="@{/img/svg/intellij.svg}" alt="intellij"></div>
                     <div class="skill-subnames">The best IDE</div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">My primary programming environment is <b>IntelliJ IDEA from
-                        JetBrains</b>
-                        - a tool that allows me to fully utilize the capabilities of Java and the Spring framework.
-                    </div>
+                    <div class="skill-description">My primary programming environment is <b>IntelliJ IDEA from JetBrains</b> - a tool that allows me to fully utilize the capabilities of Java and the Spring framework.</div>
                 </div>
                 <div class="skill skill-github">
-                    <div class="skill-name"><a>GitHub</a><img src="/static/img/svg/github-dark.svg" height="48"
-                                                              th:src="@{/img/svg/github-dark.svg}" alt="github"></div>
+                    <div class="skill-name"><a>GitHub</a><img src="/static/img/svg/github-dark.svg" height="48" th:src="@{/img/svg/github-dark.svg}" alt="github"></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">I use <b>GitHub</b>, the most popular solution, for version control.
-                        I
-                        believe it is the right platform for presenting my projects, which are available on it.
-                    </div>
+                    <div class="skill-description">I use <b>GitHub</b>, the most popular solution, for version control. I believe it is the right platform for presenting my projects, which are available on it.</div>
                 </div>
                 <div class="skill skill-gitlab">
-                    <div class="skill-name"><a>GitLab</a><img src="/static/img/svg/gitlab.svg" height="48"
-                                                              th:src="@{/img/svg/gitlab.svg}" alt="gitlab">
-                    </div>
+                    <div class="skill-name"><a>GitLab</a><img src="/static/img/svg/gitlab.svg" height="48" th:src="@{/img/svg/gitlab.svg}" alt="gitlab"></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">I also have experience with <b>GitLab</b>, which I learned about
-                        during
-                        more complex team projects while working at a start-up.
-                    </div>
+                    <div class="skill-description">I also have experience with <b>GitLab</b>, which I learned about during more complex team projects while working at a start-up.</div>
                 </div>
                 <div class="skill skill-docker">
-                    <div class="skill-name"><a>Docker</a><img src="/static/img/svg/docker.svg" height="48"
-                                                              th:src="@{/img/svg/docker.svg}" alt="docker"></div>
+                    <div class="skill-name"><a>Docker</a><img src="/static/img/svg/docker.svg" height="48" th:src="@{/img/svg/docker.svg}" alt="docker"></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">I use <b>Docker</b> for deployment. The portfolio you are currently
-                        viewing was deployed using this technology. Although using a Spring Boot-based server to display
-                        static pages may seem excessive, I treated it as a practical exercise covering the full
-                        application
-                        lifecycle - from development to deployment.
-                    </div>
+                    <div class="skill-description">I use <b>Docker</b> for deployment. The portfolio you are currently viewing was deployed using this technology. Although using a Spring Boot-based server to display static pages may seem excessive, I treated it as a practical exercise covering the full application lifecycle - from development to deployment.</div>
                 </div>
                 <div class="skill skill-postman">
-                    <div class="skill-name"><a>Postman</a><img src="/static/img/svg/postman.svg" height="48"
-                                                               th:src="@{/img/svg/postman.svg}" alt="postman"></div>
+                    <div class="skill-name"><a>Postman</a><img src="/static/img/svg/postman.svg" height="48" th:src="@{/img/svg/postman.svg}" alt="postman"></div>
                     <div class="skill-subnames"></div>
                     <div class="line-under-subnames"></div>
-                    <div class="skill-description">When working with REST API, I use <b>Postman</b>, a tool that allows
-                        me
-                        to effectively test endpoints, analyze responses, and streamline the interface design process.
-                    </div>
+                    <div class="skill-description">When working with REST API, I use <b>Postman</b>, a tool that allows me to effectively test endpoints, analyze responses, and streamline the interface design process.</div>
                 </div>
             </div>
         </div>
@@ -145,6 +111,7 @@
             <div class="skill-others">
                 <div class="skill-others-name"><a href="#" th:href="@{/skills/java}">Java and frameworks</a></div>
                 <div class="skill-others-name"><a href="#" th:href="@{/skills/databases}">Databases</a></div>
+                <div class="skill-others-name active"><a href="#" th:href="@{/skills/tools}">Tools and platforms</a></div>
                 <div class="skill-others-name"><a href="#" th:href="@{/skills/others}">Others</a></div>
             </div>
         </div>
