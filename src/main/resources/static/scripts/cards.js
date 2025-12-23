@@ -1,9 +1,10 @@
-let cards;
-let shuffledCards;
+let cards = [];
+let shuffledCards= [];
+const playedCards = [];
 
 function shuffle() {
-    document.querySelector(`.playground-rule`).remove();
-    let cardInputs = document.querySelectorAll(`.card-input`);const playground = document.querySelector('.playground-cards');
+    let cardInputs = document.querySelectorAll(`.card-input`);
+    const playground = document.querySelector('.playground-cards');
     const oldCards = [...playground.children];
 
     oldCards.forEach(card => card.classList.remove('show'));
@@ -13,6 +14,23 @@ function shuffle() {
     cards = generateCardImagesFromInputs();
 
     shuffledCards = shuffleCards(cards);
+
+    writeDownWords();
+}
+
+function writeDownWords() {
+    const container = document.querySelector('.menu-words');
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    [...shuffledCards].reverse().forEach(card => {
+        if (!card.word) return;
+
+        const p = document.createElement('p');
+        p.textContent = card.word;
+        container.appendChild(p);
+    });
 }
 
 function updateCardsCount(cardInputs) {
@@ -23,22 +41,6 @@ function updateCardsCount(cardInputs) {
     })
 
     document.querySelector(`.count`).innerHTML = count;
-}
-
-function reset() {
-    document.querySelectorAll('.card-input').forEach(card => {
-        card.value = 1;
-    });
-
-    const playground = document.querySelector('.playground-cards');
-    const cards = [...playground.children];
-
-    cards.forEach(card => card.classList.remove('show'));
-
-    setTimeout(() => {
-        playground.innerHTML = '';
-        shuffle();
-    }, 300);
 }
 
 function generateCardImagesFromInputs() {
@@ -52,6 +54,7 @@ function generateCardImagesFromInputs() {
         const [suit, value] = input.id.split('-');
         const suitUpper = suit.toUpperCase();
         const basePath = '/static/img/cards/';
+        const word = input.name;
 
         for (let i = 0; i < count; i++) {
             const rotation = Math.floor(Math.random() * 31) - 15; // -15 do +15
@@ -60,7 +63,8 @@ function generateCardImagesFromInputs() {
                 src: `${basePath}${suitUpper}-${value}.svg`,
                 alt: `${suitUpper} ${value}`,
                 className: 'full-card',
-                rotate: rotation
+                rotate: rotation,
+                word: word
             });
         }
     });
@@ -83,6 +87,8 @@ function addCardToPlayground() {
     if (shuffledCards.length === 0) return;
 
     const card = shuffledCards.pop();
+    playedCards.push(card);
+
     const playground = document.querySelector('.playground-cards');
 
     const img = document.createElement('img');
@@ -100,13 +106,73 @@ function addCardToPlayground() {
 }
 
 function removeLastCardFromPlayground() {
-    const playground = document.querySelector('.playground-cards');
-    const lastCard = playground.lastElementChild;
-    if (!lastCard) return;
+    if (playedCards.length === 0) return;
 
-    lastCard.classList.remove('show');
+    const playground = document.querySelector('.playground-cards');
+    const lastCardEl = playground.lastElementChild;
+    if (!lastCardEl) return;
+
+    const card = playedCards.pop();
+    shuffledCards.push(card);
+
+    lastCardEl.classList.remove('show');
 
     setTimeout(() => {
-        playground.removeChild(lastCard);
+        playground.removeChild(lastCardEl);
     }, 300);
+}
+
+function toggleSuit(checkboxSelector, inputsSelector) {
+    const checkbox = document.querySelector(checkboxSelector);
+    const inputs = document.querySelectorAll(inputsSelector);
+
+    checkbox.addEventListener('change', () => {
+        if (!checkbox.checked) {
+            inputs.forEach(input => {
+                input.value = 0;
+                input.disabled = true;
+            });
+        } else {
+            inputs.forEach(input => {
+                input.disabled = false;
+                input.value = 1;
+            });
+        }
+    });
+}
+
+toggleSuit('.diamonds-suit', '.card-input-diamond');
+
+toggleSuit('.hearts-suit', '.card-input-hearts');
+
+toggleSuit('.clubs-suit', '.card-input-clubs');
+
+toggleSuit('.spades-suit', '.card-input-spades');
+
+function selectSmallDeck() {
+    const allInputs = document.querySelectorAll('.card-input');
+
+    allInputs.forEach(input => {
+        if (input.classList.contains('small-deck')) {
+            input.value = 1;
+        } else {
+            input.value = 0;
+        }
+    });
+}
+
+function selectFullDeck() {
+    const allInputs = document.querySelectorAll('.card-input');
+
+    allInputs.forEach(input => {
+        input.value = 1;
+    });
+}
+
+function selectDoubleDeck() {
+    const allInputs = document.querySelectorAll('.card-input');
+
+    allInputs.forEach(input => {
+        input.value = 2;
+    });
 }

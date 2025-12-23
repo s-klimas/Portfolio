@@ -61,6 +61,10 @@ html, body {
     width: 40px;
 }
 
+.suits {
+    justify-self: center
+}
+
 .playground-cards {
     height: 90vh;
     display: flex;
@@ -74,7 +78,7 @@ html, body {
 
     height: 50vh;
     position: absolute;
-    border: 2px solid #B57F02;
+    border: 5px outset #B57F02;
     border-radius: 25px;
     overflow: hidden;
     opacity: 0;
@@ -98,21 +102,17 @@ html, body {
 }
 
 .playground-texts {
-    height: 5vh;
-    display: flex;
+    min-height: 5vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.playground-texts {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .playground-text {
     color: #D9D9D9;
-    font-family: "Inter", sans-serif;
+    font-family: "Quintessential", serif;
     font-weight: 700;
     margin-left: 10px;
     margin-right: 10px;
@@ -126,27 +126,48 @@ html, body {
     -ms-user-select: none;
 }
 
-.menu-button {
-    display: block;
-    width: 200px;
-    height: 40px;
-    background-color: #000000;
-    border: 1px outset #D9D9D9;
-    margin-top: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.menu-button > a {
-    color: #D9D9D9;
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
+.playground-shuffle {
+    color: #B57F02;
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
 }
 
 .menu-stats {
     color: #D9D9D9;
-    font-family: "Inter", sans-serif;
+    font-family: "Quintessential", serif;
     text-align: center;
     font-weight: 700;
     margin-top: 20px;
+}
+
+.menu-button {
+    display: block;
+    height: 40px;
+    width: 200px;
+    background-color: #B57F02;
+    border: #31081F 4px outset;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.menu-button > a {
+    font-family: "Quintessential", serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.menu-words {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-words > p {
+    color: #D9D9D9;
+    font-family: "Quintessential", serif;
+
 }
