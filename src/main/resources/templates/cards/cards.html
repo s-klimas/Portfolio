@@ -8,10 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
-
     <title>👨‍💻S-Klimas | Cards🚀</title>
     <meta name="description" content="Portfolio Sebastian Klimas">
-
     <link rel="shortcut icon" type="image/x-icon" href="/static/favicon/favicon.ico" th:href="@{/favicon/favicon.ico}"/>
     <link rel="icon" href="/static/favicon/favicon_32.ico" th:href="@{/favicon/favicon_32.ico}" sizes="32x32"/>
     <link rel="icon" href="/static/favicon/favicon_48.ico" th:href="@{/favicon/favicon_48.ico}" sizes="48x48"/>
@@ -26,233 +24,151 @@
                 <input class="diamonds-suit" type="checkbox" name="diamond-suit" checked/>
             </label>
         </div>
-        <div class="card diamond-01">
-            <img src="/static/img/cards/DIAMOND-1.svg" alt="DIAMOND 1" class="card-image">
-            <label for="diamond-1" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond small-deck" id="diamond-1" type="number" step="1" min="0" max="100" value="1"
-                   name="11 - TaTa / DoDa"/>
-            <hr>
+        <div class="cards-as">
+            <div class="card diamond-01">
+                <img src="/static/img/cards/DIAMOND-1.svg" alt="DIAMOND 1" class="card-image">
+                <label for="diamond-1" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond small-deck" id="diamond-1" type="number" step="1" min="0" max="100" value="1" name="11 - TaTa / DoDa"/>
+            </div>
         </div>
-        <div class="card diamond-02">
-            <img src="/static/img/cards/DIAMOND-2.svg" alt="DIAMOND 2" class="card-image">
-            <label for="diamond-2" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond" id="diamond-2" type="number" step="1" min="0" max="100" value="1"
-                   name="12 - ToN"/>
-            <hr>
+        <div class="cards-column-1">
+            <div class="card diamond-02">
+                <img src="/static/img/cards/DIAMOND-2.svg" alt="DIAMOND 2" class="card-image">
+                <label for="diamond-2" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond" id="diamond-2" type="number" step="1" min="0" max="100" value="1" name="12 - ToN"/>
+            </div>
+            <div class="card diamond-03">
+                <img src="/static/img/cards/DIAMOND-3.svg" alt="DIAMOND 3" class="card-image">
+                <label for="diamond-3" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond" id="diamond-3" type="number" step="1" min="0" max="100" value="1" name="13 - ToM"/>
+            </div>
+            <div class="card diamond-04">
+                <img src="/static/img/cards/DIAMOND-4.svg" alt="DIAMOND 1" class="card-image">
+                <label for="diamond-4" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond" id="diamond-4" type="number" step="1" min="0" max="100" value="1" name="14 - ToR"/>
+            </div>
+            <div class="card diamond-05">
+                <img src="/static/img/cards/DIAMOND-5.svg" alt="DIAMOND 5" class="card-image">
+                <label for="diamond-5" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond" id="diamond-5" type="number" step="1" min="0" max="100" value="1" name="15 - TaLia"/>
+            </div>
+            <div class="card diamond-06">
+                <img src="/static/img/cards/DIAMOND-6.svg" alt="DIAMOND 6" class="card-image">
+                <label for="diamond-6" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond" id="diamond-6" type="number" step="1" min="0" max="100" value="1" name="16 - TuJa"/>
+            </div>
+            <div class="card diamond-07">
+                <img src="/static/img/cards/DIAMOND-7.svg" alt="DIAMOND 7" class="card-image">
+                <label for="diamond-7" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond" id="diamond-7" type="number" step="1" min="0" max="100" value="1" name="17 - DoK"/>
+            </div>
         </div>
-        <div class="card diamond-03">
-            <img src="/static/img/cards/DIAMOND-3.svg" alt="DIAMOND 3" class="card-image">
-            <label for="diamond-3" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond" id="diamond-3" type="number" step="1" min="0" max="100" value="1"
-                   name="13 - ToM"/>
-            <hr>
-        </div>
-        <div class="card diamond-04">
-            <img src="/static/img/cards/DIAMOND-4.svg" alt="DIAMOND 1" class="card-image">
-            <label for="diamond-4" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond" id="diamond-4" type="number" step="1" min="0" max="100" value="1"
-                   name="14 - ToR"/>
-            <hr>
-        </div>
-        <div class="card diamond-05">
-            <img src="/static/img/cards/DIAMOND-5.svg" alt="DIAMOND 5" class="card-image">
-            <label for="diamond-5" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond" id="diamond-5" type="number" step="1" min="0" max="100" value="1"
-                   name="15 - TaLia"/>
-            <hr>
-        </div>
-        <div class="card diamond-06">
-            <img src="/static/img/cards/DIAMOND-6.svg" alt="DIAMOND 6" class="card-image">
-            <label for="diamond-6" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond" id="diamond-6" type="number" step="1" min="0" max="100" value="1"
-                   name="16 - TuJa"/>
-            <hr>
-        </div>
-        <div class="card diamond-07">
-            <img src="/static/img/cards/DIAMOND-7.svg" alt="DIAMOND 7" class="card-image">
-            <label for="diamond-7" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond" id="diamond-7" type="number" step="1" min="0" max="100" value="1"
-                   name="17 - DoK"/>
-            <hr>
-        </div>
-        <div class="card diamond-08">
-            <img src="/static/img/cards/DIAMOND-8.svg" alt="DIAMOND 8" class="card-image">
-            <label for="diamond-8" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond" id="diamond-8" type="number" step="1" min="0" max="100" value="1"
-                   name="18 - ToFfi"/>
-            <hr>
-        </div>
-        <div class="card diamond-09">
-            <img src="/static/img/cards/DIAMOND-9.svg" alt="DIAMOND 9" class="card-image">
-            <label for="diamond-9" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond small-deck" id="diamond-9" type="number" step="1" min="0" max="100" value="1"
-                   name="19 - DąB"/>
-            <hr>
-        </div>
-        <div class="card diamond-10">
-            <img src="/static/img/cards/DIAMOND-10.svg" alt="DIAMOND 10" class="card-image">
-            <label for="diamond-10" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond small-deck" id="diamond-10" type="number" step="1" min="0" max="100" value="1"
-                   name="20 - NoS"/>
-            <hr>
-        </div>
-        <div class="card diamond-11">
-            <img src="/static/img/cards/DIAMOND-11.svg" alt="DIAMOND 11" class="card-image">
-            <label for="diamond-11" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond small-deck" id="diamond-11" type="number" step="1" min="0" max="100" value="1"
-                   name="21 - NoDi"/>
-            <hr>
-        </div>
-        <div class="card diamond-12">
-            <img src="/static/img/cards/DIAMOND-12.svg" alt="DIAMOND 12" class="card-image">
-            <label for="diamond-12" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond small-deck" id="diamond-12" type="number" step="1" min="0" max="100" value="1"
-                   name="22 - NaN"/>
-            <hr>
-        </div>
-        <div class="card diamond-13">
-            <img src="/static/img/cards/DIAMOND-13.svg" alt="DIAMOND 13" class="card-image">
-            <label for="diamond-13" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-diamond small-deck" id="diamond-13" type="number" step="1" min="0" max="100" value="1"
-                   name="23 - NeMo"/>
-            <hr>
+        <div class="cards-column-2">
+            <div class="card diamond-08">
+                <img src="/static/img/cards/DIAMOND-8.svg" alt="DIAMOND 8" class="card-image">
+                <label for="diamond-8" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond" id="diamond-8" type="number" step="1" min="0" max="100" value="1" name="18 - ToFfi"/>
+            </div>
+            <div class="card diamond-09">
+                <img src="/static/img/cards/DIAMOND-9.svg" alt="DIAMOND 9" class="card-image">
+                <label for="diamond-9" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond small-deck" id="diamond-9" type="number" step="1" min="0" max="100" value="1" name="19 - DąB"/>
+            </div>
+            <div class="card diamond-10">
+                <img src="/static/img/cards/DIAMOND-10.svg" alt="DIAMOND 10" class="card-image">
+                <label for="diamond-10" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond small-deck" id="diamond-10" type="number" step="1" min="0" max="100" value="1" name="20 - NoS"/>
+            </div>
+            <div class="card diamond-11">
+                <img src="/static/img/cards/DIAMOND-11.svg" alt="DIAMOND 11" class="card-image">
+                <label for="diamond-11" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond small-deck" id="diamond-11" type="number" step="1" min="0" max="100" value="1" name="21 - NoDi"/>
+            </div>
+            <div class="card diamond-12">
+                <img src="/static/img/cards/DIAMOND-12.svg" alt="DIAMOND 12" class="card-image">
+                <label for="diamond-12" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond small-deck" id="diamond-12" type="number" step="1" min="0" max="100" value="1" name="22 - NaN"/>
+            </div>
+            <div class="card diamond-13">
+                <img src="/static/img/cards/DIAMOND-13.svg" alt="DIAMOND 13" class="card-image">
+                <label for="diamond-13" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-diamond small-deck" id="diamond-13" type="number" step="1" min="0" max="100" value="1" name="23 - NeMo"/>
+            </div>
         </div>
     </div>
     <div class="cards hearts">
-        <div class="suits hearts">
-            <label>
-                <input class="hearts-suit" type="checkbox" name="hearts-suit" checked/>
-            </label>
+        <div class="suits hearts"><label><input class="hearts-suit" type="checkbox" name="hearts-suit" checked/></label>
         </div>
-        <div class="card hearts-01">
-            <img src="/static/img/cards/HEART-1.svg" alt="HEART 1" class="card-image">
-            <label for="heart-1" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts small-deck" id="heart-1" type="number" step="1" min="0" max="100" value="1" name="31 - MaTa"/>
-            <hr>
+        <div class="cards-as">
+            <div class="card hearts-01">
+                <img src="/static/img/cards/HEART-1.svg" alt="HEART 1" class="card-image">
+                <label for="heart-1" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts small-deck" id="heart-1" type="number" step="1" min="0" max="100" value="1" name="31 - MaTa"/>
+            </div>
         </div>
-        <div class="card hearts-02">
-            <img src="/static/img/cards/HEART-2.svg" alt="HEART 2" class="card-image">
-            <label for="heart-2" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts" id="heart-2" type="number" step="1" min="0" max="100" value="1" name="31 - MiNa"/>
-            <hr>
+        <div class="cards-column-1">
+            <div class="card hearts-02">
+                <img src="/static/img/cards/HEART-2.svg" alt="HEART 2" class="card-image">
+                <label for="heart-2" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts" id="heart-2" type="number" step="1" min="0" max="100" value="1" name="31 - MiNa"/>
+            </div>
+            <div class="card hearts-03">
+                <img src="/static/img/cards/HEART-3.svg" alt="HEART 3" class="card-image">
+                <label for="heart-3" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts" id="heart-3" type="number" step="1" min="0" max="100" value="1" name="33 - MuMia"/>
+            </div>
+            <div class="card hearts-04">
+                <img src="/static/img/cards/HEART-4.svg" alt="HEART 4" class="card-image">
+                <label for="heart-4" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts" id="heart-4" type="number" step="1" min="0" max="100" value="1" name="34 - MuR"/>
+            </div>
+            <div class="card hearts-05">
+                <img src="/static/img/cards/HEART-5.svg" alt="HEART 5" class="card-image">
+                <label for="heart-5" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts" id="heart-5" type="number" step="1" min="0" max="100" value="1" name="35 - MoL"/>
+            </div>
+            <div class="card hearts-06">
+                <img src="/static/img/cards/HEART-6.svg" alt="HEART 6" class="card-image">
+                <label for="heart-6" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts" id="heart-6" type="number" step="1" min="0" max="100" value="1" name="36 - MoYa"/>
+            </div>
+            <div class="card hearts-07">
+                <img src="/static/img/cards/HEART-7.svg" alt="HEART 7" class="card-image">
+                <label for="heart-7" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts" id="heart-7" type="number" step="1" min="0" max="100" value="1" name="37 - MaK"/>
+            </div>
         </div>
-        <div class="card hearts-03">
-            <img src="/static/img/cards/HEART-3.svg" alt="HEART 3" class="card-image">
-            <label for="heart-3" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts" id="heart-3" type="number" step="1" min="0" max="100" value="1" name="33 - MuMia"/>
-            <hr>
-        </div>
-        <div class="card hearts-04">
-            <img src="/static/img/cards/HEART-4.svg" alt="HEART 4" class="card-image">
-            <label for="heart-4" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts" id="heart-4" type="number" step="1" min="0" max="100" value="1" name="34 - MuR"/>
-            <hr>
-        </div>
-        <div class="card hearts-05">
-            <img src="/static/img/cards/HEART-5.svg" alt="HEART 5" class="card-image">
-            <label for="heart-5" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts" id="heart-5" type="number" step="1" min="0" max="100" value="1" name="35 - MoL"/>
-            <hr>
-        </div>
-        <div class="card hearts-06">
-            <img src="/static/img/cards/HEART-6.svg" alt="HEART 6" class="card-image">
-            <label for="heart-6" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts" id="heart-6" type="number" step="1" min="0" max="100" value="1" name="36 - MoYa"/>
-            <hr>
-        </div>
-        <div class="card hearts-07">
-            <img src="/static/img/cards/HEART-7.svg" alt="HEART 7" class="card-image">
-            <label for="heart-7" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts" id="heart-7" type="number" step="1" min="0" max="100" value="1" name="37 - MaK"/>
-            <hr>
-        </div>
-        <div class="card hearts-08">
-            <img src="/static/img/cards/HEART-8.svg" alt="HEART 8" class="card-image">
-            <label for="heart-8" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts" id="heart-8" type="number" step="1" min="0" max="100" value="1" name="38 - MaFia"/>
-            <hr>
-        </div>
-        <div class="card hearts-09">
-            <img src="/static/img/cards/HEART-9.svg" alt="HEART 9" class="card-image">
-            <label for="heart-9" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts small-deck" id="heart-9" type="number" step="1" min="0" max="100" value="1" name="39 - MaPa"/>
-            <hr>
-        </div>
-        <div class="card hearts-10">
-            <img src="/static/img/cards/HEART-10.svg" alt="HEART 10" class="card-image">
-            <label for="heart-10" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts small-deck" id="heart-10" type="number" step="1" min="0" max="100" value="1" name="40 - RoSa"/>
-            <hr>
-        </div>
-        <div class="card hearts-11">
-            <img src="/static/img/cards/HEART-11.svg" alt="HEART 11" class="card-image">
-            <label for="heart-11" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts small-deck" id="heart-11" type="number" step="1" min="0" max="100" value="1" name="41 - RaDio"/>
-            <hr>
-        </div>
-        <div class="card hearts-12">
-            <img src="/static/img/cards/HEART-12.svg" alt="HEART 12" class="card-image">
-            <label for="heart-12" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts small-deck" id="heart-12" type="number" step="1" min="0" max="100" value="1" name="42 - RaNa"/>
-            <hr>
-        </div>
-        <div class="card hearts-13">
-            <img src="/static/img/cards/HEART-13.svg" alt="HEART 13" class="card-image">
-            <label for="heart-13" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-hearts small-deck" id="heart-13" type="number" step="1" min="0" max="100" value="1" name="43 - RaMa"/>
-            <hr>
+        <div class="cards-column-2">
+            <div class="card hearts-08">
+                <img src="/static/img/cards/HEART-8.svg" alt="HEART 8" class="card-image">
+                <label for="heart-8" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts" id="heart-8" type="number" step="1" min="0" max="100" value="1" name="38 - MaFia"/>
+            </div>
+            <div class="card hearts-09">
+                <img src="/static/img/cards/HEART-9.svg" alt="HEART 9" class="card-image">
+                <label for="heart-9" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts small-deck" id="heart-9" type="number" step="1" min="0" max="100" value="1" name="39 - MaPa"/>
+            </div>
+            <div class="card hearts-10">
+                <img src="/static/img/cards/HEART-10.svg" alt="HEART 10" class="card-image">
+                <label for="heart-10" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts small-deck" id="heart-10" type="number" step="1" min="0" max="100" value="1" name="40 - RoSa"/>
+            </div>
+            <div class="card hearts-11">
+                <img src="/static/img/cards/HEART-11.svg" alt="HEART 11" class="card-image">
+                <label for="heart-11" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts small-deck" id="heart-11" type="number" step="1" min="0" max="100" value="1" name="41 - RaDio"/>
+            </div>
+            <div class="card hearts-12">
+                <img src="/static/img/cards/HEART-12.svg" alt="HEART 12" class="card-image">
+                <label for="heart-12" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts small-deck" id="heart-12" type="number" step="1" min="0" max="100" value="1" name="42 - RaNa"/>
+            </div>
+            <div class="card hearts-13">
+                <img src="/static/img/cards/HEART-13.svg" alt="HEART 13" class="card-image">
+                <label for="heart-13" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-hearts small-deck" id="heart-13" type="number" step="1" min="0" max="100" value="1" name="43 - RaMa"/>
+            </div>
         </div>
     </div>
     <div class="cards spades">
@@ -261,109 +177,80 @@
                 <input class="spades-suit" type="checkbox" name="spades-suit" checked/>
             </label>
         </div>
-        <div class="card spades-01">
-            <img src="/static/img/cards/SPADE-1.svg" alt="SPADE 1" class="card-image">
-            <label for="spade-1" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades small-deck" id="spade-1" type="number" step="1" min="0" max="100" value="1" name="51 - LaTo"/>
-            <hr>
+        <div class="cards-as">
+            <div class="card spades-01">
+                <img src="/static/img/cards/SPADE-1.svg" alt="SPADE 1" class="card-image">
+                <label for="spade-1" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades small-deck" id="spade-1" type="number" step="1" min="0" max="100" value="1" name="51 - LaTo"/>
+            </div>
         </div>
-        <div class="card spades-02">
-            <img src="/static/img/cards/SPADE-2.svg" alt="SPADE 2" class="card-image">
-            <label for="spade-2" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades" id="spade-2" type="number" step="1" min="0" max="100" value="1" name="52 - LiNa"/>
-            <hr>
+        <div class="cards-column-1">
+            <div class="card spades-02">
+                <img src="/static/img/cards/SPADE-2.svg" alt="SPADE 2" class="card-image">
+                <label for="spade-2" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades" id="spade-2" type="number" step="1" min="0" max="100" value="1" name="52 - LiNa"/>
+            </div>
+            <div class="card spades-03">
+                <img src="/static/img/cards/SPADE-3.svg" alt="SPADE 3" class="card-image">
+                <label for="spade-3" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades" id="spade-3" type="number" step="1" min="0" max="100" value="1" name="53 - LaMa"/>
+            </div>
+            <div class="card spades-04">
+                <img src="/static/img/cards/SPADE-4.svg" alt="SPADE 4" class="card-image">
+                <label for="spade-4" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades" id="spade-4" type="number" step="1" min="0" max="100" value="1" name="54 - LaRa (Croft)"/>
+            </div>
+            <div class="card spades-05">
+                <img src="/static/img/cards/SPADE-5.svg" alt="SPADE 5" class="card-image">
+                <label for="spade-5" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades" id="spade-5" type="number" step="1" min="0" max="100" value="1" name="55 - LaLa"/>
+            </div>
+            <div class="card spades-06">
+                <img src="/static/img/cards/SPADE-6.svg" alt="SPADE 6" class="card-image">
+                <label for="spade-6" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades" id="spade-6" type="number" step="1" min="0" max="100" value="1" name="56 - oLeJ"/>
+            </div>
+            <div class="card spades-07">
+                <img src="/static/img/cards/SPADE-7.svg" alt="SPADE 7" class="card-image">
+                <label for="spade-7" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades" id="spade-7" type="number" step="1" min="0" max="100" value="1" name="57 - LeK"/>
+            </div>
         </div>
-        <div class="card spades-03">
-            <img src="/static/img/cards/SPADE-3.svg" alt="SPADE 3" class="card-image">
-            <label for="spade-3" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades" id="spade-3" type="number" step="1" min="0" max="100" value="1" name="53 - LaMa"/>
-            <hr>
-        </div>
-        <div class="card spades-04">
-            <img src="/static/img/cards/SPADE-4.svg" alt="SPADE 4" class="card-image">
-            <label for="spade-4" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades" id="spade-4" type="number" step="1" min="0" max="100" value="1" name="54 - LaRa (Croft)"/>
-            <hr>
-        </div>
-        <div class="card spades-05">
-            <img src="/static/img/cards/SPADE-5.svg" alt="SPADE 5" class="card-image">
-            <label for="spade-5" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades" id="spade-5" type="number" step="1" min="0" max="100" value="1" name="55 - LaLa"/>
-            <hr>
-        </div>
-        <div class="card spades-06">
-            <img src="/static/img/cards/SPADE-6.svg" alt="SPADE 6" class="card-image">
-            <label for="spade-6" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades" id="spade-6" type="number" step="1" min="0" max="100" value="1" name="56 - oLeJ"/>
-            <hr>
-        </div>
-        <div class="card spades-07">
-            <img src="/static/img/cards/SPADE-7.svg" alt="SPADE 7" class="card-image">
-            <label for="spade-7" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades" id="spade-7" type="number" step="1" min="0" max="100" value="1" name="57 - LeK"/>
-            <hr>
-        </div>
-        <div class="card spades-08">
-            <img src="/static/img/cards/SPADE-8.svg" alt="SPADE 8" class="card-image">
-            <label for="spade-8" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades" id="spade-8" type="number" step="1" min="0" max="100" value="1" name="58 - LeW"/>
-            <hr>
-        </div>
-        <div class="card spades-09">
-            <img src="/static/img/cards/SPADE-9.svg" alt="SPADE 9" class="card-image">
-            <label for="spade-9" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades small-deck" id="spade-9" type="number" step="1" min="0" max="100" value="1" name="59 - LiPa"/>
-            <hr>
-        </div>
-        <div class="card spades-10">
-            <img src="/static/img/cards/SPADE-10.svg" alt="SPADE 10" class="card-image">
-            <label for="spade-10" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades small-deck" id="spade-10" type="number" step="1" min="0" max="100" value="1" name="60 - JaZz"/>
-            <hr>
-        </div>
-        <div class="card spades-11">
-            <img src="/static/img/cards/SPADE-11.svg" alt="SPADE 11" class="card-image">
-            <label for="spade-11" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades small-deck" id="spade-11" type="number" step="1" min="0" max="100" value="1" name="61 - JaD"/>
-            <hr>
-        </div>
-        <div class="card spades-12">
-            <img src="/static/img/cards/SPADE-12.svg" alt="SPADE 12" class="card-image">
-            <label for="spade-12" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades small-deck" id="spade-12" type="number" step="1" min="0" max="100" value="1" name="62 - JaN"/>
-            <hr>
-        </div>
-        <div class="card spades-13">
-            <img src="/static/img/cards/SPADE-13.svg" alt="SPADE 13" class="card-image">
-            <label for="spade-13" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-spades small-deck" id="spade-13" type="number" step="1" min="0" max="100" value="1" name="63 - JaMa"/>
-            <hr>
+        <div class="cards-column-2">
+            <div class="card spades-08">
+                <img src="/static/img/cards/SPADE-8.svg" alt="SPADE 8" class="card-image">
+                <label for="spade-8" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades" id="spade-8" type="number" step="1" min="0" max="100" value="1" name="58 - LeW"/>
+            </div>
+            <div class="card spades-09">
+                <img src="/static/img/cards/SPADE-9.svg" alt="SPADE 9" class="card-image">
+                <label for="spade-9" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades small-deck" id="spade-9" type="number" step="1" min="0" max="100" value="1" name="59 - LiPa"/>
+            </div>
+            <div class="card spades-10">
+                <img src="/static/img/cards/SPADE-10.svg" alt="SPADE 10"
+                   class="card-image">
+                <label for="spade-10" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades small-deck" id="spade-10" type="number" step="1" min="0" max="100" value="1" name="60 - JaZz"/>
+            </div>
+            <div class="card spades-11">
+                <img src="/static/img/cards/SPADE-11.svg" alt="SPADE 11"
+                   class="card-image">
+                <label for="spade-11" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades small-deck" id="spade-11" type="number" step="1" min="0" max="100" value="1" name="61 - JaD"/>
+            </div>
+            <div class="card spades-12">
+                <img src="/static/img/cards/SPADE-12.svg" alt="SPADE 12"
+                   class="card-image">
+                <label for="spade-12" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades small-deck" id="spade-12" type="number" step="1" min="0" max="100" value="1" name="62 - JaN"/>
+            </div>
+            <div class="card spades-13">
+                <img src="/static/img/cards/SPADE-13.svg" alt="SPADE 13"
+                   class="card-image">
+                <label for="spade-13" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-spades small-deck" id="spade-13" type="number" step="1" min="0" max="100" value="1" name="63 - JaMa"/>
+            </div>
         </div>
     </div>
     <div class="cards clubs">
@@ -372,109 +259,76 @@
                 <input class="clubs-suit" type="checkbox" name="clubs-suit" checked/>
             </label>
         </div>
-        <div class="card club-01">
-            <img src="/static/img/cards/CLUB-1.svg" alt="CLUB 1" class="card-image">
-            <label for="club-1" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs small-deck" id="club-1" type="number" step="1" min="0" max="100" value="1" name="71 - KoT"/>
-            <hr>
+        <div class="cards-as">
+            <div class="card club-01">
+                <img src="/static/img/cards/CLUB-1.svg" alt="CLUB 1" class="card-image">
+                <label for="club-1" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs small-deck" id="club-1" type="number" step="1" min="0" max="100" value="1" name="71 - KoT"/>
+            </div>
         </div>
-        <div class="card club-02">
-            <img src="/static/img/cards/CLUB-2.svg" alt="CLUB 2" class="card-image">
-            <label for="club-2" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs" id="club-2" type="number" step="1" min="0" max="100" value="1" name="72 - KiNo"/>
-            <hr>
+        <div class="cards-column-1">
+            <div class="card club-02">
+                <img src="/static/img/cards/CLUB-2.svg" alt="CLUB 2" class="card-image">
+                <label for="club-2" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs" id="club-2" type="number" step="1" min="0" max="100" value="1" name="72 - KiNo"/>
+            </div>
+            <div class="card club-03">
+                <img src="/static/img/cards/CLUB-3.svg" alt="CLUB 3" class="card-image">
+                <label for="club-3" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs" id="club-3" type="number" step="1" min="0" max="100" value="1" name="73 - Kim (Dzong Un)"/>
+            </div>
+            <div class="card club-04">
+                <img src="/static/img/cards/CLUB-4.svg" alt="CLUB 4" class="card-image">
+                <label for="club-4" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs" id="club-4" type="number" step="1" min="0" max="100" value="1" name="74 - KuRa"/>
+            </div>
+            <div class="card club-05">
+                <img src="/static/img/cards/CLUB-5.svg" alt="CLUB 5" class="card-image">
+                <label for="club-5" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs" id="club-5" type="number" step="1" min="0" max="100" value="1" name="75 - CoLa"/>
+            </div>
+            <div class="card club-06">
+                <img src="/static/img/cards/CLUB-6.svg" alt="CLUB 6" class="card-image">
+                <label for="club-6" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs" id="club-6" type="number" step="1" min="0" max="100" value="1" name="76 - KiJ"/>
+            </div>
+            <div class="card club-07">
+                <img src="/static/img/cards/CLUB-7.svg" alt="CLUB 7" class="card-image">
+                <label for="club-7" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs" id="club-7" type="number" step="1" min="0" max="100" value="1" name="77 - KiCK"/>
+            </div>
         </div>
-        <div class="card club-03">
-            <img src="/static/img/cards/CLUB-3.svg" alt="CLUB 3" class="card-image">
-            <label for="club-3" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs" id="club-3" type="number" step="1" min="0" max="100" value="1" name="73 - Kim (Dzong Un)"/>
-            <hr>
-        </div>
-        <div class="card club-04">
-            <img src="/static/img/cards/CLUB-4.svg" alt="CLUB 4" class="card-image">
-            <label for="club-4" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs" id="club-4" type="number" step="1" min="0" max="100" value="1" name="74 - KuRa"/>
-            <hr>
-        </div>
-        <div class="card club-05">
-            <img src="/static/img/cards/CLUB-5.svg" alt="CLUB 5" class="card-image">
-            <label for="club-5" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs" id="club-5" type="number" step="1" min="0" max="100" value="1" name="75 - CoLa"/>
-            <hr>
-        </div>
-        <div class="card club-06">
-            <img src="/static/img/cards/CLUB-6.svg" alt="CLUB 6" class="card-image">
-            <label for="club-6" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs" id="club-6" type="number" step="1" min="0" max="100" value="1" name="76 - KiJ"/>
-            <hr>
-        </div>
-        <div class="card club-07">
-            <img src="/static/img/cards/CLUB-7.svg" alt="CLUB 7" class="card-image">
-            <label for="club-7" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs" id="club-7" type="number" step="1" min="0" max="100" value="1" name="77 - KiCK"/>
-            <hr>
-        </div>
-        <div class="card club-08">
-            <img src="/static/img/cards/CLUB-8.svg" alt="CLUB 8" class="card-image">
-            <label for="club-8" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs" id="club-8" type="number" step="1" min="0" max="100" value="1" name="78 - KaWa"/>
-            <hr>
-        </div>
-        <div class="card club-09">
-            <img src="/static/img/cards/CLUB-9.svg" alt="CLUB 9" class="card-image">
-            <label for="club-9" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs small-deck" id="club-9" type="number" step="1" min="0" max="100" value="1" name="79 - KuPa"/>
-            <hr>
-        </div>
-        <div class="card club-10">
-            <img src="/static/img/cards/CLUB-10.svg" alt="CLUB 10" class="card-image">
-            <label for="club-10" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs small-deck" id="club-10" type="number" step="1" min="0" max="100" value="1" name="80 - FoSa"/>
-            <hr>
-        </div>
-        <div class="card club-11">
-            <img src="/static/img/cards/CLUB-11.svg" alt="CLUB 11" class="card-image">
-            <label for="club-11" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs small-deck" id="club-11" type="number" step="1" min="0" max="100" value="1" name="81 - FiT"/>
-            <hr>
-        </div>
-        <div class="card club-12">
-            <img src="/static/img/cards/CLUB-12.svg" alt="CLUB 12" class="card-image">
-            <label for="club-12" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs small-deck" id="club-12" type="number" step="1" min="0" max="100" value="1" name="82 - FaN"/>
-            <hr>
-        </div>
-        <div class="card club-13">
-            <img src="/static/img/cards/CLUB-13.svg" alt="CLUB 13" class="card-image">
-            <label for="club-13" class="card-label">
-                <a>Q:</a>
-            </label>
-            <input class="card-input card-input-clubs small-deck" id="club-13" type="number" step="1" min="0" max="100" value="1" name="83 - FoMo"/>
-            <hr>
+        <div class="cards-column-2">
+            <div class="card club-08">
+                <img src="/static/img/cards/CLUB-8.svg" alt="CLUB 8" class="card-image">
+                <label for="club-8" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs" id="club-8" type="number" step="1" min="0" max="100" value="1" name="78 - KaWa"/>
+            </div>
+            <div class="card club-09">
+                <img src="/static/img/cards/CLUB-9.svg" alt="CLUB 9" class="card-image">
+                <label for="club-9" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs small-deck" id="club-9" type="number" step="1" min="0" max="100" value="1" name="79 - KuPa"/>
+            </div>
+            <div class="card club-10">
+                <img src="/static/img/cards/CLUB-10.svg" alt="CLUB 10" class="card-image">
+                <label for="club-10" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs small-deck" id="club-10" type="number" step="1" min="0" max="100" value="1" name="80 - FoSa"/>
+            </div>
+            <div class="card club-11">
+                <img src="/static/img/cards/CLUB-11.svg" alt="CLUB 11" class="card-image">
+                <label for="club-11" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs small-deck" id="club-11" type="number" step="1" min="0" max="100" value="1" name="81 - FiT"/>
+            </div>
+            <div class="card club-12">
+                <img src="/static/img/cards/CLUB-12.svg" alt="CLUB 12" class="card-image">
+                <label for="club-12" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs small-deck" id="club-12" type="number" step="1" min="0" max="100" value="1" name="82 - FaN"/>
+            </div>
+            <div class="card club-13">
+                <img src="/static/img/cards/CLUB-13.svg" alt="CLUB 13" class="card-image">
+                <label for="club-13" class="card-label"><a>Q:</a></label>
+                <input class="card-input card-input-clubs small-deck" id="club-13" type="number" step="1" min="0" max="100" value="1" name="83 - FoMo"/>
+            </div>
         </div>
     </div>
     <div class="playground">
@@ -486,12 +340,11 @@
         </div>
     </div>
     <div class="menu">
+        <button class="menu-button" onclick="selectNone()"><a>Select empty deck</a></button>
         <button class="menu-button" onclick="selectSmallDeck()"><a>Select small deck</a></button>
         <button class="menu-button" onclick="selectFullDeck()"><a>Select full deck</a></button>
         <button class="menu-button" onclick="selectDoubleDeck()"><a>Select double deck</a></button>
-        <div class="menu-stats">
-            <a>Cards in game: </a><a class="count">0</a>
-        </div>
+        <div class="menu-stats"><a>Cards in game: </a><a class="count">0</a></div>
         <div class="menu-words"></div>
     </div>
 </div>
