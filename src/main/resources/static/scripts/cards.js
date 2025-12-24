@@ -57,7 +57,7 @@ function generateCardImagesFromInputs() {
         const word = input.name;
 
         for (let i = 0; i < count; i++) {
-            const rotation = Math.floor(Math.random() * 31) - 15; // -15 do +15
+            const rotation = Math.floor(Math.random() * 31) - 15;
 
             cards.push({
                 src: `${basePath}${suitUpper}-${value}.svg`,
@@ -149,6 +149,14 @@ toggleSuit('.clubs-suit', '.card-input-clubs');
 
 toggleSuit('.spades-suit', '.card-input-spades');
 
+function selectNone() {
+    const allInputs = document.querySelectorAll('.card-input');
+
+    allInputs.forEach(input => {
+        input.value = 0;
+    });
+}
+
 function selectSmallDeck() {
     const allInputs = document.querySelectorAll('.card-input');
 
@@ -176,3 +184,24 @@ function selectDoubleDeck() {
         input.value = 2;
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cardImages = document.querySelectorAll(".card img");
+
+    cardImages.forEach(img => {
+        img.addEventListener("click", () => {
+            const cardDiv = img.closest(".card");
+            if (!cardDiv) return;
+
+            const input = cardDiv.querySelector("input[type='number']");
+            if (!input) return;
+
+            const max = input.max ? parseInt(input.max, 10) : Infinity;
+            let value = parseInt(input.value, 10) || 0;
+
+            if (value < max) {
+                input.value = value + 1;
+            }
+        });
+    });
+});
