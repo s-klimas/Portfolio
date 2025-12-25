@@ -53,7 +53,7 @@ function generateCardImagesFromInputs() {
 
         const [suit, value] = input.id.split('-');
         const suitUpper = suit.toUpperCase();
-        const basePath = '/static/img/cards/';
+        const basePath = '/img/cards/';
         const word = input.name;
 
         for (let i = 0; i < count; i++) {
