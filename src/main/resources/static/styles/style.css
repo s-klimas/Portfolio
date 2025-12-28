@@ -8,6 +8,9 @@
     --Dark-Green: #032C1C;
     --Dark-Purple: #31081F;
     --Middle-Dark-Theme: #262626;
+    --Middle-Grey: #808080;
+    --Light-Grey: #A0A0A0;
+    --Dark-Grey: #666666;
 }
 
 html, body {
@@ -70,47 +73,53 @@ html, body {
     display: block;
     margin-left: 20px;
     cursor: pointer;
-}
-
-.git-logo > a {
-    color: var(--Gold, #B57F02);
     transition: 0.2s ease-in-out;
 }
 
-.git-logo > a:hover {
+.git-logo:hover {
+    /*transform: scale(1.1);*/
+}
+
+.git-logo > a {
     color: var(--Light-Text, #D9D9D9);
     transition: 0.2s ease-in-out;
 }
 
-.git-logo > a:active {
-    color: var(--Dark-Purple, #032C1C);
-    transition: 0.2s ease-in-out;
+.git-logo > a:hover {
+    color: var(--Gold, #B57F02);
 }
+
+/*.git-logo > a:active {*/
+/*    color: var(--Dark-Purple, #032C1C);*/
+/*    transition: 0.2s ease-in-out;*/
+/*}*/
 
 .linkedin-logo {
     width: 2rem;
     height: 2rem;
     flex-shrink: 0;
     display: block;
-    color: var(--Gold, #B57F02);
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 
-.linkedin-logo > a {
-    color: var(--Gold, #B57F02);
-    transition: 0.2s ease-in-out;
+.linkedin-logo:hover {
+    /*transform: scale(1.1);*/
 }
 
-.linkedin-logo > a:hover {
+.linkedin-logo > a {
     color: var(--Light-Text, #D9D9D9);
     transition: 0.2s ease-in-out;
 }
 
-.linkedin-logo > a:active {
-    color: var(--Dark-Purple, #032C1C);
-    transition: 0.2s ease-in-out;
+.linkedin-logo > a:hover {
+    color: var(--Gold, #B57F02);
 }
+
+/*.linkedin-logo > a:active {*/
+/*    color: var(--Dark-Purple, #032C1C);*/
+/*    transition: 0.2s ease-in-out;*/
+/*}*/
 
 .nav {
     flex-shrink: 0;
@@ -449,7 +458,7 @@ html, body {
 
 .skill-description {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -567,7 +576,7 @@ html, body {
 
 .about-me-name {
     color: var(--Light-Text, #D9D9D9);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
@@ -576,7 +585,7 @@ html, body {
 
 .about-me-title {
     color: var(--Gold, #B57F02);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.875rem;
     font-style: normal;
     font-weight: 400;
@@ -586,7 +595,7 @@ html, body {
 .about-me-description {
     color: var(--Light-Text, #D9D9D9);
     text-align: justify;
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 300;
@@ -699,7 +708,7 @@ html, body {
     background: var(--Middle-Dark-Theme, #262626);
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    border: 2px outset #000000;
+    /*border: 2px outset #000000;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -730,28 +739,40 @@ html, body {
 .project:hover {
     color: var(--Dark-Text, #1F1F1F);
     background: var(--Light-Text, #D9D9D9);
-    border: 2px outset #FFFFFF;
+    /*border: 2px outset #FFFFFF;*/
     transition: 0.5s ease-in-out;
 }
 
-.project:hover * {
+.project:hover .project-title, .project:hover .project-technologies {
     color: var(--Dark-Text, #1F1F1F);
     transition: 0.5s;
 }
 
-.project:hover .gold-color {
-    color: var(--Dark-Purple, #31081F);
-    transition: 0.5s;
+.project:hover .project-description {
+    color: var(--Dark-Grey, #666666);
 }
 
-.project:hover .gold-color * {
-    color: var(--Dark-Purple, #31081F);
-    transition: 0.5s;
+.project:hover path {
+    fill: var(--Middle-Dark-Theme, #262626);
 }
+
+.project:hover svg:hover path {
+    fill: var(--Gold, #B57F02);
+}
+
+/*.project:hover .gold-color {*/
+/*    color: var(--Dark-Purple, #31081F);*/
+/*    transition: 0.5s;*/
+/*}*/
+
+/*.project:hover .gold-color * {*/
+/*    color: var(--Dark-Purple, #31081F);*/
+/*    transition: 0.5s;*/
+/*}*/
 
 .project-header {
     padding-top: 2rem;
-    margin-left: -5%;
+    /*margin-left: -5%;*/
     display: flex;
     flex-direction: row;
     align-self: flex-start;
@@ -768,15 +789,31 @@ html, body {
 }
 
 .project-github {
-    display: inline;
-    flex-shrink: 0;
+    display: flex;
     margin-left: 20px;
     cursor: pointer;
 }
 
+.project-github > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-github-svg {
+    width: 35px;
+    height: auto;
+}
+
+.project-github-svg > path {
+    fill: var(--Light-Text, #D9D9D9);
+    transition: 0.5s ease;
+}
+
 .project-github > a > svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    /*width: 2.5rem;*/
+    /*height: 2.5rem;*/
 }
 
 .gold-color {
@@ -798,22 +835,30 @@ html, body {
 
 .project-description {
     width: 100%;
-    color: var(--Light-Text, #D9D9D9);
+    color: var(--Light-Grey, #A0A0A0);
     text-align: justify;
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: 0.5s ease;
 }
 
 .project-show-more {
-    font-family: Inter, sans-serif;
-    font-size: 0.7rem;
+    color: var(--Middle-Grey, #808080);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    float: right;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.project-show-more a:hover{
+    color: var(--Gold, #B57F02);
+    transition: 0.5s ease;
 }
 
 .project-technologies {
@@ -821,21 +866,27 @@ html, body {
     display: flex;
     flex-direction: row;
     color: var(--Light-Text, #D9D9D9);
-    font-family: Inter, sans-serif;
-    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
 }
 
+.project-technologies-2 {
+    margin-bottom: 25px;
+}
+
 .project-technologies-1 > a {
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    /*margin-left: 10px;*/
+    margin-right: 20px;
 }
 
 .project-technologies-2 > a {
-    margin: 15px 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
 }
 
 .projects-full {
@@ -861,7 +912,7 @@ html, body {
 
 .project-full-title {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 700;
@@ -906,7 +957,7 @@ html, body {
 
 .project-full-description-header > .project-full-description-question {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
@@ -915,7 +966,7 @@ html, body {
 
 .project-full-description-header > .project-full-description-answer {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 500;
@@ -924,7 +975,7 @@ html, body {
 
 .project-full-text {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 0.8125rem;
     font-style: normal;
     font-weight: 400;
@@ -935,7 +986,7 @@ html, body {
 
 .project-full-smaller-tittle {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;
@@ -981,7 +1032,7 @@ html, body {
 
 .project-full-technologies > a {
     color: var(--Light-Dark-Text, #5D5D5D);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 800;
