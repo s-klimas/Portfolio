@@ -205,3 +205,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+const openBtn = document.getElementById("openCheat");
+const closeBtn = document.getElementById("closeCheat");
+const overlay = document.getElementById("cheatOverlay");
+
+function openCheatModal() {
+    overlay.classList.add("active");
+}
+
+function closeCheatModal() {
+    overlay.classList.remove("active");
+}
+
+openBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    openCheatModal();
+});
+
+closeBtn.addEventListener("click", closeCheatModal);
+
+overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) {
+        closeCheatModal();
+    }
+});
