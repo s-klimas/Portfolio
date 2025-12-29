@@ -5,9 +5,13 @@
     --Gold: #B57F02;
     --Light-Dark-Text: #5D5D5D;
     --Mustard: #D3CFBA;
+    --Dark-Mustard: #8C8A84;
     --Dark-Green: #032C1C;
     --Dark-Purple: #31081F;
     --Middle-Dark-Theme: #262626;
+    --Middle-Grey: #808080;
+    --Light-Grey: #A0A0A0;
+    --Dark-Grey: #666666;
 }
 
 html, body {
@@ -26,7 +30,7 @@ html, body {
 .header {
     flex-shrink: 0;
     background: var(--Dark-Theme, #1B1B1B);
-    padding: 25px 50px 30px 50px;
+    padding: 25px 50px 0 50px;
 }
 
 .header-right {
@@ -70,77 +74,126 @@ html, body {
     display: block;
     margin-left: 20px;
     cursor: pointer;
-}
-
-.git-logo > a {
-    color: var(--Gold, #B57F02);
     transition: 0.2s ease-in-out;
 }
 
-.git-logo > a:hover {
+.git-logo:hover {
+    /*transform: scale(1.1);*/
+}
+
+.git-logo > a {
     color: var(--Light-Text, #D9D9D9);
     transition: 0.2s ease-in-out;
 }
 
-.git-logo > a:active {
-    color: var(--Dark-Purple, #032C1C);
-    transition: 0.2s ease-in-out;
+.git-logo > a:hover {
+    color: var(--Gold, #B57F02);
 }
+
+/*.git-logo > a:active {*/
+/*    color: var(--Dark-Purple, #032C1C);*/
+/*    transition: 0.2s ease-in-out;*/
+/*}*/
 
 .linkedin-logo {
     width: 2rem;
     height: 2rem;
     flex-shrink: 0;
     display: block;
-    color: var(--Gold, #B57F02);
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 
-.linkedin-logo > a {
-    color: var(--Gold, #B57F02);
-    transition: 0.2s ease-in-out;
+.linkedin-logo:hover {
+    /*transform: scale(1.1);*/
 }
 
-.linkedin-logo > a:hover {
+.linkedin-logo > a {
     color: var(--Light-Text, #D9D9D9);
     transition: 0.2s ease-in-out;
 }
 
-.linkedin-logo > a:active {
-    color: var(--Dark-Purple, #032C1C);
-    transition: 0.2s ease-in-out;
+.linkedin-logo > a:hover {
+    color: var(--Gold, #B57F02);
 }
+
+/*.linkedin-logo > a:active {*/
+/*    color: var(--Dark-Purple, #032C1C);*/
+/*    transition: 0.2s ease-in-out;*/
+/*}*/
 
 .nav {
     flex-shrink: 0;
     background: var(--Dark-Theme, #1B1B1B);
-    padding: 25px 50px 30px 50px;
+    padding-bottom: 20px;
 }
 
 .nav-items {
-    min-height: 1.8125rem;
-    flex-shrink: 0;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-column-gap: 3%;
+    align-items: center;
 }
+
+.nav-item:first-child { justify-self: end; }
+.nav-item:last-child  { justify-self: start; }
+.nav-item-selected    { justify-self: center; }
 
 .nav-item > div {
     display: inline-block;
     margin-top: 0.5rem;
 }
 
-.nav-item-selected {
-    color: var(--Gold, #B57F02);
+.nav-item {
+    color: var(--Light-Dark-Text, #5D5D5D);
     text-align: center;
     font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 300;
     line-height: normal;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    cursor: pointer;
     text-decoration: none;
+    position: relative;
+    transition: color .3s ease;
+}
+
+.nav-item .line {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: var(--Gold, #B57F02);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .35s ease;
+}
+
+.nav-item:hover .line {
+    transform: scaleX(1);
+}
+
+.nav-item > div {
+    transition: all 0.5s ease;
+}
+
+.nav-item:hover > div {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+
+.nav-item:active {
+
+}
+
+.nav-item-selected {
+    color: var(--Gold, #B57F02);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-item-selected .line {
+    transform: scaleX(1);
 }
 
 .nav-item-selected > div {
@@ -162,32 +215,6 @@ html, body {
 
 .nav-item-selected > div > a {
     display: inline-block;
-}
-
-.nav-item {
-    color: var(--Light-Dark-Text, #5D5D5D);
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    text-decoration: none;
-}
-
-.nav-item > div {
-    transition: all 0.5s ease;
-}
-
-.nav-item:hover > div {
-    transition: all 0.5s ease;
-    transform: scale(1.1);
-}
-
-.nav-item:active {
-
 }
 
 .container {
@@ -303,7 +330,7 @@ html, body {
     padding-bottom: 1rem;
     background-color: var(--Mustard, #D3CFBA);
     border-radius: 10px;
-    border: 4px outset #f4f1e5;
+    /*box-shadow: 1px 1px 12px var(--Dark-Mustard, #8C8A84);*/
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -336,7 +363,7 @@ html, body {
     justify-content: center;
     background-color: var(--Mustard, #D3CFBA);
     border-radius: 10px;
-    border: 4px outset #f4f1e5;
+    /*box-shadow: 1px 1px 12px var(--Dark-Mustard, #8C8A84);*/
     margin-left: 10px;
     margin-right: 5px;
     margin-bottom: 10px;
@@ -388,7 +415,7 @@ html, body {
     justify-content: center;
     background-color: var(--Mustard, #D3CFBA);
     border-radius: 10px;
-    border: 4px outset #f4f1e5;
+    /*box-shadow: 1px 1px 12px var(--Dark-Mustard, #8C8A84);*/
     margin-left: 5px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -449,7 +476,7 @@ html, body {
 
 .skill-description {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -497,7 +524,7 @@ html, body {
 .skill-footer {
     background-color: var(--Mustard, #D3CFBA);
     border-radius: 10px;
-    border: 4px outset #f4f1e5;
+    /*box-shadow: 1px 1px 12px var(--Dark-Mustard, #8C8A84);*/
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -518,15 +545,6 @@ html, body {
     transition: all 0.2s ease;
 }
 
-.skill-others-name:hover {
-    transition: all 0.2s ease;
-    transform: scale(1.1);
-}
-
-.skill-others-name.active {
-    scale: 1.3;
-}
-
 .skill-others-name > a {
     color: var(--Dark-Text, #1F1F1F);
     text-decoration: none;
@@ -536,10 +554,54 @@ html, body {
     color: var(--Gold, #B57F02);
 }
 
+.skill-others-name > a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.skill-others-name .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--Gold, #B57F02);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s ease;
+}
+
+.skill-others-name:not(.active):hover .line {
+    transform: scaleX(1);
+}
+
+.skill-others-name:hover ~ .active .line,
+.active ~ .skill-others-name:hover ~ .active .line {
+    transform: scaleX(0);
+}
+
+.skill-others {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.skill-underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: var(--Gold);
+    transition: all .35s cubic-bezier(.4,0,.2,1);
+}
+
 .about-me-full-box {
+    justify-self: center;
     background: var(--Middle-Dark-Theme, #262626);
-    margin: 0 auto 0;
-    width: 1400px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    max-width: 1400px;
     min-height: 40rem;
     border-radius: 10px;
     flex-shrink: 0;
@@ -548,7 +610,7 @@ html, body {
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 0;
-    border: 2px outset #000000;
+    box-shadow: 5px 5px 12px black;
 }
 
 .about-me-left {
@@ -567,7 +629,7 @@ html, body {
 
 .about-me-name {
     color: var(--Light-Text, #D9D9D9);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 4rem;
     font-style: normal;
     font-weight: 700;
@@ -575,8 +637,8 @@ html, body {
 }
 
 .about-me-title {
-    color: var(--Gold, #B57F02);
-    font-family: Inter, sans-serif;
+    color: var(--Mustard, #D3CFBA);
+    font-family: "Inter", sans-serif;
     font-size: 1.875rem;
     font-style: normal;
     font-weight: 400;
@@ -586,7 +648,7 @@ html, body {
 .about-me-description {
     color: var(--Light-Text, #D9D9D9);
     text-align: justify;
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 300;
@@ -595,7 +657,7 @@ html, body {
 
 .about-me-description > div > b {
     font-weight: 900;
-    color: var(--Gold, #B57F02); /* TODO jeszcze nie wiem jaki kolor */
+    color: var(--Mustard, #D3CFBA);
 }
 
 .about-me-description > * {
@@ -699,10 +761,10 @@ html, body {
     background: var(--Middle-Dark-Theme, #262626);
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    border: 2px outset #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 5px 5px 12px black;
 }
 
 .project-1 {
@@ -730,28 +792,40 @@ html, body {
 .project:hover {
     color: var(--Dark-Text, #1F1F1F);
     background: var(--Light-Text, #D9D9D9);
-    border: 2px outset #FFFFFF;
     transition: 0.5s ease-in-out;
+    box-shadow: 5px 5px 12px var(--Dark-Grey, #666666);
 }
 
-.project:hover * {
+.project:hover .project-title, .project:hover .project-technologies {
     color: var(--Dark-Text, #1F1F1F);
     transition: 0.5s;
 }
 
-.project:hover .gold-color {
-    color: var(--Dark-Purple, #31081F);
-    transition: 0.5s;
+.project:hover .project-description {
+    color: var(--Dark-Grey, #666666);
 }
 
-.project:hover .gold-color * {
-    color: var(--Dark-Purple, #31081F);
-    transition: 0.5s;
+.project:hover path {
+    fill: var(--Middle-Dark-Theme, #262626);
 }
+
+.project:hover svg:hover path {
+    fill: var(--Gold, #B57F02);
+}
+
+/*.project:hover .gold-color {*/
+/*    color: var(--Dark-Purple, #31081F);*/
+/*    transition: 0.5s;*/
+/*}*/
+
+/*.project:hover .gold-color * {*/
+/*    color: var(--Dark-Purple, #31081F);*/
+/*    transition: 0.5s;*/
+/*}*/
 
 .project-header {
     padding-top: 2rem;
-    margin-left: -5%;
+    /*margin-left: -5%;*/
     display: flex;
     flex-direction: row;
     align-self: flex-start;
@@ -768,15 +842,31 @@ html, body {
 }
 
 .project-github {
-    display: inline;
-    flex-shrink: 0;
+    display: flex;
     margin-left: 20px;
     cursor: pointer;
 }
 
+.project-github > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-github-svg {
+    width: 35px;
+    height: auto;
+}
+
+.project-github-svg > path {
+    fill: var(--Light-Text, #D9D9D9);
+    transition: 0.5s ease;
+}
+
 .project-github > a > svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    /*width: 2.5rem;*/
+    /*height: 2.5rem;*/
 }
 
 .gold-color {
@@ -798,22 +888,30 @@ html, body {
 
 .project-description {
     width: 100%;
-    color: var(--Light-Text, #D9D9D9);
+    color: var(--Light-Grey, #A0A0A0);
     text-align: justify;
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    transition: 0.5s ease;
 }
 
 .project-show-more {
-    font-family: Inter, sans-serif;
-    font-size: 0.7rem;
+    color: var(--Middle-Grey, #808080);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.project-show-more a:hover{
+    color: var(--Gold, #B57F02);
+    transition: 0.5s ease;
 }
 
 .project-technologies {
@@ -821,21 +919,25 @@ html, body {
     display: flex;
     flex-direction: row;
     color: var(--Light-Text, #D9D9D9);
-    font-family: Inter, sans-serif;
-    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
 }
 
+.project-technologies-2 {
+    margin-bottom: 30px;
+}
+
 .project-technologies-1 > a {
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .project-technologies-2 > a {
-    margin: 15px 10px;
+    margin-top: 15px;
+    margin-right: 20px;
 }
 
 .projects-full {
@@ -844,7 +946,7 @@ html, body {
 }
 
 .project-full {
-    border: 4px outset #000000;
+    box-shadow: 5px 5px 12px black;
     width: 1400px;
     min-height: 500px;
     padding-bottom: 1rem;
@@ -861,7 +963,7 @@ html, body {
 
 .project-full-title {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 700;
@@ -897,7 +999,7 @@ html, body {
 }
 
 .project-full-description-header {
-    margin-top: 2rem;
+    margin-top: 1.25rem;
 }
 
 .project-full-description-header > * {
@@ -906,7 +1008,7 @@ html, body {
 
 .project-full-description-header > .project-full-description-question {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
@@ -915,7 +1017,7 @@ html, body {
 
 .project-full-description-header > .project-full-description-answer {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 500;
@@ -924,7 +1026,7 @@ html, body {
 
 .project-full-text {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 0.8125rem;
     font-style: normal;
     font-weight: 400;
@@ -935,7 +1037,7 @@ html, body {
 
 .project-full-smaller-tittle {
     color: var(--Dark-Text, #1F1F1F);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;
@@ -981,12 +1083,27 @@ html, body {
 
 .project-full-technologies > a {
     color: var(--Light-Dark-Text, #5D5D5D);
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
     margin-right: 0.7rem;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer > a {
+    color: var(--Light-Text, #D9D9D9);
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
 .not-found {
@@ -1027,7 +1144,8 @@ html, body {
     }
 
     .nav {
-        padding: 25px 25px 30px 25px;
+        padding-top: 1rem;
+        padding-bottom: 0.6rem;
     }
 
     .nav-item-selected {
@@ -1093,6 +1211,7 @@ html, body {
 
     .skills-title {
         font-size: 2rem;
+        box-shadow: none;
     }
 
     .skill-body {
@@ -1121,6 +1240,10 @@ html, body {
         flex-direction: row;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+    }
+
+    .skill-point:hover {
+        transform: scale(1);
     }
 
     .skill-point img {
@@ -1171,13 +1294,26 @@ html, body {
         height: 0.1rem;
     }
 
+    .skill-others {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .skill-others-name {
         display: block;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        margin: 0;
     }
 
     .skill-others-name.active {
         scale: 1.1;
+    }
+
+    .skill-footer {
+        box-shadow: none;
     }
 
     .about-me-full-box {

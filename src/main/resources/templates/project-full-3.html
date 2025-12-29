@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
     <script defer src="../static/scripts/common.js" th:src="@{/scripts/common.js}"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <meta name="description" content="Portfolio Sebastian Klimas">
     <link rel="shortcut icon" type="image/x-icon" href="/static/favicon/favicon.ico" th:href="@{/favicon/favicon.ico}"/>
     <link rel="icon" href="/static/favicon/favicon_32.ico" th:href="@{/favicon/favicon_32.ico}" sizes="32x32"/>
@@ -48,13 +52,13 @@
 <div class="nav">
     <div class="nav-items">
         <a class="nav-item" href="#" th:href="@{/skills}">
-            <div>SKILLS</div>
+            SKILLS <span class="line"></span>
         </a>
-        <a class="nav-item-selected" href="#" th:href="@{/}">
-            <div>PROJECTS</div>
+        <a class="nav-item nav-item-selected" href="#" th:href="@{/}">
+            PROJECTS <span class="line"></span>
         </a>
         <a class="nav-item" href="#" th:href="@{/about-me}">
-            <div>ABOUT ME</div>
+            ABOUT ME <span class="line"></span>
         </a>
     </div>
 </div>
@@ -144,6 +148,9 @@
             </div>
         </div>
     </div>
+</div>
+<div class="footer">
+    <a>&copy;  2026 Created by Sebastian Klimas - All Rights Reserved.</a>
 </div>
 </body>
 </html>
