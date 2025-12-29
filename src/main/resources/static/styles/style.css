@@ -529,11 +529,11 @@ html, body {
     margin-right: 10px;
 }
 
-.skill-others {
+.skill-footer-others {
     text-align: center;
 }
 
-.skill-others-name {
+.skill-footer-others-name {
     display: inline-block;
     color: var(--Dark-Text, #1F1F1F);
     font-family: Inter, sans-serif;
@@ -545,22 +545,22 @@ html, body {
     transition: all 0.2s ease;
 }
 
-.skill-others-name > a {
+.skill-footer-others-name > a {
     color: var(--Dark-Text, #1F1F1F);
     text-decoration: none;
 }
 
-.skill-others-name.active > a {
+.skill-footer-others-name.active > a {
     color: var(--Gold, #B57F02);
 }
 
-.skill-others-name > a {
+.skill-footer-others-name > a {
     position: relative;
     display: inline-block;
     padding-bottom: 6px;
 }
 
-.skill-others-name .line {
+.skill-footer-others-name .line {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -572,16 +572,16 @@ html, body {
     transition: transform .3s ease;
 }
 
-.skill-others-name:not(.active):hover .line {
+.skill-footer-others-name:not(.active):hover .line {
     transform: scaleX(1);
 }
 
-.skill-others-name:hover ~ .active .line,
-.active ~ .skill-others-name:hover ~ .active .line {
+.skill-footer-others-name:hover ~ .active .line,
+.active ~ .skill-footer-others-name:hover ~ .active .line {
     transform: scaleX(0);
 }
 
-.skill-others {
+.skill-footer-others {
     position: relative;
     display: flex;
     justify-content: center;
@@ -1294,7 +1294,7 @@ html, body {
         height: 0.1rem;
     }
 
-    .skill-others {
+    .skill-footer-others {
         padding-top: 1rem;
         padding-bottom: 1rem;
         display: flex;
@@ -1302,13 +1302,13 @@ html, body {
         gap: 1rem;
     }
 
-    .skill-others-name {
+    .skill-footer-others-name {
         display: block;
         font-size: 0.9rem;
         margin: 0;
     }
 
-    .skill-others-name.active {
+    .skill-footer-others-name.active {
         scale: 1.1;
     }
 
