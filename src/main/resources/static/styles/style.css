@@ -128,28 +128,71 @@ html, body {
 }
 
 .nav-items {
-    min-height: 1.8125rem;
-    flex-shrink: 0;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-column-gap: 3%;
+    align-items: center;
 }
+
+.nav-item:first-child { justify-self: end; }
+.nav-item:last-child  { justify-self: start; }
+.nav-item-selected    { justify-self: center; }
 
 .nav-item > div {
     display: inline-block;
     margin-top: 0.5rem;
 }
 
-.nav-item-selected {
-    color: var(--Gold, #B57F02);
+.nav-item {
+    color: var(--Light-Dark-Text, #5D5D5D);
     text-align: center;
     font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 300;
     line-height: normal;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    cursor: pointer;
     text-decoration: none;
+    position: relative;
+    transition: color .3s ease;
+}
+
+.nav-item .line {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: var(--Gold, #B57F02);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .35s ease;
+}
+
+.nav-item:hover .line {
+    transform: scaleX(1);
+}
+
+.nav-item > div {
+    transition: all 0.5s ease;
+}
+
+.nav-item:hover > div {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+
+.nav-item:active {
+
+}
+
+.nav-item-selected {
+    color: var(--Gold, #B57F02);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-item-selected .line {
+    transform: scaleX(1);
 }
 
 .nav-item-selected > div {
@@ -171,32 +214,6 @@ html, body {
 
 .nav-item-selected > div > a {
     display: inline-block;
-}
-
-.nav-item {
-    color: var(--Light-Dark-Text, #5D5D5D);
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    text-decoration: none;
-}
-
-.nav-item > div {
-    transition: all 0.5s ease;
-}
-
-.nav-item:hover > div {
-    transition: all 0.5s ease;
-    transform: scale(1.1);
-}
-
-.nav-item:active {
-
 }
 
 .container {
@@ -584,7 +601,7 @@ html, body {
 }
 
 .about-me-title {
-    color: var(--Gold, #B57F02);
+    color: var(--Mustard, #D3CFBA);
     font-family: "Inter", sans-serif;
     font-size: 1.875rem;
     font-style: normal;
@@ -604,7 +621,7 @@ html, body {
 
 .about-me-description > div > b {
     font-weight: 900;
-    color: var(--Gold, #B57F02); /* TODO jeszcze nie wiem jaki kolor */
+    color: var(--Mustard, #D3CFBA);
 }
 
 .about-me-description > * {
@@ -1172,6 +1189,10 @@ html, body {
         flex-direction: row;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+    }
+
+    .skill-point:hover {
+        transform: scale(1);
     }
 
     .skill-point img {
