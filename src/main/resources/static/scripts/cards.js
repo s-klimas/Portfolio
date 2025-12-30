@@ -206,9 +206,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const openBtn = document.getElementById("openCheat");
-const closeBtn = document.getElementById("closeCheat");
-const overlay = document.getElementById("cheatOverlay");
+const openBtn = document.querySelector(".cheat-button");
+const closeBtn = document.querySelector(".close-button");
+const overlay = document.querySelector(".overlay");
 
 function openCheatModal() {
     overlay.classList.add("active");
