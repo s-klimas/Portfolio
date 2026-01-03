@@ -67,33 +67,20 @@ html, body {
     font-weight: 300;
 }
 
-.git-logo {
-    width: 2rem;
-    height: 2rem;
-    flex-shrink: 0;
-    display: block;
+.github-logo {
+    width: 35px;
+    height: auto;
     margin-left: 20px;
-    cursor: pointer;
+}
+
+.github-logo > path {
+    fill: var(--Light-Text, #D9D9D9);
     transition: 0.2s ease-in-out;
 }
 
-.git-logo:hover {
-    /*transform: scale(1.1);*/
+.github-logo:hover > path {
+    fill: var(--Gold, #B57F02);
 }
-
-.git-logo > a {
-    color: var(--Light-Text, #D9D9D9);
-    transition: 0.2s ease-in-out;
-}
-
-.git-logo > a:hover {
-    color: var(--Gold, #B57F02);
-}
-
-/*.git-logo > a:active {*/
-/*    color: var(--Dark-Purple, #032C1C);*/
-/*    transition: 0.2s ease-in-out;*/
-/*}*/
 
 .linkedin-logo {
     width: 2rem;
@@ -104,10 +91,6 @@ html, body {
     transition: 0.2s ease-in-out;
 }
 
-.linkedin-logo:hover {
-    /*transform: scale(1.1);*/
-}
-
 .linkedin-logo > a {
     color: var(--Light-Text, #D9D9D9);
     transition: 0.2s ease-in-out;
@@ -116,11 +99,6 @@ html, body {
 .linkedin-logo > a:hover {
     color: var(--Gold, #B57F02);
 }
-
-/*.linkedin-logo > a:active {*/
-/*    color: var(--Dark-Purple, #032C1C);*/
-/*    transition: 0.2s ease-in-out;*/
-/*}*/
 
 .nav {
     flex-shrink: 0;
@@ -135,9 +113,17 @@ html, body {
     align-items: center;
 }
 
-.nav-item:first-child { justify-self: end; }
-.nav-item:last-child  { justify-self: start; }
-.nav-item-selected    { justify-self: center; }
+.nav-item:first-child {
+    justify-self: end;
+}
+
+.nav-item:last-child  {
+    justify-self: start;
+}
+
+.nav-item-selected    {
+    justify-self: center;
+}
 
 .nav-item > div {
     display: inline-block;
@@ -182,10 +168,6 @@ html, body {
     transform: scale(1.1);
 }
 
-.nav-item:active {
-
-}
-
 .nav-item-selected {
     color: var(--Gold, #B57F02);
     font-weight: 700;
@@ -203,10 +185,6 @@ html, body {
 .nav-item-selected:hover > div {
     transition: all 0.5s ease;
     transform: scale(1.1);
-}
-
-.nav-item-selected:active {
-
 }
 
 .nav-item-selected > div {
@@ -260,6 +238,22 @@ html, body {
     gap: 1rem;
 }
 
+.skill-main:has(.label:hover),
+.skill-main:has(.circle:hover) {
+    & > .label,
+    & > .circle {
+        transform: scale(1.1);
+    }
+}
+
+.skill-main:has(.label:active),
+.skill-main:has(.circle:active) {
+    & > .label,
+    & > .circle {
+        transform: scale(1.3);
+    }
+}
+
 .label {
     height: 3.65rem;
     flex-shrink: 0;
@@ -270,14 +264,6 @@ html, body {
     line-height: normal;
     transition: transform 0.2s ease;
     cursor: pointer;
-}
-
-.label:hover {
-    transform: scale(1.1);
-}
-
-.label:active {
-    transform: scale(1.3);
 }
 
 .label > a {
@@ -298,14 +284,6 @@ html, body {
     transition: transform 0.2s ease;
     flex-shrink: 0;
     transform: rotate(-0.001deg);
-}
-
-.circle:hover {
-    transform: scale(1.2);
-}
-
-.circle:active {
-    transform: scale(1.4);
 }
 
 .skills-full-box {
@@ -682,6 +660,18 @@ html, body {
     margin-top: 0.5rem;
 }
 
+.about-me-link svg {
+    vertical-align: text-bottom;
+}
+
+.about-me-link:hover > * {
+    transition: 0.2s ease-in-out;
+}
+
+.about-me-link:hover > * {
+    color: var(--Gold, #B57F02);
+}
+
 .about-me-links-github {
     display: flex;
     align-items: center;
@@ -739,6 +729,28 @@ html, body {
     font-weight: 600;
     line-height: normal;
     text-decoration: none;
+}
+
+.about-me-links-cv {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.about-me-links-cv .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--Gold, #B57F02);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s ease;
+}
+
+.about-me-links-cv:hover .line {
+    transform: scaleX(1);
 }
 
 .projects {
@@ -813,19 +825,8 @@ html, body {
     fill: var(--Gold, #B57F02);
 }
 
-/*.project:hover .gold-color {*/
-/*    color: var(--Dark-Purple, #31081F);*/
-/*    transition: 0.5s;*/
-/*}*/
-
-/*.project:hover .gold-color * {*/
-/*    color: var(--Dark-Purple, #31081F);*/
-/*    transition: 0.5s;*/
-/*}*/
-
 .project-header {
     padding-top: 2rem;
-    /*margin-left: -5%;*/
     display: flex;
     flex-direction: row;
     align-self: flex-start;
@@ -862,11 +863,6 @@ html, body {
 .project-github-svg > path {
     fill: var(--Light-Text, #D9D9D9);
     transition: 0.5s ease;
-}
-
-.project-github > a > svg {
-    /*width: 2.5rem;*/
-    /*height: 2.5rem;*/
 }
 
 .gold-color {
