@@ -238,6 +238,22 @@ html, body {
     gap: 1rem;
 }
 
+.skill-main:has(.label:hover),
+.skill-main:has(.circle:hover) {
+    & > .label,
+    & > .circle {
+        transform: scale(1.1);
+    }
+}
+
+.skill-main:has(.label:active),
+.skill-main:has(.circle:active) {
+    & > .label,
+    & > .circle {
+        transform: scale(1.3);
+    }
+}
+
 .label {
     height: 3.65rem;
     flex-shrink: 0;
@@ -248,14 +264,6 @@ html, body {
     line-height: normal;
     transition: transform 0.2s ease;
     cursor: pointer;
-}
-
-.label:hover {
-    transform: scale(1.1);
-}
-
-.label:active {
-    transform: scale(1.3);
 }
 
 .label > a {
@@ -276,14 +284,6 @@ html, body {
     transition: transform 0.2s ease;
     flex-shrink: 0;
     transform: rotate(-0.001deg);
-}
-
-.circle:hover {
-    transform: scale(1.2);
-}
-
-.circle:active {
-    transform: scale(1.4);
 }
 
 .skills-full-box {
